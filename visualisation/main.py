@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 
 index_col = ['hotel_id', 'group', 'brand', 'city', 'parking', 'pool', 'children_policy']
 
-hotels = pd.read_csv('features_hotels.csv')
+hotels = pd.read_csv('../data/features_hotels.csv')
 
 city = hotels['city'].to_numpy()
 
