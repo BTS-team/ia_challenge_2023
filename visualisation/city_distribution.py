@@ -1,0 +1,24 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import warnings
+import numpy as np
+
+warnings.filterwarnings('ignore')
+
+index_col = ['hotel_id', 'group', 'brand', 'city', 'parking', 'pool', 'children_policy']
+
+hotels = pd.read_csv('../data/features_hotels.csv')
+
+city = hotels['city'].to_numpy()
+
+keys = set(city.tolist())
+histo = []
+
+for i in keys:
+    nb_hotel = len(list(filter(lambda x: x == i, city)))
+    pourcentage = nb_hotel / len(city)
+    histo.append([i, nb_hotel, pourcentage])
+
+city_distribution = pd.DataFrame(histo, columns=['city', 'nb_hotel', 'ratio'])
+city_distribution['ratio'] = city_distribution['ratio'].round(3)
+city_distribution.to_csv('../data/city_distribution.csv',index=False)
