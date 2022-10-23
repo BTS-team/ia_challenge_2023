@@ -9,11 +9,12 @@ def get_distribution(hotels, attribute):
     attribute_row = hotels[attribute].to_numpy()
 
     keys = set(attribute_row.tolist())
+    total_hotel = len(attribute_row)
     histo = []
 
     for i in keys:
         nb_hotel = len(list(filter(lambda x: x == i, attribute_row)))
-        pourcentage = nb_hotel / len(attribute_row)
+        pourcentage = nb_hotel / total_hotel
         histo.append([i, nb_hotel, pourcentage])
 
     attribute_distribution = pd.DataFrame(histo, columns=[attribute, 'nb_hotel', 'distribution'])
