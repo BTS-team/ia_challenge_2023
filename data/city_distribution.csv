@@ -1,10 +1,10 @@
-city,nb_hotel,ratio
-sofia,56,0.056
+city,nb_hotel,distribution
 vilnius,96,0.096
+paris,167,0.167
+madrid,118,0.118
 amsterdam,135,0.135
 vienna,106,0.106
-valletta,48,0.048
-madrid,118,0.118
-copenhagen,144,0.144
 rome,129,0.129
-paris,167,0.167
+valletta,48,0.048
+copenhagen,144,0.144
+sofia,56,0.056
