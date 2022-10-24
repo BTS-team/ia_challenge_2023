@@ -56,7 +56,7 @@ def fake_request(stored_requests, request):
         requests.append(pd.DataFrame(r['prices']).assign(**r['request']))
 
     requests = pd.concat(requests)
-    requests.to_csv(stored_requests)
+    requests.to_csv(stored_requests, index=False)
 
 
 if __name__ == '__main__':

@@ -1,10 +1,11 @@
 import torch
 from torch import Tensor
 from torch.nn import Linear, ModuleList, MSELoss, Module
-from torch.nn.functional import relu
+from torch.nn.functional import relu,sigmoid,elu,silu
 from torch.optim import SGD
 import warnings
 from data import apply
+from dataset import prepare_dataloader
 
 warnings.filterwarnings("ignore")
 
@@ -17,8 +18,10 @@ class Model(Module):
             self.layers.append(Linear(layer[i - 1], layer[i]))
 
     def forward(self, x):
+        #print(self.layers)
         for i in self.layers:
-            x = relu(i(x))
+            x = silu(i(x))
+            #print(x)
         return x
 
 
@@ -111,6 +114,7 @@ def display_metrics(loss, accuracy):
 
 def predict(row, model):
     row = list(map(lambda x: apply(x), row))
+    print(row)
     row = Tensor([row])
     prediction = model(row)
     prediction = prediction.detach().numpy()
@@ -118,5 +122,10 @@ def predict(row, model):
 
 
 if __name__ == '__main__':
-    model = Model([10, 5, 3, 1])
-    print(model)
+    dataloader = prepare_dataloader('../data/stored_requests.csv', '../data/features_hotels.csv', batch_size=254)
+    model = Model([10,5,3, 1])
+    row = ['valletta', 20, 'german', 0, 20, 'Independant', 'Independant', 1, 5, 0]
+    #print(predict(row, model))
+    metrics = train(model, dataloader[0], dataloader[2])
+    test_model(model,dataloader[1])
+    #print(metrics)
