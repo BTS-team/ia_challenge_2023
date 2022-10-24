@@ -1,5 +1,5 @@
 import pandas as pd
-from data import apply, response_test
+from data import apply, response_test_1, response_test_2
 import requests
 import urllib.parse
 import urllib.error
@@ -39,9 +39,6 @@ class Connector:
             print(e)
 
 
-
-
-
 def request(connector, params, stored_requests):
     r = connector.requests(params=params)
     request = pd.DataFrame(r.json()['prices']).assign(**r.json()['request'])
@@ -53,5 +50,14 @@ def request(connector, params, stored_requests):
         request.to_csv(stored_requests)
 
 
+def fake_request(stored_requests, request):
+    requests = []
+    for r in request:
+        requests.append(pd.DataFrame(r['prices']).assign(**r['request']))
+
+    requests = pd.concat(requests)
+    requests.to_csv(stored_requests)
+
+
 if __name__ == '__main__':
-    print(prepare_train("../data/test.csv", "../data/features_hotels.csv"))
+    fake_request("../data/stored_requests.csv", [response_test_1, response_test_2])
