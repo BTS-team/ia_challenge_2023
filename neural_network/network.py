@@ -88,7 +88,7 @@ def test_model(model, test_data):
 
 
 def predict(row, model):
-    row = map(lambda x: apply(x), row)
+    row = list(map(lambda x: apply(x), row))
     row = Tensor([row])
     prediction = model(row)
     prediction = prediction.detach().numpy()
