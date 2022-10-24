@@ -42,7 +42,7 @@ city = {
 
 brand = {
     'Royal Lotus': 0,
-    'Independent': 1,
+    'Independant': 1,
     'Boss Western': 2,
     'Tripletree': 3,
     'Quadrupletree': 4,
@@ -61,7 +61,7 @@ brand = {
 
 group = {
     'Yin Yang': 0,
-    'Independent': 1,
+    'Independant': 1,
     'Boss Western': 2,
     'Chillton Worldwide': 3,
     'Morriott International': 4,

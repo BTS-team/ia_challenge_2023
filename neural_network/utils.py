@@ -39,29 +39,7 @@ class Connector:
             print(e)
 
 
-def prepare_train(stored_requests, features_hotels):
-    stored_r = pd.read_csv(stored_requests)
-    hotels = pd.read_csv(features_hotels, index_col=['hotel_id', 'city'])
 
-    pricing_requests = stored_r.join(hotels, on=['hotel_id', 'city'])
-
-    y_data_set = pricing_requests['price']
-
-    x_data_set = pricing_requests[[
-        'city',
-        'date',
-        'language',
-        'mobile',
-        'stock',
-        'group',
-        'brand',
-        'parking',
-        'pool',
-        'children_policy'
-    ]]
-
-    x_data_set = x_data_set.applymap(apply)
-    return x_data_set.to_numpy(), y_data_set.to_numpy()
 
 
 def request(connector, params, stored_requests):
