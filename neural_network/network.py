@@ -85,9 +85,11 @@ def train(model, train_data, validation_data, learning_rate=0.1, loss_function=M
         # Saving the model
         if accuracy > max(accuracy_values):
             saveModel()
-        print(f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - accuracy : {accuracy}%")
+        print(
+            f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - accuracy : {accuracy}%")
 
-    return loss_values,accuracy_values
+    return loss_values, accuracy_values
+
 
 def test_model(model, test_data):
     test_accuracy = 0
@@ -103,8 +105,9 @@ def test_model(model, test_data):
             f"Accuracy of the model based on the test set of {len(X_test)} inputs is {(100 * test_accuracy / total)}%")
 
 
-def display_metrics(loss,accuracy):
+def display_metrics(loss, accuracy):
     pass
+
 
 def predict(row, model):
     row = list(map(lambda x: apply(x), row))
