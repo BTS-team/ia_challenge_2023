@@ -35,36 +35,51 @@ def train(model, train_data, validation_data, learning_rate=0.1, loss_function=M
     accuracy_values = []
 
     for epoch in range(epochs):
-        running_train_loss = 0.0
-        running_accuracy = 0.0
-        running_vall_loss = 0.0
+        epoch_train_loss = 0.0
+        epoch_accuracy = 0.0
+        epoch_vall_loss = 0.0
         total = 0
 
         # Training Loop
         for X_train, y_train in train_data:
-            optimizer.zero_grad()  # zero the parameter gradients
-            prediction = model(X_train)  # predict output from the model
-            loss = loss_function(prediction, y_train)  # calculate loss for the predicted output
-            loss.backward()  # backpropagate the loss
-            optimizer.step()  # adjust parameters based on the calculated gradients
-            running_train_loss += loss.item()  # track the loss value
+            # zero the parameter gradients
+            optimizer.zero_grad()
+
+            # predict output from the model
+            prediction = model(X_train)
+
+            # calculate loss for the predicted output
+            loss = loss_function(prediction, y_train)
+
+            # backpropagate the loss
+            loss.backward()
+
+            # adjust parameters based on the calculated gradients
+            optimizer.step()
+
+            # update the loss value
+            epoch_train_loss += loss.item()
 
         # Calculate training loss value
-        train_loss_value = running_train_loss / len(train_data)
+        train_loss_value = epoch_train_loss / len(train_data)
+
         loss_values.append(train_loss_value)
+
         # Validation Loop
         with torch.no_grad():
             model.eval()
             for X_val, y_val in validation_data:
                 prediction = model(X_val)
                 val_loss = loss_function(prediction, y_val)
-                running_vall_loss += val_loss.item()
+                epoch_vall_loss += val_loss.item()
                 total += y_val.size(0)
-                running_accuracy += (prediction == y_val).sum().item()
+                epoch_accuracy += (prediction == y_val).sum().item()
 
-                # Calculate validation loss value
-        val_loss_value = running_vall_loss / len(validation_data)
-        accuracy = (100 * running_accuracy / total)
+        # Calculate validation loss value
+        val_loss_value = epoch_vall_loss / len(validation_data)
+
+        # Calculate the accuracy
+        accuracy = (100 * epoch_accuracy / total)
         accuracy_values.append(accuracy)
 
         # Saving the model
@@ -72,20 +87,24 @@ def train(model, train_data, validation_data, learning_rate=0.1, loss_function=M
             saveModel()
         print(f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - accuracy : {accuracy}%")
 
+    return loss_values,accuracy_values
 
 def test_model(model, test_data):
-    running_accuracy = 0
+    test_accuracy = 0
     total = 0
     with torch.no_grad():
         for X_test, y_test in test_data:
             y_test = y_test.to(torch.float32)
             prediction = model(X_test)
             total += y_test.size(0)
-            running_accuracy += (prediction == y_test).sum().item()
+            test_accuracy += (prediction == y_test).sum().item()
 
         print(
-            f"Accuracy of the model based on the test set of {len(X_test)} inputs is {(100 * running_accuracy / total)}%")
+            f"Accuracy of the model based on the test set of {len(X_test)} inputs is {(100 * test_accuracy / total)}%")
 
+
+def display_metrics(loss,accuracy):
+    pass
 
 def predict(row, model):
     row = list(map(lambda x: apply(x), row))
