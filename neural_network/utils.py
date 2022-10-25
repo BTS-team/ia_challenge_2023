@@ -165,12 +165,13 @@ if __name__ == '__main__':
     params = {
         'path_requests': '../data/possible_api_requests.csv',
         'path_city': '../data/city_distribution.csv',
-        'nb_requests': 91,
+        'nb_requests': 89,
         'private_key': 'c760f776-e640-4d8c-a26e-dba910cc7218',
         'path_gen_request': '../data/generated_requests.csv',
         'stored_request': '../data/stored_requests.csv'
     }
-    making_n_requests(**params)
+    #print(response.history)
+    #making_n_requests(**params)
 
     print("fin de la generation")
     generate_histo()
