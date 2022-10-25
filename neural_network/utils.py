@@ -1,3 +1,5 @@
+import sys
+
 import pandas as pd
 from data import apply, language, response_test_1, response_test_2, city
 import requests
@@ -36,21 +38,28 @@ class Connector:
     def query(self, params):
         try:
             r = requests.get(self.path(f"pricing/{self.user_id}"), params=params)
-            print(r.status_code)
-            return r.json()
+            if r.status_code == 200:
+                return r.json()
+            elif r.status_code == 422:
+                return 422
+            else:
+                print(r.status_code, r.json()['detail'])
+                sys.exit(1)
+
         except urllib.error as e:
             print(e)
 
 
 def request(connector, params, stored_requests):
     r = connector.query(params=params)
-    queries = pd.DataFrame(r.json()['prices']).assign(**r.json()['request'])
-    try:
-        stored_r = pd.read_csv(stored_requests)
-        pricing_requests = pd.concat([stored_r, queries])
-        pricing_requests.to_csv(stored_requests)
-    except:
-        queries.to_csv(stored_requests)
+    if r != 200:
+        try:
+            queries = pd.DataFrame(r['prices']).assign(**r['request'])
+            stored_r = pd.read_csv(stored_requests)
+            pricing_requests = pd.concat([stored_r, queries])
+            pricing_requests.to_csv(stored_requests, index=False)
+        except:
+            queries.to_csv(stored_requests, index=False)
 
 
 def fake_request(stored_requests, query):
@@ -74,7 +83,7 @@ def generate_api_requests(path):
     api_requests_df.to_csv(path, index=False)
 
 
-def take_n_requests(path_requests, path_city, nb_requests):
+def take_n_requests(path_requests, path_city, nb_requests, path_gen_request):
     city_distribution = pd.read_csv(path_city)
     poss_api_requests = pd.read_csv(path_requests)
 
@@ -105,7 +114,11 @@ def take_n_requests(path_requests, path_city, nb_requests):
                 (poss_api_requests['mobile'] == r_mobile), 'used'
             ] = 1
     poss_api_requests.to_csv(path_requests, index=False)
-    return pd.DataFrame(queries, columns=['city', 'language', 'date', 'mobile'])
+    generated_requests = pd.DataFrame(queries, columns=['city', 'language', 'date', 'mobile'])
+    already_gen = pd.read_csv(path_gen_request)
+    already_gen = pd.concat([already_gen, generated_requests])
+    already_gen.to_csv(path_gen_request, index=False)
+    return generated_requests
 
 
 def assigning_avatar(queries, connector):
@@ -117,13 +130,13 @@ def assigning_avatar(queries, connector):
     for i in range(len(date)):
         temp = start_avatar + i
         avatar_dict[date[i]] = temp
-        # connector.create_avatar(f"{temp}")
+        connector.create_avatar(f"{temp}")
 
     queries['avatar_name'] = queries['date'].apply(lambda x: avatar_dict[x])
 
 
-def making_n_requests(path_requests, path_city, nb_requests, private_key, stored_request):
-    queries = take_n_requests(path_requests, path_city, nb_requests)
+def making_n_requests(path_requests, path_city, nb_requests, private_key, stored_request, path_gen_request):
+    queries = take_n_requests(path_requests, path_city, nb_requests, path_gen_request)
     connector = Connector(private_key)
     assigning_avatar(queries, connector)
     queries_dict = list(queries.to_dict('index').values())
@@ -132,12 +145,38 @@ def making_n_requests(path_requests, path_city, nb_requests, private_key, stored
         request(connector, i, stored_request)
 
 
+def generate_histo():
+    generated_r = pd.read_csv('../data/generated_requests.csv')
+
+    attribute_row = generated_r['city'].to_numpy()
+    keys = set(attribute_row.tolist())
+    total_hotel = len(attribute_row)
+    histo = []
+
+    for i in keys:
+        nb_hotel = len(list(filter(lambda x: x == i, attribute_row)))
+        pourcentage = nb_hotel / total_hotel
+        histo.append([i, nb_hotel, pourcentage])
+
+    print(pd.DataFrame(histo))
+
+
 if __name__ == '__main__':
     params = {
         'path_requests': '../data/possible_api_requests.csv',
         'path_city': '../data/city_distribution.csv',
-        'nb_requests': 10,
-        'private_key': 'c760f776-e640-4d8c-a26e-dba910cc7218'
+        'nb_requests': 91,
+        'private_key': 'c760f776-e640-4d8c-a26e-dba910cc7218',
+        'path_gen_request': '../data/generated_requests.csv',
+        'stored_request': '../data/stored_requests.csv'
     }
     making_n_requests(**params)
+
+    print("fin de la generation")
+    generate_histo()
     # generate_api_requests('../data/possible_api_requests.csv')
+
+    # store = pd.read_csv('../data/stored_requests.csv')
+    # stored = store[['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id']]
+    # print(stored)
+    # stored.to_csv('../data/stored_requests.csv',index=False)
