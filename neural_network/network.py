@@ -2,11 +2,12 @@ import torch
 from torch import Tensor
 from torch.nn import Linear, ModuleList, MSELoss, Module
 from torch.nn.functional import relu, sigmoid, elu, silu
-from torch.optim import SGD
+from torch.optim import SGD, Adam
 import warnings
 from data import apply
 from dataset import prepare_dataloader
 from sklearn.metrics import mean_squared_error
+import pandas as pd
 
 warnings.filterwarnings("ignore")
 
@@ -19,20 +20,14 @@ class Model(Module):
         #    self.layers.append(Linear(layer[i - 1], layer[i]))
 
         self.layer_1 = Linear(10, 10)
-        self.layer_2 = Linear(10, 7)
-        self.layer_3 = Linear(7, 5)
-        self.layer_4 = Linear(5, 5)
-        self.layer_out = Linear(5, 1)
+        self.layer_2 = Linear(10, 1)
 
     def forward(self, x):
         # for i in range(len(self.layers) - 1):
         #    x = relu(self.layers[i](x))
         # x = self.layers[-1](x)
-        x = silu(self.layer_1(x))
-        x = sigmoid(self.layer_2(x))
-        x = sigmoid(self.layer_3(x))
-        x = relu(self.layer_4(x))
-        x = self.layer_out(x)
+        x = sigmoid(self.layer_1(x))
+        x = self.layer_2(x)
         return x
 
 
@@ -40,7 +35,7 @@ def saveModel(model, path):
     torch.save(model.state_dict(), path)
 
 
-def train(model, train_data, validation_data, learning_rate=0.1, loss_function=MSELoss(), optimizer=SGD, epochs=100):
+def train(model, train_data, validation_data, learning_rate=0.001, loss_function=MSELoss(), optimizer=Adam, epochs=1):
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
@@ -84,7 +79,8 @@ def train(model, train_data, validation_data, learning_rate=0.1, loss_function=M
                 val_loss = loss_function(prediction, y_val)
                 epoch_vall_loss += val_loss.item()
                 total += y_val.size(0)
-
+                print(y_val)
+                print(prediction)
                 y_predicted.extend(prediction.tolist())
                 y_actual.extend(y_val.tolist())
 
@@ -99,11 +95,11 @@ def train(model, train_data, validation_data, learning_rate=0.1, loss_function=M
 
         # Saving the model
         if accuracy > max(accuracy_values):
-            saveModel()
+            saveModel('')
         print(
             f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {(accuracy).round(3)}")
 
-    return loss_values, accuracy_values
+    return model, loss_values, accuracy_values
 
 
 def test_model(model, test_data):
@@ -122,10 +118,6 @@ def test_model(model, test_data):
             f"RMSE of the model based on the test set of {len(X_test)} inputs is {(mean_squared_error(y_actual, y_predicted, squared=False)).round(3)}")
 
 
-def display_metrics(loss, accuracy):
-    pass
-
-
 def predict(row, model):
     row = list(map(lambda x: apply(x), row))
     print(row)
@@ -135,11 +127,43 @@ def predict(row, model):
     return prediction
 
 
-if __name__ == '__main__':
+def submission():
     dataloader = prepare_dataloader('../dataset', '../meta_data/features_hotels.csv', batch_size=254)
     model = Model()
-    # row = ['valletta', 20, 'german', 0, 20, 'Independant', 'Independant', 1, 5, 0]
-    # print(predict(row, model))
     metrics = train(model, dataloader[0], dataloader[2])
-    test_model(model, dataloader[1])
-    # print(metrics)
+
+    model = metrics[0]
+
+    to_predict = pd.read_csv('../data/test_set.csv')
+    hotels = pd.read_csv('../meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
+    to_predict = to_predict.join(hotels, on=['hotel_id', 'city'])
+
+    submission_df = []
+
+    for i in to_predict.to_dict('index').values():
+        index = i['index']
+        X = [
+            i['city'],
+            i['date'],
+            i['language'],
+            i['mobile'],
+            i['stock'],
+            i['group'],
+            i['brand'],
+            i['parking'],
+            i['pool'],
+            i['children_policy']
+        ]
+        X = list(map(lambda x: apply(x), X))
+        X = Tensor([X])
+        prediction = model(X)
+        prediction = prediction.detach().numpy()
+
+        submission_df.append([index, prediction[0][0]])
+
+    submission_df = pd.DataFrame(submission_df, columns=['index', 'price'])
+    submission_df.to_csv('../sample_submission.csv',index=False)
+
+
+if __name__ == '__main__':
+    submission()
