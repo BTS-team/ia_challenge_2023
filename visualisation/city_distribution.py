@@ -24,7 +24,7 @@ def get_distribution(hotels, attribute):
 
 if __name__ == '__main__':
     index_col = ['hotel_id', 'group', 'brand', 'city', 'parking', 'pool', 'children_policy']
-    hotels = pd.read_csv('../data/features_hotels.csv')
+    hotels = pd.read_csv('../meta_data/features_hotels.csv')
 
     attribute = ['city', 'brand', 'group', 'pool', 'parking', 'children_policy']
     for i in attribute:
