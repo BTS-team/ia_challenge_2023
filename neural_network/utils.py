@@ -7,6 +7,12 @@ import urllib.parse
 import urllib.error
 import random
 import numpy as np
+import os
+
+
+def get_folder(path):
+    arr = os.listdir(path)
+    return arr
 
 
 class Connector:
@@ -50,16 +56,50 @@ class Connector:
             print(e)
 
 
-def request(connector, params, stored_requests):
+def update_dataset(city, language, queries, dataset):
+    city_folder = get_folder(dataset)
+
+    if city not in city_folder:
+        os.mkdir(f"{dataset}/{city}")
+        queries.to_csv(f"{dataset}/{city}/{city}_{language}.csv", index=False)
+
+    else:
+        language_file = get_folder(f"{dataset}/{city}")
+        if f"{city}_{language}.csv" not in language_file:
+            queries.to_csv(f"{dataset}/{city}/{city}_{language}.csv", index=False)
+        else:
+            temp = pd.read_csv(f"{dataset}/{city}/{city}_{language}.csv")
+            temp = pd.concat([temp, queries])
+            temp.to_csv(f"{dataset}/{city}/{city}_{language}.csv", index=False)
+
+
+def request(connector, params, dataset, path_generated_request, poss_request):
     r = connector.query(params=params)
-    if r != 200:
-        try:
-            queries = pd.DataFrame(r['prices']).assign(**r['request'])
-            stored_r = pd.read_csv(stored_requests)
-            pricing_requests = pd.concat([stored_r, queries])
-            pricing_requests.to_csv(stored_requests, index=False)
-        except:
-            queries.to_csv(stored_requests, index=False)
+    if r != 422:
+        queries = pd.DataFrame(r['prices']).assign(**r['request'])
+        update_dataset(params['city'], params['language'], queries, dataset)
+
+        gen = pd.read_csv(path_generated_request)
+        gen = pd.concat([
+            gen,
+            pd.DataFrame.from_records([params])[[
+                'city',
+                'language',
+                'date',
+                'mobile'
+            ]]
+        ])
+        gen.to_csv(path_generated_request, index=False)
+
+        poss_api_requests = pd.read_csv(poss_request)
+        poss_api_requests.loc[
+            (poss_api_requests['city'] == params['city']) &
+            (poss_api_requests['date'] == params['date']) &
+            (poss_api_requests['language'] == params['language']) &
+            (poss_api_requests['mobile'] == params['mobile']), 'used'
+        ] = 2
+        poss_api_requests.to_csv(poss_request, index=False)
+        print(f"Request({params['city']},{params['language']},{params['date']},{params['mobile']}) ==> Done")
 
 
 def fake_request(stored_requests, query):
@@ -83,13 +123,13 @@ def generate_api_requests(path):
     api_requests_df.to_csv(path, index=False)
 
 
-def take_n_requests(path_requests, path_city, nb_requests, path_gen_request):
+def take_n_requests(path_requests, path_city, nb_requests):
     city_distribution = pd.read_csv(path_city)
     poss_api_requests = pd.read_csv(path_requests)
 
     cities_weights = city_distribution['nb_hotel'].tolist()
     cities = city_distribution['city'].tolist()
-
+    poss_api_requests.loc[(poss_api_requests['used'] == 1)] = 0
     queries = []
 
     while len(queries) < nb_requests:
@@ -97,7 +137,6 @@ def take_n_requests(path_requests, path_city, nb_requests, path_gen_request):
         r_date = random.randint(0, 44)
         r_language = random.choice(list(language.items()))[0]
         r_mobile = random.randint(0, 1)
-        # print(r_city, r_date, r_language, r_mobile)
 
         choosen_request = poss_api_requests.loc[
             (poss_api_requests['city'] == r_city) &
@@ -115,9 +154,6 @@ def take_n_requests(path_requests, path_city, nb_requests, path_gen_request):
             ] = 1
     poss_api_requests.to_csv(path_requests, index=False)
     generated_requests = pd.DataFrame(queries, columns=['city', 'language', 'date', 'mobile'])
-    already_gen = pd.read_csv(path_gen_request)
-    already_gen = pd.concat([already_gen, generated_requests])
-    already_gen.to_csv(path_gen_request, index=False)
     return generated_requests
 
 
@@ -135,50 +171,58 @@ def assigning_avatar(queries, connector):
     queries['avatar_name'] = queries['date'].apply(lambda x: avatar_dict[x])
 
 
-def making_n_requests(path_requests, path_city, nb_requests, private_key, stored_request, path_gen_request):
-    queries = take_n_requests(path_requests, path_city, nb_requests, path_gen_request)
+def making_n_requests(path_requests, path_city, nb_requests, private_key, dataset, path_gen_request):
+    queries = take_n_requests(path_requests, path_city, nb_requests)
     connector = Connector(private_key)
     assigning_avatar(queries, connector)
     queries_dict = list(queries.to_dict('index').values())
 
     for i in queries_dict:
-        request(connector, i, stored_request)
+        request(connector, i, dataset, path_gen_request, path_requests)
 
 
-def generate_histo():
-    generated_r = pd.read_csv('../data/generated_requests.csv')
-
-    attribute_row = generated_r['city'].to_numpy()
-    keys = set(attribute_row.tolist())
-    total_hotel = len(attribute_row)
+def generate_histo(dataset="../dataset"):
+    city_folder = get_folder(dataset)
     histo = []
 
-    for i in keys:
-        nb_hotel = len(list(filter(lambda x: x == i, attribute_row)))
-        pourcentage = nb_hotel / total_hotel
-        histo.append([i, nb_hotel, pourcentage])
+    for i in city_folder:
+        language_file = get_folder(f"{dataset}/{i}")
 
-    print(pd.DataFrame(histo))
+        total_city = 0
+        for j in language_file:
+            temp = pd.read_csv(f"{dataset}/{i}/{j}")
+            total_city += temp.shape[0]
 
+        histo.append([i, total_city])
+
+    histo = pd.DataFrame(histo, columns=['city', 'row_nb'])
+    total = sum(histo['row_nb'])
+    histo['distribution'] = (histo['row_nb']/total).round(3)
+    print(histo)
+
+
+def get_nb_row_dataset(dataset="../dataset"):
+    city_folder = get_folder(dataset)
+    total = 0
+    for i in city_folder:
+        language_file = get_folder(f"{dataset}/{i}")
+        for j in language_file:
+            temp = pd.read_csv(f"{dataset}/{i}/{j}")
+            total += temp.shape[0]
+
+    return total
 
 
 if __name__ == '__main__':
     params = {
-        'path_requests': '../data/possible_api_requests.csv',
-        'path_city': '../data/city_distribution.csv',
-        'nb_requests': 89,
+        'path_requests': '../meta_data/possible_api_requests.csv',
+        'path_city': '../meta_data/city_distribution.csv',
+        'nb_requests': 1,
         'private_key': 'c760f776-e640-4d8c-a26e-dba910cc7218',
-        'path_gen_request': '../data/generated_requests.csv',
-        'stored_request': '../data/stored_requests.csv'
+        'path_gen_request': '../meta_data/generated_requests.csv',
+        'dataset': '../dataset'
     }
-    #print(response.history)
-    #making_n_requests(**params)
-
-    print("fin de la generation")
+    # print(response.history)
+    making_n_requests(**params)
     generate_histo()
-    # generate_api_requests('../data/possible_api_requests.csv')
-
-    # store = pd.read_csv('../data/stored_requests.csv')
-    # stored = store[['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id']]
-    # print(stored)
-    # stored.to_csv('../data/stored_requests.csv',index=False)
+    # generate_api_requests('../meta_data/possible_api_requests.csv')

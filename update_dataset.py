@@ -49,7 +49,37 @@ def get_nb_row_dataset(dataset="./dataset"):
     return total
 
 
+def generate_generated_requests(dataset="./dataset"):
+    city_folder = get_folder(dataset)
+    generated_request = pd.DataFrame(columns=['city', 'language', 'date', 'mobile'])
+
+    for i in city_folder:
+        language_file = get_folder(f"{dataset}/{i}")
+        for j in language_file:
+            temp = pd.read_csv(f"{dataset}/{i}/{j}")[['city', 'language', 'date', 'mobile']]
+            generated_request = pd.concat([generated_request, temp])
+
+    generated_request.drop_duplicates(keep='first').to_csv("meta_data/generated_requests.csv", index=False)
+
+
+def update_possible_requests(gen_request="meta_data/generated_requests.csv",
+                             path_poss_request="meta_data/possible_api_requests.csv"):
+    gen = pd.read_csv(gen_request).to_dict('index').values()
+    poss_request = pd.read_csv(path_poss_request)
+
+    for i in gen:
+        poss_request.loc[
+            (poss_request['city'] == i['city']) &
+            (poss_request['date'] == i['date']) &
+            (poss_request['language'] == i['language']) &
+            (poss_request['mobile'] == i['mobile']), 'used'
+        ] = 2
+        
+    poss_request.to_csv(path_poss_request,index=False)
+
+
 if __name__ == '__main__':
-    #update_csvfile('data/stored_requests.csv')
-    update_csvfile('backup/stored_requests_3.csv')
-    print(get_nb_row_dataset())
+    # update_csvfile('data/stored_requests.csv')
+    # update_csvfile('backup/stored_requests_3.csv')
+    # print(get_nb_row_dataset())
+    generate_generated_requests()
