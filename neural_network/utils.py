@@ -1,5 +1,4 @@
 import sys
-
 import pandas as pd
 from data import apply, language, response_test_1, response_test_2, city
 import requests
@@ -11,12 +10,26 @@ import os
 
 
 def get_folder(path):
+    """A function to get the list of elements in a given directory
+
+    :param path: The path of the directory
+    :return: A list of string containing all files names and directories names
+    :rtype: list of string
+    """
     arr = os.listdir(path)
     return arr
 
 
 class Connector:
+    """A class to connect to the api
+
+    :param user_id: The private key to connect to the api
+    :param path: The web path of the api
+    """
     def __init__(self, key):
+        """Constructor method
+        :param key: The private key of the api
+        """
         domain = "51.91.251.0"
         port = 3000
         host = f"http://{domain}:{port}"
@@ -24,6 +37,11 @@ class Connector:
         self.user_id = key
 
     def create_avatar(self, name):
+        """A method to create an avatar
+
+        :param name: The name of the avatar to create
+        :return: None
+        """
         try:
             r = requests.post(self.path(f'avatars/{self.user_id}/{name}'))
             print(r)
@@ -31,6 +49,10 @@ class Connector:
             print(e)
 
     def get_avatar(self):
+        """A method to get all avatar for the private key given in the constructor method
+
+        :return: A list of tuple containing each avatars and theirs ids
+        """
         try:
             r = requests.get(self.path(f"avatars/{self.user_id}"))
             result = []
@@ -42,6 +64,11 @@ class Connector:
             print(e)
 
     def query(self, params):
+        """A method to make a request to the api
+
+        :param params: A dictionary containing all parameters of the request. This dictionary must be defined as in the tutorial.
+        :return: Either the request result in dictionary format nor the error code
+        """
         try:
             r = requests.get(self.path(f"pricing/{self.user_id}"), params=params)
             if r.status_code == 200:
@@ -57,6 +84,14 @@ class Connector:
 
 
 def update_dataset(city, language, queries, dataset):
+    """ A function to save a request in the dataset directory taking into account the sub directories and sub files.
+
+    :param city: The city of the request to save in the dataset
+    :param language: the language of the request to save in the dataset
+    :param queries: A pandas.DataFrame containing the api response for the request
+    :param dataset: The path of the dataset directory
+    :return: None
+    """
     city_folder = get_folder(dataset)
 
     if city not in city_folder:
@@ -74,6 +109,15 @@ def update_dataset(city, language, queries, dataset):
 
 
 def request(connector, params, dataset, path_generated_request, poss_request):
+    """ A function to perform and save the result of a request
+
+    :param connector: A Connector object to communicate with the API
+    :param params: The parameters of the request to perform (see the kaggle tutorial)
+    :param dataset: The path of the directory where to save the result of the request
+    :param path_generated_request: The path of the csv file containing all already used request
+    :param poss_request: The path of the file containing all possible requests that can be made
+    :return: None
+    """
     r = connector.query(params=params)
     if r != 422:
         queries = pd.DataFrame(r['prices']).assign(**r['request'])
@@ -103,6 +147,14 @@ def request(connector, params, dataset, path_generated_request, poss_request):
 
 
 def fake_request(stored_requests, query):
+    """ A function to simulate a request
+
+    Not used anymore
+
+    :param stored_requests:
+    :param query:
+    :return:
+    """
     queries = []
     for r in query:
         queries.append(pd.DataFrame(r['prices']).assign(**r['request']))
@@ -112,6 +164,11 @@ def fake_request(stored_requests, query):
 
 
 def generate_api_requests(path):
+    """ A function to generate all possible api requests
+
+    :param path: The path of the file where to save the possible requests
+    :return: None
+    """
     api_requests = []
     for c in city:
         for l in language:
@@ -124,6 +181,11 @@ def generate_api_requests(path):
 
 
 def generate_histo(gen_request):
+    """ A function to generate the distribution of city among the generated requests
+
+    :param gen_request: The path of the file containing all already generated requests
+    :return: A tuple containing the distribution of cities and the total number of rows in the dataset
+    """
     generated_r = pd.read_csv(gen_request)['city']
     histo = {}
 
@@ -140,6 +202,14 @@ def generate_histo(gen_request):
 
 
 def take_n_requests(path_requests, path_city, nb_requests, generated_r):
+    """ A function to generate n requests randomly
+
+    :param path_requests: The path of the CSV file containing all possible api requests
+    :param path_city: The path of the file containing the distribution of hotels among the different cities
+    :param nb_requests: The number of request to generate
+    :param generated_r: The path of the file containing all already generated requests
+    :return: A pandas.DataFrame containing the n generated requests
+    """
     real_dist, _ = generate_histo(generated_r)
     theo = pd.read_csv(path_city)
     theo = theo.sort_values(by=['city'], ignore_index=True)
@@ -180,6 +250,13 @@ def take_n_requests(path_requests, path_city, nb_requests, generated_r):
 
 
 def assigning_avatar(queries, connector):
+    """ A function to create and assign avatar to requests.
+    This function is used to create the right amount of avatar for a group a request and assign an avatar to each request depending of the date of this request.
+
+    :param queries: A pandas.DataFrame containing all requests
+    :param connector: A Connector object to communicate with the API
+    :return: None
+    """
     avatars = np.array(connector.get_avatar())
     start_avatar = max(list(map(lambda x: int(x), avatars[:, 1]))) + 1
     avatar_dict = dict()
@@ -194,6 +271,16 @@ def assigning_avatar(queries, connector):
 
 
 def making_n_requests(path_requests, path_city, nb_requests, private_key, dataset, path_gen_request):
+    """ A function used to perform n different requests to the api
+
+    :param path_requests: The path of the file containing all possible requests that can be made
+    :param path_city: The path of the csv file containing the distribution of hotels among the different cities
+    :param nb_requests: The number of request to perform
+    :param private_key: The private key needed to connect with the api
+    :param dataset: The path of the directory used to store the results of each api requests
+    :param path_gen_request: The path of the csv file containing all already used request
+    :return: None
+    """
     queries = take_n_requests(path_requests, path_city, nb_requests, path_gen_request)
     connector = Connector(private_key)
     assigning_avatar(queries, connector)
@@ -204,6 +291,12 @@ def making_n_requests(path_requests, path_city, nb_requests, private_key, datase
 
 
 def get_nb_row_dataset(dataset="../dataset"):
+    """A function to get the number of rows in the dataset
+
+    :param dataset: The path of the dataset
+    :return: The number of rows
+    :rtype: int
+    """
     city_folder = get_folder(dataset)
     total = 0
     for i in city_folder:
@@ -224,14 +317,10 @@ if __name__ == '__main__':
         'path_gen_request': '../meta_data/generated_requests.csv',
         'dataset': '../dataset'
     }
-    # print(response.history)
     #making_n_requests(**params)
     histo,total = generate_histo('../meta_data/generated_requests.csv')
     print()
     print(histo)
     print(f"Nb de requetes {total}")
     print(f"Nb de ligne {get_nb_row_dataset()}")
-    # print(real)
-    # print(sum(real['corrige']))
-    #
-    # generate_api_requests('../meta_data/possible_api_requests.csv')
+
