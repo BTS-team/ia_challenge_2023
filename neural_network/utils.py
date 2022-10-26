@@ -219,13 +219,13 @@ if __name__ == '__main__':
     params = {
         'path_requests': '../meta_data/possible_api_requests.csv',
         'path_city': '../meta_data/city_distribution.csv',
-        'nb_requests': 40,
+        'nb_requests': 80,
         'private_key': 'c760f776-e640-4d8c-a26e-dba910cc7218',
         'path_gen_request': '../meta_data/generated_requests.csv',
         'dataset': '../dataset'
     }
     # print(response.history)
-    making_n_requests(**params)
+    #making_n_requests(**params)
     histo,total = generate_histo('../meta_data/generated_requests.csv')
     print()
     print(histo)
