@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 
 def get_distribution(hotels, attribute):
     attribute_row = hotels[attribute].to_numpy()
-
+    print(attribute_row)
     keys = set(attribute_row.tolist())
     total_hotel = len(attribute_row)
     histo = []
