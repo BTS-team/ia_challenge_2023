@@ -123,12 +123,34 @@ def generate_api_requests(path):
     api_requests_df.to_csv(path, index=False)
 
 
-def take_n_requests(path_requests, path_city, nb_requests):
-    city_distribution = pd.read_csv(path_city)
+def generate_histo(gen_request):
+    generated_r = pd.read_csv(gen_request)['city']
+    histo = {}
+
+    for i in generated_r.to_list():
+        if i in histo.keys():
+            histo[i] += 1
+        else:
+            histo[i] = 1
+    total = sum(histo.values())
+    data = {'city': histo.keys(), 'nb_requests': histo.values()}
+    distribution = pd.DataFrame.from_dict(data)
+    distribution['dataset'] = distribution['nb_requests'] / total
+    return distribution, total
+
+
+def take_n_requests(path_requests, path_city, nb_requests, generated_r):
+    real_dist, _ = generate_histo(generated_r)
+    theo = pd.read_csv(path_city)
+    theo = theo.sort_values(by=['city'], ignore_index=True)
+    real_dist['hotels'] = theo['distribution']
+    real_dist['difference'] = theo['distribution'] - real_dist['dataset']
+    real_dist['corrige'] = real_dist['hotels'] + real_dist['difference']
+    print(real_dist)
     poss_api_requests = pd.read_csv(path_requests)
 
-    cities_weights = city_distribution['nb_hotel'].tolist()
-    cities = city_distribution['city'].tolist()
+    cities_weights = real_dist['corrige'].tolist()
+    cities = real_dist['city'].tolist()
     poss_api_requests.loc[(poss_api_requests['used'] == 1)] = 0
     queries = []
 
@@ -172,33 +194,13 @@ def assigning_avatar(queries, connector):
 
 
 def making_n_requests(path_requests, path_city, nb_requests, private_key, dataset, path_gen_request):
-    queries = take_n_requests(path_requests, path_city, nb_requests)
+    queries = take_n_requests(path_requests, path_city, nb_requests, path_gen_request)
     connector = Connector(private_key)
     assigning_avatar(queries, connector)
     queries_dict = list(queries.to_dict('index').values())
 
     for i in queries_dict:
         request(connector, i, dataset, path_gen_request, path_requests)
-
-
-def generate_histo(dataset="../dataset"):
-    city_folder = get_folder(dataset)
-    histo = []
-
-    for i in city_folder:
-        language_file = get_folder(f"{dataset}/{i}")
-
-        total_city = 0
-        for j in language_file:
-            temp = pd.read_csv(f"{dataset}/{i}/{j}")
-            total_city += temp.shape[0]
-
-        histo.append([i, total_city])
-
-    histo = pd.DataFrame(histo, columns=['city', 'row_nb'])
-    total = sum(histo['row_nb'])
-    histo['distribution'] = (histo['row_nb']/total).round(3)
-    print(histo)
 
 
 def get_nb_row_dataset(dataset="../dataset"):
@@ -217,12 +219,19 @@ if __name__ == '__main__':
     params = {
         'path_requests': '../meta_data/possible_api_requests.csv',
         'path_city': '../meta_data/city_distribution.csv',
-        'nb_requests': 1,
+        'nb_requests': 40,
         'private_key': 'c760f776-e640-4d8c-a26e-dba910cc7218',
         'path_gen_request': '../meta_data/generated_requests.csv',
         'dataset': '../dataset'
     }
     # print(response.history)
     making_n_requests(**params)
-    generate_histo()
+    histo,total = generate_histo('../meta_data/generated_requests.csv')
+    print()
+    print(histo)
+    print(f"Nb de requetes {total}")
+    print(f"Nb de ligne {get_nb_row_dataset()}")
+    # print(real)
+    # print(sum(real['corrige']))
+    #
     # generate_api_requests('../meta_data/possible_api_requests.csv')
