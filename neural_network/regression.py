@@ -69,7 +69,7 @@ def regression():
     reg = linear_model.LinearRegression()
     reg.fit(x_data_set,y_data_set)
 
-    #Prediction Part
+    #Prediction and Submission Part
     to_predict = pd.read_csv('../data/test_set.csv')
     hotels = pd.read_csv('../meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
     to_predict = to_predict.join(hotels, on=['hotel_id', 'city'])
@@ -96,7 +96,7 @@ def regression():
         submission_df.append([index, price_prediction[0]])
     
     submission_df = pd.DataFrame(submission_df, columns=['index', 'price'])
-    submission_df.to_csv('../sample_submission.csv',index=False)
+    submission_df.to_csv('../sample_submission_regression_1.csv',index=False)
 
 if __name__ == '__main__':
     regression()
