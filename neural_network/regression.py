@@ -1,9 +1,33 @@
 import torch
 import pandas as pd
 import numpy as np
+import warnings
 from sklearn import linear_model
-from utils import get_folder
+from utils import get_folder, get_nb_row_dataset
 from data import apply
+from sklearn.metrics import mean_squared_error
+
+warnings.filterwarnings("ignore")
+
+def validate(x_data_set,y_data_set):
+    cut = int(0.8*get_nb_row_dataset())
+    train_x = x_data_set.iloc[:cut,:]
+    valid_x = x_data_set.iloc[cut:,:]
+
+    train_y = y_data_set.iloc[:cut]
+    valid_y = y_data_set.iloc[cut:]
+
+    reg = linear_model.LinearRegression()
+    reg.fit(train_x,train_y)
+
+    #Validation:
+    y_predicted=[]
+    for i in valid_x.to_numpy():
+        prediction=reg.predict([i])
+        y_predicted.append(prediction)
+    rmse = mean_squared_error(valid_y, y_predicted, squared=False)
+    print(rmse)
+   
 
 def regression():
     dataset_path = '../dataset'
