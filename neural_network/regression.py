@@ -1,10 +1,9 @@
-import torch
 import pandas as pd
 import numpy as np
 import warnings
 from sklearn import linear_model
-from utils import get_folder, get_nb_row_dataset
-from data import apply
+from data_recovery.recovery import get_folder, get_nb_row_dataset
+from data_recovery.recovery import apply
 from sklearn.metrics import mean_squared_error
 
 warnings.filterwarnings("ignore")
@@ -70,7 +69,7 @@ def regression():
     reg.fit(x_data_set,y_data_set)
 
     #Prediction and Submission Part
-    to_predict = pd.read_csv('../data/test_set.csv')
+    to_predict = pd.read_csv('../meta_data/test_set.csv')
     hotels = pd.read_csv('../meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
     to_predict = to_predict.join(hotels, on=['hotel_id', 'city'])
 

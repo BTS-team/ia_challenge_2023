@@ -1,11 +1,11 @@
 import torch
 from torch import Tensor
-from torch.nn import Linear, ModuleList, MSELoss, Module
-from torch.nn.functional import relu, sigmoid, elu, silu
-from torch.optim import SGD, Adam
+from torch.nn import Linear, MSELoss, Module
+from torch.nn.functional import sigmoid
+from torch.optim import Adam
 import warnings
-from data import apply
-from dataset import prepare_dataloader
+from data_recovery.recovery import apply
+from data_loading.torch_dataloader import prepare_dataloader
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 
@@ -134,7 +134,7 @@ def submission():
 
     model = metrics[0]
 
-    to_predict = pd.read_csv('../data/test_set.csv')
+    to_predict = pd.read_csv('../meta_data/test_set.csv')
     hotels = pd.read_csv('../meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
     to_predict = to_predict.join(hotels, on=['hotel_id', 'city'])
 

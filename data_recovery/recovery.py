@@ -1,86 +1,8 @@
-import sys
 import pandas as pd
-from data import apply, language, response_test_1, response_test_2, city
-import requests
-import urllib.parse
-import urllib.error
+from utils import language, get_folder, generate_histo, Connector, get_nb_row_dataset
 import random
 import numpy as np
 import os
-
-
-def get_folder(path):
-    """A function to get the list of elements in a given directory
-
-    :param path: The path of the directory
-    :return: A list of string containing all files names and directories names
-    :rtype: list of string
-    """
-    arr = os.listdir(path)
-    return arr
-
-
-class Connector:
-    """A class to connect to the api
-
-    :param user_id: The private key to connect to the api
-    :param path: The web path of the api
-    """
-    def __init__(self, key):
-        """Constructor method
-        :param key: The private key of the api
-        """
-        domain = "51.91.251.0"
-        port = 3000
-        host = f"http://{domain}:{port}"
-        self.path = lambda x: urllib.parse.urljoin(host, x)
-        self.user_id = key
-
-    def create_avatar(self, name):
-        """A method to create an avatar
-
-        :param name: The name of the avatar to create
-        :return: None
-        """
-        try:
-            r = requests.post(self.path(f'avatars/{self.user_id}/{name}'))
-            print(r)
-        except urllib.error as e:
-            print(e)
-
-    def get_avatar(self):
-        """A method to get all avatar for the private key given in the constructor method
-
-        :return: A list of tuple containing each avatars and theirs ids
-        """
-        try:
-            r = requests.get(self.path(f"avatars/{self.user_id}"))
-            result = []
-            for avatar in r.json():
-                result.append([avatar['id'], avatar['name']])
-            return result
-
-        except urllib.error as e:
-            print(e)
-
-    def query(self, params):
-        """A method to make a request to the api
-
-        :param params: A dictionary containing all parameters of the request. This dictionary must be defined as in the tutorial.
-        :return: Either the request result in dictionary format nor the error code
-        """
-        try:
-            r = requests.get(self.path(f"pricing/{self.user_id}"), params=params)
-            if r.status_code == 200:
-                return r.json()
-            elif r.status_code == 422:
-                return 422
-            else:
-                print(r.status_code, r.json()['detail'])
-                sys.exit(1)
-
-        except urllib.error as e:
-            print(e)
 
 
 def update_dataset(city, language, queries, dataset):
@@ -144,61 +66,6 @@ def request(connector, params, dataset, path_generated_request, poss_request):
         ] = 2
         poss_api_requests.to_csv(poss_request, index=False)
         print(f"Request({params['city']},{params['language']},{params['date']},{params['mobile']}) ==> Done")
-
-
-def fake_request(stored_requests, query):
-    """ A function to simulate a request
-
-    Not used anymore
-
-    :param stored_requests:
-    :param query:
-    :return:
-    """
-    queries = []
-    for r in query:
-        queries.append(pd.DataFrame(r['prices']).assign(**r['request']))
-
-    queries = pd.concat(queries)
-    queries.to_csv(stored_requests)
-
-
-def generate_api_requests(path):
-    """ A function to generate all possible api requests
-
-    :param path: The path of the file where to save the possible requests
-    :return: None
-    """
-    api_requests = []
-    for c in city:
-        for l in language:
-            for i in range(45):
-                api_requests.append([c, l, i, 0, 0])
-                api_requests.append([c, l, i, 1, 0])
-
-    api_requests_df = pd.DataFrame(api_requests, columns=['city', 'language', 'date', 'mobile', 'used'])
-    api_requests_df.to_csv(path, index=False)
-
-
-def generate_histo(gen_request):
-    """ A function to generate the distribution of city among the generated requests
-
-    :param gen_request: The path of the file containing all already generated requests
-    :return: A tuple containing the distribution of cities and the total number of rows in the dataset
-    """
-    generated_r = pd.read_csv(gen_request)['city']
-    histo = {}
-
-    for i in generated_r.to_list():
-        if i in histo.keys():
-            histo[i] += 1
-        else:
-            histo[i] = 1
-    total = sum(histo.values())
-    data = {'city': histo.keys(), 'nb_requests': histo.values()}
-    distribution = pd.DataFrame.from_dict(data)
-    distribution['dataset'] = distribution['nb_requests'] / total
-    return distribution, total
 
 
 def take_n_requests(path_requests, path_city, nb_requests, generated_r):
@@ -290,24 +157,6 @@ def making_n_requests(path_requests, path_city, nb_requests, private_key, datase
         request(connector, i, dataset, path_gen_request, path_requests)
 
 
-def get_nb_row_dataset(dataset="../dataset"):
-    """A function to get the number of rows in the dataset
-
-    :param dataset: The path of the dataset
-    :return: The number of rows
-    :rtype: int
-    """
-    city_folder = get_folder(dataset)
-    total = 0
-    for i in city_folder:
-        language_file = get_folder(f"{dataset}/{i}")
-        for j in language_file:
-            temp = pd.read_csv(f"{dataset}/{i}/{j}")
-            total += temp.shape[0]
-
-    return total
-
-
 if __name__ == '__main__':
     params = {
         'path_requests': '../meta_data/possible_api_requests.csv',
@@ -317,10 +166,9 @@ if __name__ == '__main__':
         'path_gen_request': '../meta_data/generated_requests.csv',
         'dataset': '../dataset'
     }
-    #making_n_requests(**params)
-    histo,total = generate_histo('../meta_data/generated_requests.csv')
+    # making_n_requests(**params)
+    histo, total = generate_histo('../meta_data/generated_requests.csv')
     print()
     print(histo)
     print(f"Nb de requetes {total}")
     print(f"Nb de ligne {get_nb_row_dataset()}")
-
