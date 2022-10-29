@@ -85,6 +85,11 @@ class CustomDataset:
 
         return tuple(result)
 
+    def to_numpy(self):
+        if isinstance(self.x, pd.core.frame.DataFrame):
+            self.x = self.x.to_numpy()
+            self.y = self.y.to_numpy()
+
 
 def load_dataset(dataset_path, features_hotels, dtype="numpy"):
     """ A function to load the dataset directory

@@ -1,11 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-
-
-def get_folder(path):
-    arr = os.listdir(path)
-    return arr
+from utils import get_folder
 
 
 def update_csvfile(path, dataset="./dataset"):
@@ -37,18 +33,6 @@ def update_csvfile(path, dataset="./dataset"):
         df_dict[i].drop_duplicates(keep='first').to_csv(i, index=False)
 
 
-def get_nb_row_dataset(dataset="./dataset"):
-    city_folder = get_folder(dataset)
-    total = 0
-    for i in city_folder:
-        language_file = get_folder(f"{dataset}/{i}")
-        for j in language_file:
-            temp = pd.read_csv(f"{dataset}/{i}/{j}")
-            total += temp.shape[0]
-
-    return total
-
-
 def generate_generated_requests(dataset="./dataset"):
     city_folder = get_folder(dataset)
     generated_request = pd.DataFrame(columns=['city', 'language', 'date', 'mobile'])
@@ -74,8 +58,8 @@ def update_possible_requests(gen_request="meta_data/generated_requests.csv",
             (poss_request['language'] == i['language']) &
             (poss_request['mobile'] == i['mobile']), 'used'
         ] = 2
-        
-    poss_request.to_csv(path_poss_request,index=False)
+
+    poss_request.to_csv(path_poss_request, index=False)
 
 
 if __name__ == '__main__':
