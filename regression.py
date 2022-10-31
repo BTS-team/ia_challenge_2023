@@ -10,15 +10,19 @@ class Regression(MLModel):
     def __init__(self, dataset='dataset/', features_hotels='meta_data/features_hotels.csv'):
         super().__init__(dataset, features_hotels)
         self.train_set, self.valid_set = self.dataset.split(dist=[0.9])
-        #self.model = linear_model.LinearRegression()
-        self.model = PolynomialFeatures(degree=1)
+        self.model = linear_model.LinearRegression()
+        self.poly_model = PolynomialFeatures(degree=6)
 
     def train(self):
-        self.model.fit(self.train_set.x, self.train_set.y)
+        poly_x_train = self.poly_model.fit_transform(self.train_set.x)
+        self.model.fit(poly_x_train, self.train_set.y)
 
     def predict(self, x):
         x = list(map(lambda x: apply(x), x))
-        return self.model.predict([x])[0]
+
+        poly_x_predict= self.poly_model.fit_transform([x])
+
+        return self.model.predict(poly_x_predict)[0]
 
     def validate(self):
         return super().validate(self.valid_set.x, self.valid_set.y)
