@@ -1,101 +1,29 @@
-import pandas as pd
-import numpy as np
 import warnings
 from sklearn import linear_model
-from data_recovery.recovery import get_folder, get_nb_row_dataset
-from data_recovery.recovery import apply
-from sklearn.metrics import mean_squared_error
-
+from MLModel import MLModel
+from utils import apply
 warnings.filterwarnings("ignore")
 
-def validate(x_data_set,y_data_set):
-    cut = int(0.8*get_nb_row_dataset())
-    train_x = x_data_set.iloc[:cut,:]
-    valid_x = x_data_set.iloc[cut:,:]
 
-    train_y = y_data_set.iloc[:cut]
-    valid_y = y_data_set.iloc[cut:]
+class Regression(MLModel):
+    def __init__(self, dataset='../dataset', features_hotels='../meta_data/features_hotels.csv'):
+        super().__init__(dataset, features_hotels)
+        self.train_set, self.valid_set = self.dataset.split(dist=[0.9])
+        self.model = linear_model.LinearRegression()
 
-    reg = linear_model.LinearRegression()
-    reg.fit(train_x,train_y)
+    def train(self):
+        self.model.fit(self.train_set.x, self.train_set.y)
 
-    #Validation:
-    y_predicted=[]
-    for i in valid_x.to_numpy():
-        prediction=reg.predict([i])
-        y_predicted.append(prediction)
-    rmse = mean_squared_error(valid_y, y_predicted, squared=False)
-    print(rmse)
-   
+    def predict(self, x):
+        x = list(map(lambda x: apply(x), x))
+        return self.model.predict([x])[0]
 
-def regression():
-    dataset_path = '../dataset'
-    features_hotels = "../meta_data/features_hotels.csv"
+    def validate(self):
+        return super().validate(self.valid_set.x, self.valid_set.y)
 
-    city_folder = get_folder(dataset_path)
-    rows = None
-    for i in city_folder:
-        language_file = get_folder(f"{dataset_path}/{i}")
-        for j in language_file:
-            temp = pd.read_csv(f"{dataset_path}/{i}/{j}")
-            if rows is None:
-                rows = temp.to_numpy()
-            else:
-                rows = np.concatenate((rows, temp.to_numpy()))
-
-    np.random.shuffle(rows)
-    rows = pd.DataFrame(rows,
-                        columns=['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id'])
-    hotels = pd.read_csv(features_hotels, index_col=['hotel_id', 'city'])
-    pricing_requests = rows.join(hotels, on=['hotel_id', 'city'])
-
-    x_data_set = pricing_requests[[
-        'city',
-        'date',
-        'language',
-        'mobile',
-        'stock',
-        'group',
-        'brand',
-        'parking',
-        'pool',
-        'children_policy'
-    ]]
-
-    x_data_set = x_data_set.applymap(apply)
-    y_data_set = pricing_requests['price']
-
-    reg = linear_model.LinearRegression()
-    reg.fit(x_data_set,y_data_set)
-
-    #Prediction and Submission Part
-    to_predict = pd.read_csv('../meta_data/test_set.csv')
-    hotels = pd.read_csv('../meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
-    to_predict = to_predict.join(hotels, on=['hotel_id', 'city'])
-
-    submission_df = []
-
-    for i in to_predict.to_dict('index').values():
-        index = i['index']
-        X = [
-            i['city'],
-            i['date'],
-            i['language'],
-            i['mobile'],
-            i['stock'],
-            i['group'],
-            i['brand'],
-            i['parking'],
-            i['pool'],
-            i['children_policy']
-        ]
-        X = list(map(lambda x: apply(x), X))
-        
-        price_prediction=reg.predict([X])
-        submission_df.append([index, price_prediction[0]])
-    
-    submission_df = pd.DataFrame(submission_df, columns=['index', 'price'])
-    submission_df.to_csv('../sample_submission_regression_1.csv',index=False)
 
 if __name__ == '__main__':
-    regression()
+    model = Regression()
+    model.train()
+    print(model.validate())
+    print(model.submission())
