@@ -9,9 +9,10 @@ warnings.filterwarnings("ignore")
 class Regression(MLModel):
     def __init__(self, dataset='dataset/', features_hotels='meta_data/features_hotels.csv'):
         super().__init__(dataset, features_hotels)
-        self.train_set, self.valid_set = self.dataset.split(dist=[0.9])
+        self.train_set, self.valid_set = self.dataset.split(dist=[0.98])
         self.model = linear_model.LinearRegression()
-        self.poly_model = PolynomialFeatures(degree=6)
+        #degree 4 is the best
+        self.poly_model = PolynomialFeatures(degree=4)
 
     def train(self):
         poly_x_train = self.poly_model.fit_transform(self.train_set.x)
@@ -31,5 +32,5 @@ class Regression(MLModel):
 if __name__ == '__main__':
     model = Regression()
     model.train()
-    print(model.validate())
-    #print(model.submission())
+    #print(model.validate())
+    model.submission().to_csv("./polynomial_submission_degree4_1.csv", index=False)
