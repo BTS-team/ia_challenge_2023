@@ -116,7 +116,7 @@ def load_dataset(dataset_path, features_hotels, dtype="numpy"):
                         columns=['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id'])
     hotels = pd.read_csv(features_hotels, index_col=['hotel_id', 'city'])
     pricing_requests = rows.join(hotels, on=['hotel_id', 'city'])
-    y_data_set = pricing_requests['price']
+    y_data_set = pricing_requests[['price']]
     x_data_set = pricing_requests[[
         'city',
         'date',
