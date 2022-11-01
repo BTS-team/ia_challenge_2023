@@ -52,7 +52,7 @@ def generate_histo(gen_request):
     return distribution, total
 
 
-def get_nb_row_dataset(dataset="../dataset"):
+def get_nb_row_dataset(dataset="dataset/"):
     """A function to get the number of rows in the dataset
 
     :param dataset: The path of the dataset
