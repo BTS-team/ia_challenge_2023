@@ -12,7 +12,7 @@ class Regression(MLModel):
         self.train_set, self.valid_set = self.dataset.split(dist=[0.98])
         self.model = linear_model.LinearRegression()
         #degree 4 is the best
-        self.poly_model = PolynomialFeatures(degree=4)
+        self.poly_model = PolynomialFeatures(degree=1)
 
     def train(self):
         poly_x_train = self.poly_model.fit_transform(self.train_set.x)

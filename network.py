@@ -31,6 +31,8 @@ class Model(Module):
         return x
 
 
+
+
 def saveModel(model, path):
     torch.save(model.state_dict(), path)
 
@@ -79,8 +81,6 @@ def train(model, train_data, validation_data, learning_rate=0.001, loss_function
                 val_loss = loss_function(prediction, y_val)
                 epoch_vall_loss += val_loss.item()
                 total += y_val.size(0)
-                print(y_val)
-                print(prediction)
                 y_predicted.extend(prediction.tolist())
                 y_actual.extend(y_val.tolist())
 
