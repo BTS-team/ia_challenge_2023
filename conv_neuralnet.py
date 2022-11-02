@@ -6,7 +6,7 @@ from datascience.data_loading import prepare_dataloader
 from datascience.data_loading import torch_test_set
 import torch
 from torch import Tensor
-from torch.nn import Linear, MSELoss, Module, Dropout
+from torch.nn import Linear, MSELoss, Module, Conv1d
 from torch.nn.functional import relu, sigmoid
 from torch.optim import Adam
 import warnings
@@ -21,19 +21,20 @@ warnings.filterwarnings("ignore")
 class NNModel(Module):
     def __init__(self):
         super().__init__()
-        self.input = Linear(62, 62)
-        self.hidden = Linear(62, 42)
-        self.hidden_2 = Linear(42, 32)
-        self.output = Linear(32, 1)
-        self.dropout = Dropout(0.25)
+        self.input = Conv1d(in_channels=1, out_channels=1, kernel_size=3, bias=True)
+        print(self.input)
+        #self.hidden = Conv1d(in_channels=2, out_channels=2, kernel_size=5, bias=True)
+        #self.hidden_2 = Conv1d(in_channels=2, out_channels=1, kernel_size=5, bias=True)
+        self.hidden_3 = Linear(60, 52)
+        self.output = Linear(52, 1)
 
     def forward(self, x):
+        x = x.unsqueeze(2).unsqueeze(0)
+        print(x.shape)
         x = sigmoid(self.input(x))
-        x = self.dropout(x)
-        x = sigmoid(self.hidden(x))
-        x = self.dropout(x)
-        x = sigmoid(self.hidden_2(x))
-        x = self.dropout(x)
+        #x = sigmoid(self.hidden(x))
+        #x = sigmoid(self.hidden_2(x))
+        x = sigmoid(self.hidden_3(x))
         return self.output(x)
 
     def save(self, model_path):
@@ -44,7 +45,7 @@ class NNModel(Module):
         self.eval()
 
 
-class DeepLearningModel(MLModel):
+class DeepLearningModel:
     def __init__(self, dataset='dataset/', features_hotels='meta_data/features_hotels.csv'):
         self.dataset = prepare_dataloader(dataset, features_hotels)
         self.model = NNModel()
@@ -103,12 +104,11 @@ class DeepLearningModel(MLModel):
         with torch.no_grad():
             self.model.eval()
             for X_val, y_val in self.dataset[1]:
-                prediction = self.model(X_val)
+                prediction = self.model(X_val)[0][0]
                 val_loss = loss_fn(prediction, y_val)
                 vall_loss += val_loss.item()
                 y_predicted.extend(prediction.tolist())
                 y_actual.extend(y_val.tolist())
-
         val_loss_value = vall_loss / len(self.dataset[1])
         rmse = mean_squared_error(y_actual, y_predicted, squared=False)
 
@@ -129,7 +129,7 @@ class DeepLearningModel(MLModel):
 
 if __name__ == '__main__':
     nn = DeepLearningModel()
-    nn.train(epochs=30)
-    # print("training done")
-    nn.submission().to_csv("nnet_submission_epoch_30_new.csv", index=False)
+    nn.train(epochs=15)
+    #print("training done")
+    #nn.submission().to_csv("nnet_submission_epoch_30_new.csv", index=False)
 
