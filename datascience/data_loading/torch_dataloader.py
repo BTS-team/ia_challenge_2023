@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
-from datascience.data_loading import load_dataset,load_test_set
+from datascience.data_loading import load_dataset, load_test_set
 from torch.nn.functional import one_hot
 from datascience.utils import city, language, brand, group
 import pandas as pd
@@ -35,6 +35,7 @@ def one_hot_encoding(x):
     add_one_hot_columns(result, language_df, language)
     add_one_hot_columns(result, brand_df, brand)
     add_one_hot_columns(result, group_df, group)
+
     return result
 
 

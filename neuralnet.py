@@ -21,10 +21,10 @@ warnings.filterwarnings("ignore")
 class NNModel(Module):
     def __init__(self):
         super().__init__()
-        self.input = Linear(62, 62)
-        self.hidden = Linear(62, 42)
-        self.hidden_2 = Linear(42, 32)
-        self.output = Linear(32, 1)
+        self.input = Linear(62, 248)
+        self.hidden = Linear(248, 62)
+        self.hidden_2 = Linear(62, 62)
+        self.output = Linear(62, 1)
         self.dropout = Dropout(0.25)
 
     def forward(self, x):
@@ -32,8 +32,8 @@ class NNModel(Module):
         x = self.dropout(x)
         x = sigmoid(self.hidden(x))
         x = self.dropout(x)
-        x = sigmoid(self.hidden_2(x))
-        x = self.dropout(x)
+        #x = relu(self.hidden_2(x))
+        #x = self.dropout(x)
         return self.output(x)
 
     def save(self, model_path):
@@ -129,7 +129,7 @@ class DeepLearningModel(MLModel):
 
 if __name__ == '__main__':
     nn = DeepLearningModel()
-    nn.train(epochs=30)
+    nn.train(epochs=15)
     # print("training done")
-    nn.submission().to_csv("nnet_submission_epoch_30_new.csv", index=False)
+    nn.submission().to_csv("nnet_submission_epoch_30_regularization.csv", index=False)
 
