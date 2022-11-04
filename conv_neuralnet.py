@@ -81,7 +81,7 @@ class DeepLearningModel:
             print(
                 f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
 
-        torch.save(self.model, "nn_model.pth")
+        torch.save(self.model, "backup/19_56713/nn_model.pth")
 
         if show:
             x = list(range(1, epochs + 1))

@@ -11,19 +11,27 @@ pd.option_context('display.max_columns', None)
 
 
 def add_one_hot_columns(result, column, label):
-    onehot = one_hot(column, num_classes=len(label.keys())).numpy()
-    # result += pd.DataFrame(onehot.numpy(), columns=label.keys())
-    for i, key in enumerate(label.keys()):
-        result[key] = onehot[:, i]
+    if isinstance(label, dict):
+        length = len(label.keys())
+    else:
+        length = label[1]
+        name = label[0]
+    onehot = one_hot(column, num_classes=length).numpy()
+
+    if isinstance(label, dict):
+        for i, key in enumerate(label.keys()):
+            result[key] = onehot[:, i]
+    else:
+        for i in range(length):
+            key = f"{name}_{i}"
+            result[key] = onehot[:, i]
 
 
 def one_hot_encoding(x):
     pd.set_option('display.max_columns', len(list(x)))
     result = x[[
-        'date',
         'mobile',
         'parking',
-        'children_policy',
         'pool',
         'stock'
     ]]
@@ -31,11 +39,15 @@ def one_hot_encoding(x):
     language_df = torch.from_numpy(x['language'].to_numpy())
     brand_df = torch.from_numpy(x['brand'].to_numpy())
     group_df = torch.from_numpy(x['group'].to_numpy())
+    children_df = torch.from_numpy(x['children_policy'].to_numpy())
+    date_df = torch.from_numpy(x['date'].to_numpy())
     add_one_hot_columns(result, city_df, city)
     add_one_hot_columns(result, language_df, language)
     add_one_hot_columns(result, brand_df, brand)
     add_one_hot_columns(result, group_df, group)
-
+    add_one_hot_columns(result, children_df, ('children_policy', 3))
+    add_one_hot_columns(result, date_df, ('date', 45))
+    print(result.shape)
     return result
 
 

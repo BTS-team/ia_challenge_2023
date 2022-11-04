@@ -21,19 +21,19 @@ warnings.filterwarnings("ignore")
 class NNModel(Module):
     def __init__(self):
         super().__init__()
-        self.input = Linear(62, 248)
-        self.hidden = Linear(248, 62)
-        self.hidden_2 = Linear(62, 62)
-        self.output = Linear(62, 1)
+        self.input = Linear(108, 108)
+        # self.hidden = Linear(248, 62)
+        # self.hidden_2 = Linear(62, 62)
+        self.output = Linear(108, 1)
         self.dropout = Dropout(0.25)
 
     def forward(self, x):
         x = sigmoid(self.input(x))
         x = self.dropout(x)
-        x = sigmoid(self.hidden(x))
-        x = self.dropout(x)
-        #x = relu(self.hidden_2(x))
-        #x = self.dropout(x)
+        # x = sigmoid(self.hidden(x))
+        # x = self.dropout(x)
+        # x = relu(self.hidden_2(x))
+        # x = self.dropout(x)
         return self.output(x)
 
     def save(self, model_path):
@@ -80,7 +80,7 @@ class DeepLearningModel(MLModel):
             print(
                 f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
 
-        torch.save(self.model, "nn_model.pth")
+        torch.save(self.model, "backup/19_56713/nn_model.pth")
 
         if show:
             x = list(range(1, epochs + 1))
@@ -129,7 +129,6 @@ class DeepLearningModel(MLModel):
 
 if __name__ == '__main__':
     nn = DeepLearningModel()
-    nn.train(epochs=15)
+    nn.train(epochs=23)
     # print("training done")
-    nn.submission().to_csv("nnet_submission_epoch_30_regularization.csv", index=False)
-
+    nn.submission().to_csv("nnet_submission_epoch_one_hot.csv", index=False)
