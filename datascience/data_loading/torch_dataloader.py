@@ -47,20 +47,41 @@ def one_hot_encoding(x):
     add_one_hot_columns(result, group_df, group)
     add_one_hot_columns(result, children_df, ('children_policy', 3))
     add_one_hot_columns(result, date_df, ('date', 45))
-    print(result.shape)
     return result
 
 
-def torch_test_set(test_set='meta_data/test_set.csv', features_hotels='meta_data/features_hotels.csv'):
+def to_matrix(x):
+    x = x.to_numpy()
+    dataset = []
+    for row in x:
+        temp = np.reshape(row, (12, 9))
+        dataset.append(temp)
+    dataset = np.array(dataset)
+    return dataset
+
+
+def torch_test_set(test_set='meta_data/test_set.csv', features_hotels='meta_data/features_hotels.csv', matrix=False):
     index, test_set = load_test_set(test_set, features_hotels)
-    return index, one_hot_encoding(test_set)
+    test_set = one_hot_encoding(test_set)
+
+    if not matrix:
+        return index, test_set
+    else:
+        return index, to_matrix(test_set)
 
 
 class Data(Dataset):
-    def __init__(self, dataset_path, features_hotels):
+    def __init__(self, dataset_path, features_hotels, matrix=False):
         dataset = load_dataset(dataset_path, features_hotels, dtype="pandas")
         x = one_hot_encoding(dataset.x)
-        self.X = torch.from_numpy(x.to_numpy().astype(np.float32))
+
+        if matrix:
+            x = to_matrix(x)
+            print(x.shape)
+            self.X = torch.from_numpy(x.astype(np.float32))
+        else:
+            self.X = torch.from_numpy(x.to_numpy().astype(np.float32))
+
         self.y = torch.from_numpy(dataset.y.to_numpy().astype(np.float32))
         self.len = self.X.shape[0]
 
@@ -71,8 +92,8 @@ class Data(Dataset):
         return self.len
 
 
-def prepare_dataloader(dataset_path, features_hotels, dist=[0.9, 0.08, 0.02], batch_size=64):
-    dataset = Data(dataset_path, features_hotels)
+def prepare_dataloader(dataset_path, features_hotels, dist=[0.8, 0.19, 0.01], batch_size=64, matrix=False):
+    dataset = Data(dataset_path, features_hotels, matrix)
     rep = list(map(lambda x: int(x * dataset.__len__()), dist))
     rep[-1] += dataset.__len__() - sum(rep)
     train, valid, test = torch.utils.data.random_split(dataset, rep)
@@ -83,7 +104,7 @@ def prepare_dataloader(dataset_path, features_hotels, dist=[0.9, 0.08, 0.02], ba
 
 
 if __name__ == '__main__':
-    dataset = Data('../../dataset', "../../meta_data/features_hotels.csv")
+    dataset = Data('../../dataset', "../../meta_data/features_hotels.csv", matrix=True)
     # loader = prepare_dataloader('../../dataset', "../meta_data/features_hotels.csv", batch_size=1)
     """ for batch, (X, y) in enumerate(loader[0]):
         print(f"Batch: {batch + 1}")
