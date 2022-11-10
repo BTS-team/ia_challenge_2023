@@ -12,26 +12,21 @@ warnings.filterwarnings("ignore")
 class NNModel(Module):
     def __init__(self):
         super().__init__()
-        self.input = Conv1d(in_channels=12, out_channels=10, kernel_size=3, bias=True)
-        #self.hidden_conv = Conv1d(in_channels=10, out_channels=9, kernel_size=2, bias=True)
-        #self.hidden_conv_2 = Conv1d(in_channels=9, out_channels=7, kernel_size=3, bias=True)
-        self.linear_1 = Linear(70, 140)
-        self.output = Linear(140, 1)
-        self.dropout = Dropout(0.25)
+        self.input = Linear(108, 108)
+        self.hid_1 = Linear(108, 54)
+        self.hid_2 = Linear(54, 54)
+        self.hid_3 = Linear(54, 54)
+        self.output = Linear(54, 1)
+        self.dropout = Dropout(0.2)
 
     def forward(self, x):
-        #print(x.shape)
-        x = relu(self.input(x))
-        # print(x.shape)
+        x = sigmoid(self.input(x))
         x = self.dropout(x)
-        # x = sigmoid(self.hidden_conv(x))
-        #print(x.shape)
-        # x = self.dropout(x)
-        # x = sigmoid(self.hidden_conv_2(x))
-        # x = self.dropout(x)
-        #print(x.shape)
-        x = flatten(x, start_dim=1)
-        x = sigmoid(self.linear_1(x))
+        x = sigmoid(self.hid_1(x))
+        x = self.dropout(x)
+        x = sigmoid(self.hid_2(x))
+        x = sigmoid(self.hid_3(x))
+        x = self.dropout(x)
         return self.output(x)
 
     def save(self, model_path):
@@ -42,22 +37,9 @@ class NNModel(Module):
         self.eval()
 
 
-class ConvModel(DeepLearningModel):
-    def __init__(self, model, dataset='dataset/', features_hotels='meta_data/features_hotels.csv'):
-        self.dataset = prepare_dataloader(dataset, features_hotels, matrix=True)
-        self.model = model
-        self.features_hotels = features_hotels
-
-    def load_test_set(self, path):
-        index, x = torch_test_set(path, self.features_hotels, matrix=True)
-        return index, x
-
-
 if __name__ == '__main__':
     model = NNModel()
-    print(model.input.weight)
-    nn = ConvModel(model)
-    nn.train("test.pth", epochs=5, show=True)
-    print(model.input.weight)
+    nn = DeepLearningModel(model)
+    nn.train("test.pth", epochs=50)
     # print("training done")
-    #nn.submission().to_csv("nnet_submission_epoch_conv.csv", index=False)
+    nn.submission().to_csv("nnet_submission_epoch_more_data.csv", index=False)

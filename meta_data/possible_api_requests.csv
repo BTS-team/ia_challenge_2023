@@ -35,7 +35,7 @@ amsterdam,austrian,16,0,0
 amsterdam,austrian,16,1,0
 amsterdam,austrian,17,0,0
 amsterdam,austrian,17,1,0
-amsterdam,austrian,18,0,0
+amsterdam,austrian,18,0,2
 amsterdam,austrian,18,1,0
 amsterdam,austrian,19,0,0
 amsterdam,austrian,19,1,0
@@ -47,7 +47,7 @@ amsterdam,austrian,22,0,0
 amsterdam,austrian,22,1,0
 amsterdam,austrian,23,0,0
 amsterdam,austrian,23,1,0
-amsterdam,austrian,24,0,0
+amsterdam,austrian,24,0,2
 amsterdam,austrian,24,1,0
 amsterdam,austrian,25,0,0
 amsterdam,austrian,25,1,0
@@ -69,10 +69,10 @@ amsterdam,austrian,33,0,0
 amsterdam,austrian,33,1,0
 amsterdam,austrian,34,0,0
 amsterdam,austrian,34,1,0
-amsterdam,austrian,35,0,0
+amsterdam,austrian,35,0,2
 amsterdam,austrian,35,1,0
 amsterdam,austrian,36,0,0
-amsterdam,austrian,36,1,0
+amsterdam,austrian,36,1,2
 amsterdam,austrian,37,0,0
 amsterdam,austrian,37,1,2
 amsterdam,austrian,38,0,0
@@ -85,14 +85,14 @@ amsterdam,austrian,41,0,0
 amsterdam,austrian,41,1,0
 amsterdam,austrian,42,0,2
 amsterdam,austrian,42,1,2
-amsterdam,austrian,43,0,0
+amsterdam,austrian,43,0,2
 amsterdam,austrian,43,1,0
 amsterdam,austrian,44,0,0
 amsterdam,austrian,44,1,0
 amsterdam,belgian,0,0,0
 amsterdam,belgian,0,1,0
 amsterdam,belgian,1,0,0
-amsterdam,belgian,1,1,0
+amsterdam,belgian,1,1,2
 amsterdam,belgian,2,0,0
 0,0,0,0,0
 amsterdam,belgian,3,0,0
@@ -100,7 +100,7 @@ amsterdam,belgian,3,1,0
 amsterdam,belgian,4,0,0
 amsterdam,belgian,4,1,0
 amsterdam,belgian,5,0,0
-amsterdam,belgian,5,1,0
+amsterdam,belgian,5,1,2
 amsterdam,belgian,6,0,0
 amsterdam,belgian,6,1,0
 amsterdam,belgian,7,0,0
@@ -118,7 +118,7 @@ amsterdam,belgian,12,1,2
 amsterdam,belgian,13,0,0
 amsterdam,belgian,13,1,0
 amsterdam,belgian,14,0,2
-amsterdam,belgian,14,1,0
+amsterdam,belgian,14,1,2
 amsterdam,belgian,15,0,0
 amsterdam,belgian,15,1,0
 amsterdam,belgian,16,0,0
@@ -143,7 +143,7 @@ amsterdam,belgian,25,0,0
 amsterdam,belgian,25,1,2
 amsterdam,belgian,26,0,0
 amsterdam,belgian,26,1,0
-amsterdam,belgian,27,0,0
+amsterdam,belgian,27,0,2
 amsterdam,belgian,27,1,0
 amsterdam,belgian,28,0,0
 amsterdam,belgian,28,1,0
@@ -213,7 +213,7 @@ amsterdam,bulgarian,15,0,2
 amsterdam,bulgarian,15,1,0
 amsterdam,bulgarian,16,0,0
 amsterdam,bulgarian,16,1,0
-amsterdam,bulgarian,17,0,0
+amsterdam,bulgarian,17,0,2
 amsterdam,bulgarian,17,1,2
 amsterdam,bulgarian,18,0,0
 amsterdam,bulgarian,18,1,0
@@ -245,7 +245,7 @@ amsterdam,bulgarian,31,0,0
 amsterdam,bulgarian,31,1,0
 amsterdam,bulgarian,32,0,0
 amsterdam,bulgarian,32,1,0
-amsterdam,bulgarian,33,0,0
+amsterdam,bulgarian,33,0,2
 amsterdam,bulgarian,33,1,0
 amsterdam,bulgarian,34,0,0
 amsterdam,bulgarian,34,1,2
@@ -272,7 +272,7 @@ amsterdam,bulgarian,44,1,0
 amsterdam,croatian,0,0,0
 amsterdam,croatian,0,1,0
 amsterdam,croatian,1,0,2
-amsterdam,croatian,1,1,0
+amsterdam,croatian,1,1,2
 amsterdam,croatian,2,0,0
 amsterdam,croatian,2,1,2
 amsterdam,croatian,3,0,0
@@ -303,7 +303,7 @@ amsterdam,croatian,15,0,0
 amsterdam,croatian,15,1,0
 amsterdam,croatian,16,0,0
 amsterdam,croatian,16,1,2
-amsterdam,croatian,17,0,0
+amsterdam,croatian,17,0,2
 amsterdam,croatian,17,1,0
 amsterdam,croatian,18,0,0
 amsterdam,croatian,18,1,0
@@ -334,7 +334,7 @@ amsterdam,croatian,30,1,0
 amsterdam,croatian,31,0,0
 amsterdam,croatian,31,1,0
 amsterdam,croatian,32,0,0
-amsterdam,croatian,32,1,0
+amsterdam,croatian,32,1,2
 amsterdam,croatian,33,0,0
 amsterdam,croatian,33,1,0
 amsterdam,croatian,34,0,0
@@ -348,7 +348,7 @@ amsterdam,croatian,37,1,0
 amsterdam,croatian,38,0,0
 amsterdam,croatian,38,1,0
 amsterdam,croatian,39,0,0
-amsterdam,croatian,39,1,0
+amsterdam,croatian,39,1,2
 amsterdam,croatian,40,0,0
 amsterdam,croatian,40,1,0
 amsterdam,croatian,41,0,2
@@ -361,7 +361,7 @@ amsterdam,croatian,44,0,0
 amsterdam,croatian,44,1,0
 amsterdam,cypriot,0,0,0
 amsterdam,cypriot,0,1,0
-amsterdam,cypriot,1,0,0
+amsterdam,cypriot,1,0,2
 amsterdam,cypriot,1,1,0
 amsterdam,cypriot,2,0,2
 amsterdam,cypriot,2,1,0
@@ -369,7 +369,7 @@ amsterdam,cypriot,3,0,0
 amsterdam,cypriot,3,1,0
 amsterdam,cypriot,4,0,0
 amsterdam,cypriot,4,1,0
-amsterdam,cypriot,5,0,0
+amsterdam,cypriot,5,0,2
 amsterdam,cypriot,5,1,0
 amsterdam,cypriot,6,0,0
 amsterdam,cypriot,6,1,0
@@ -390,7 +390,7 @@ amsterdam,cypriot,13,1,0
 amsterdam,cypriot,14,0,0
 amsterdam,cypriot,14,1,0
 amsterdam,cypriot,15,0,0
-amsterdam,cypriot,15,1,0
+amsterdam,cypriot,15,1,2
 amsterdam,cypriot,16,0,0
 amsterdam,cypriot,16,1,0
 amsterdam,cypriot,17,0,0
@@ -522,7 +522,7 @@ amsterdam,czech,34,1,0
 amsterdam,czech,35,0,0
 amsterdam,czech,35,1,2
 amsterdam,czech,36,0,0
-amsterdam,czech,36,1,1
+0,0,0,0,0
 amsterdam,czech,37,0,0
 amsterdam,czech,37,1,0
 amsterdam,czech,38,0,0
@@ -625,7 +625,7 @@ amsterdam,danish,41,0,0
 amsterdam,danish,41,1,0
 amsterdam,danish,42,0,0
 amsterdam,danish,42,1,0
-amsterdam,danish,43,0,0
+amsterdam,danish,43,0,2
 amsterdam,danish,43,1,0
 amsterdam,danish,44,0,0
 amsterdam,danish,44,1,0
@@ -649,7 +649,7 @@ amsterdam,dutch,8,0,0
 amsterdam,dutch,8,1,0
 amsterdam,dutch,9,0,0
 amsterdam,dutch,9,1,2
-amsterdam,dutch,10,0,0
+amsterdam,dutch,10,0,2
 amsterdam,dutch,10,1,0
 amsterdam,dutch,11,0,0
 amsterdam,dutch,11,1,0
@@ -695,7 +695,7 @@ amsterdam,dutch,31,0,0
 amsterdam,dutch,31,1,0
 amsterdam,dutch,32,0,0
 amsterdam,dutch,32,1,0
-amsterdam,dutch,33,0,0
+amsterdam,dutch,33,0,2
 amsterdam,dutch,33,1,0
 amsterdam,dutch,34,0,0
 amsterdam,dutch,34,1,2
@@ -780,11 +780,11 @@ amsterdam,estonian,28,1,0
 amsterdam,estonian,29,0,0
 amsterdam,estonian,29,1,0
 amsterdam,estonian,30,0,0
-amsterdam,estonian,30,1,0
+amsterdam,estonian,30,1,2
 amsterdam,estonian,31,0,0
 amsterdam,estonian,31,1,2
 amsterdam,estonian,32,0,2
-amsterdam,estonian,32,1,0
+amsterdam,estonian,32,1,2
 amsterdam,estonian,33,0,2
 amsterdam,estonian,33,1,0
 amsterdam,estonian,34,0,0
@@ -818,7 +818,7 @@ amsterdam,finnish,2,1,0
 amsterdam,finnish,3,0,2
 amsterdam,finnish,3,1,0
 amsterdam,finnish,4,0,0
-amsterdam,finnish,4,1,0
+amsterdam,finnish,4,1,2
 amsterdam,finnish,5,0,2
 amsterdam,finnish,5,1,0
 amsterdam,finnish,6,0,0
@@ -877,7 +877,7 @@ amsterdam,finnish,32,0,0
 amsterdam,finnish,32,1,0
 amsterdam,finnish,33,0,0
 amsterdam,finnish,33,1,2
-amsterdam,finnish,34,0,0
+amsterdam,finnish,34,0,2
 amsterdam,finnish,34,1,0
 amsterdam,finnish,35,0,0
 amsterdam,finnish,35,1,0
@@ -927,12 +927,12 @@ amsterdam,french,12,0,0
 amsterdam,french,12,1,2
 amsterdam,french,13,0,0
 amsterdam,french,13,1,2
-amsterdam,french,14,0,0
+amsterdam,french,14,0,2
 amsterdam,french,14,1,0
 amsterdam,french,15,0,0
 amsterdam,french,15,1,0
 amsterdam,french,16,0,0
-amsterdam,french,16,1,0
+amsterdam,french,16,1,2
 amsterdam,french,17,0,0
 amsterdam,french,17,1,0
 amsterdam,french,18,0,0
@@ -1013,7 +1013,7 @@ amsterdam,german,10,0,0
 amsterdam,german,10,1,0
 amsterdam,german,11,0,2
 amsterdam,german,11,1,2
-amsterdam,german,12,0,0
+amsterdam,german,12,0,2
 amsterdam,german,12,1,0
 amsterdam,german,13,0,0
 amsterdam,german,13,1,0
@@ -1113,7 +1113,7 @@ amsterdam,greek,15,0,0
 amsterdam,greek,15,1,0
 amsterdam,greek,16,0,0
 amsterdam,greek,16,1,0
-amsterdam,greek,17,0,0
+amsterdam,greek,17,0,2
 amsterdam,greek,17,1,0
 amsterdam,greek,18,0,0
 amsterdam,greek,18,1,0
@@ -1134,7 +1134,7 @@ amsterdam,greek,25,1,0
 amsterdam,greek,26,0,0
 amsterdam,greek,26,1,0
 amsterdam,greek,27,0,0
-amsterdam,greek,27,1,0
+amsterdam,greek,27,1,2
 amsterdam,greek,28,0,0
 amsterdam,greek,28,1,0
 amsterdam,greek,29,0,0
@@ -1159,8 +1159,8 @@ amsterdam,greek,38,0,0
 amsterdam,greek,38,1,0
 amsterdam,greek,39,0,0
 amsterdam,greek,39,1,2
-amsterdam,greek,40,0,0
-amsterdam,greek,40,1,0
+amsterdam,greek,40,0,2
+amsterdam,greek,40,1,2
 amsterdam,greek,41,0,0
 0,0,0,0,0
 amsterdam,greek,42,0,0
@@ -1198,7 +1198,7 @@ amsterdam,hungarian,12,1,0
 amsterdam,hungarian,13,0,0
 amsterdam,hungarian,13,1,0
 amsterdam,hungarian,14,0,0
-amsterdam,hungarian,14,1,0
+amsterdam,hungarian,14,1,1
 amsterdam,hungarian,15,0,0
 amsterdam,hungarian,15,1,0
 amsterdam,hungarian,16,0,0
@@ -1274,7 +1274,7 @@ amsterdam,irish,5,1,0
 amsterdam,irish,6,0,0
 amsterdam,irish,6,1,2
 amsterdam,irish,7,0,0
-amsterdam,irish,7,1,0
+amsterdam,irish,7,1,1
 amsterdam,irish,8,0,0
 amsterdam,irish,8,1,0
 amsterdam,irish,9,0,0
@@ -1329,7 +1329,7 @@ amsterdam,irish,33,0,0
 amsterdam,irish,33,1,0
 amsterdam,irish,34,0,0
 amsterdam,irish,34,1,0
-amsterdam,irish,35,0,0
+amsterdam,irish,35,0,2
 amsterdam,irish,35,1,0
 amsterdam,irish,36,0,0
 amsterdam,irish,36,1,0
@@ -1382,7 +1382,7 @@ amsterdam,italian,14,1,0
 amsterdam,italian,15,0,0
 amsterdam,italian,15,1,0
 amsterdam,italian,16,0,0
-amsterdam,italian,16,1,0
+amsterdam,italian,16,1,2
 amsterdam,italian,17,0,0
 amsterdam,italian,17,1,2
 amsterdam,italian,18,0,0
@@ -1441,7 +1441,7 @@ amsterdam,italian,44,0,0
 0,0,0,0,0
 amsterdam,latvian,0,0,0
 amsterdam,latvian,0,1,0
-amsterdam,latvian,1,0,0
+amsterdam,latvian,1,0,2
 amsterdam,latvian,1,1,0
 amsterdam,latvian,2,0,0
 amsterdam,latvian,2,1,0
@@ -1497,7 +1497,7 @@ amsterdam,latvian,27,0,0
 amsterdam,latvian,27,1,0
 amsterdam,latvian,28,0,0
 amsterdam,latvian,28,1,0
-amsterdam,latvian,29,0,0
+amsterdam,latvian,29,0,2
 amsterdam,latvian,29,1,0
 amsterdam,latvian,30,0,0
 amsterdam,latvian,30,1,2
@@ -1536,11 +1536,11 @@ amsterdam,lithuanian,1,1,0
 amsterdam,lithuanian,2,0,0
 amsterdam,lithuanian,2,1,0
 amsterdam,lithuanian,3,0,0
-amsterdam,lithuanian,3,1,0
+amsterdam,lithuanian,3,1,2
 amsterdam,lithuanian,4,0,0
 amsterdam,lithuanian,4,1,0
 amsterdam,lithuanian,5,0,0
-amsterdam,lithuanian,5,1,0
+amsterdam,lithuanian,5,1,2
 amsterdam,lithuanian,6,0,0
 amsterdam,lithuanian,6,1,0
 amsterdam,lithuanian,7,0,0
@@ -1613,7 +1613,7 @@ amsterdam,lithuanian,40,0,0
 amsterdam,lithuanian,40,1,0
 amsterdam,lithuanian,41,0,0
 amsterdam,lithuanian,41,1,0
-amsterdam,lithuanian,42,0,0
+amsterdam,lithuanian,42,0,2
 amsterdam,lithuanian,42,1,0
 amsterdam,lithuanian,43,0,0
 amsterdam,lithuanian,43,1,0
@@ -1650,7 +1650,7 @@ amsterdam,luxembourgish,13,1,0
 amsterdam,luxembourgish,14,0,0
 amsterdam,luxembourgish,14,1,0
 amsterdam,luxembourgish,15,0,0
-amsterdam,luxembourgish,15,1,0
+amsterdam,luxembourgish,15,1,2
 amsterdam,luxembourgish,16,0,0
 amsterdam,luxembourgish,16,1,0
 amsterdam,luxembourgish,17,0,0
@@ -1669,7 +1669,7 @@ amsterdam,luxembourgish,23,0,0
 amsterdam,luxembourgish,23,1,0
 0,0,0,0,0
 amsterdam,luxembourgish,24,1,0
-amsterdam,luxembourgish,25,0,0
+amsterdam,luxembourgish,25,0,2
 amsterdam,luxembourgish,25,1,0
 amsterdam,luxembourgish,26,0,0
 amsterdam,luxembourgish,26,1,0
@@ -1735,7 +1735,7 @@ amsterdam,maltese,10,1,0
 amsterdam,maltese,11,1,0
 amsterdam,maltese,12,0,0
 amsterdam,maltese,12,1,0
-amsterdam,maltese,13,0,0
+amsterdam,maltese,13,0,2
 amsterdam,maltese,13,1,0
 amsterdam,maltese,14,0,0
 amsterdam,maltese,14,1,0
@@ -1819,11 +1819,11 @@ amsterdam,polish,8,0,0
 amsterdam,polish,8,1,0
 amsterdam,polish,9,0,0
 amsterdam,polish,9,1,0
-amsterdam,polish,10,0,0
+amsterdam,polish,10,0,2
 amsterdam,polish,10,1,0
 amsterdam,polish,11,0,0
 amsterdam,polish,11,1,0
-amsterdam,polish,12,0,0
+amsterdam,polish,12,0,2
 amsterdam,polish,12,1,0
 amsterdam,polish,13,0,0
 amsterdam,polish,13,1,0
@@ -1848,7 +1848,7 @@ amsterdam,polish,22,1,0
 amsterdam,polish,23,0,0
 amsterdam,polish,23,1,2
 amsterdam,polish,24,0,0
-amsterdam,polish,24,1,0
+amsterdam,polish,24,1,2
 amsterdam,polish,25,0,2
 amsterdam,polish,25,1,0
 0,0,0,0,0
@@ -1893,7 +1893,7 @@ amsterdam,portuguese,0,0,2
 amsterdam,portuguese,0,1,0
 amsterdam,portuguese,1,0,0
 amsterdam,portuguese,1,1,0
-amsterdam,portuguese,2,0,0
+amsterdam,portuguese,2,0,2
 amsterdam,portuguese,2,1,0
 amsterdam,portuguese,3,0,2
 amsterdam,portuguese,3,1,2
@@ -1919,7 +1919,7 @@ amsterdam,portuguese,13,0,0
 amsterdam,portuguese,13,1,0
 amsterdam,portuguese,14,0,0
 amsterdam,portuguese,14,1,0
-amsterdam,portuguese,15,0,0
+amsterdam,portuguese,15,0,1
 amsterdam,portuguese,15,1,0
 amsterdam,portuguese,16,0,0
 amsterdam,portuguese,16,1,0
@@ -1987,14 +1987,14 @@ amsterdam,romanian,2,0,0
 amsterdam,romanian,2,1,0
 amsterdam,romanian,3,0,0
 amsterdam,romanian,3,1,0
-amsterdam,romanian,4,0,1
+0,0,0,0,0
 amsterdam,romanian,4,1,0
 amsterdam,romanian,5,0,0
 amsterdam,romanian,5,1,0
 amsterdam,romanian,6,0,2
 amsterdam,romanian,6,1,0
 amsterdam,romanian,7,0,0
-amsterdam,romanian,7,1,1
+0,0,0,0,0
 amsterdam,romanian,8,0,0
 amsterdam,romanian,8,1,0
 amsterdam,romanian,9,0,0
@@ -2032,7 +2032,7 @@ amsterdam,romanian,24,1,0
 amsterdam,romanian,25,0,0
 amsterdam,romanian,25,1,2
 amsterdam,romanian,26,0,0
-amsterdam,romanian,26,1,0
+amsterdam,romanian,26,1,2
 amsterdam,romanian,27,0,0
 amsterdam,romanian,27,1,0
 amsterdam,romanian,28,0,0
@@ -2047,7 +2047,7 @@ amsterdam,romanian,32,0,0
 amsterdam,romanian,32,1,0
 amsterdam,romanian,33,0,0
 amsterdam,romanian,33,1,0
-amsterdam,romanian,34,0,0
+amsterdam,romanian,34,0,2
 amsterdam,romanian,34,1,0
 amsterdam,romanian,35,0,0
 amsterdam,romanian,35,1,0
@@ -2063,7 +2063,7 @@ amsterdam,romanian,40,0,0
 amsterdam,romanian,40,1,0
 amsterdam,romanian,41,0,2
 amsterdam,romanian,41,1,0
-amsterdam,romanian,42,0,0
+amsterdam,romanian,42,0,1
 amsterdam,romanian,42,1,0
 amsterdam,romanian,43,0,2
 amsterdam,romanian,43,1,0
@@ -2162,13 +2162,13 @@ amsterdam,slovakian,44,1,0
 amsterdam,slovene,0,0,0
 amsterdam,slovene,0,1,2
 amsterdam,slovene,1,0,0
-amsterdam,slovene,1,1,0
+amsterdam,slovene,1,1,1
 amsterdam,slovene,2,0,0
 amsterdam,slovene,2,1,0
 amsterdam,slovene,3,0,0
-amsterdam,slovene,3,1,0
+amsterdam,slovene,3,1,2
 amsterdam,slovene,4,0,0
-amsterdam,slovene,4,1,0
+amsterdam,slovene,4,1,2
 amsterdam,slovene,5,0,0
 amsterdam,slovene,5,1,0
 amsterdam,slovene,6,0,0
@@ -2259,12 +2259,12 @@ amsterdam,spanish,3,0,0
 amsterdam,spanish,3,1,0
 amsterdam,spanish,4,0,0
 amsterdam,spanish,4,1,0
-amsterdam,spanish,5,0,0
+amsterdam,spanish,5,0,1
 amsterdam,spanish,5,1,0
 amsterdam,spanish,6,0,2
 amsterdam,spanish,6,1,0
 amsterdam,spanish,7,0,0
-amsterdam,spanish,7,1,0
+amsterdam,spanish,7,1,2
 amsterdam,spanish,8,0,0
 amsterdam,spanish,8,1,0
 amsterdam,spanish,9,0,0
@@ -2291,7 +2291,7 @@ amsterdam,spanish,19,0,0
 amsterdam,spanish,19,1,0
 amsterdam,spanish,20,0,0
 amsterdam,spanish,20,1,0
-amsterdam,spanish,21,0,0
+amsterdam,spanish,21,0,2
 amsterdam,spanish,21,1,0
 amsterdam,spanish,22,0,0
 amsterdam,spanish,22,1,0
@@ -2398,7 +2398,7 @@ amsterdam,swedish,27,1,0
 amsterdam,swedish,28,0,0
 amsterdam,swedish,28,1,0
 amsterdam,swedish,29,0,0
-amsterdam,swedish,29,1,0
+amsterdam,swedish,29,1,2
 amsterdam,swedish,30,0,0
 amsterdam,swedish,30,1,0
 amsterdam,swedish,31,0,0
@@ -2437,7 +2437,7 @@ copenhagen,austrian,2,0,0
 copenhagen,austrian,2,1,0
 copenhagen,austrian,3,0,0
 copenhagen,austrian,3,1,2
-copenhagen,austrian,4,0,0
+copenhagen,austrian,4,0,2
 copenhagen,austrian,4,1,2
 copenhagen,austrian,5,0,0
 copenhagen,austrian,5,1,0
@@ -2457,9 +2457,9 @@ copenhagen,austrian,12,0,0
 copenhagen,austrian,12,1,0
 copenhagen,austrian,13,0,0
 copenhagen,austrian,13,1,0
-copenhagen,austrian,14,0,0
+copenhagen,austrian,14,0,1
 copenhagen,austrian,14,1,0
-copenhagen,austrian,15,0,0
+copenhagen,austrian,15,0,2
 copenhagen,austrian,15,1,0
 copenhagen,austrian,16,0,0
 copenhagen,austrian,16,1,0
@@ -2479,7 +2479,7 @@ copenhagen,austrian,23,0,0
 copenhagen,austrian,23,1,0
 copenhagen,austrian,24,0,0
 copenhagen,austrian,24,1,0
-copenhagen,austrian,25,0,0
+copenhagen,austrian,25,0,1
 copenhagen,austrian,25,1,2
 copenhagen,austrian,26,0,0
 copenhagen,austrian,26,1,0
@@ -2567,14 +2567,14 @@ copenhagen,belgian,22,0,0
 copenhagen,belgian,22,1,0
 copenhagen,belgian,23,0,2
 copenhagen,belgian,23,1,0
-copenhagen,belgian,24,0,0
+copenhagen,belgian,24,0,2
 copenhagen,belgian,24,1,0
 copenhagen,belgian,25,0,2
 copenhagen,belgian,25,1,0
 copenhagen,belgian,26,0,0
 copenhagen,belgian,26,1,2
 copenhagen,belgian,27,0,0
-copenhagen,belgian,27,1,0
+copenhagen,belgian,27,1,1
 copenhagen,belgian,28,0,0
 copenhagen,belgian,28,1,0
 0,0,0,0,0
@@ -2616,7 +2616,7 @@ copenhagen,bulgarian,1,1,0
 copenhagen,bulgarian,2,0,0
 copenhagen,bulgarian,2,1,0
 copenhagen,bulgarian,3,0,0
-copenhagen,bulgarian,3,1,0
+copenhagen,bulgarian,3,1,2
 copenhagen,bulgarian,4,0,0
 copenhagen,bulgarian,4,1,0
 copenhagen,bulgarian,5,0,0
@@ -2654,8 +2654,8 @@ copenhagen,bulgarian,20,1,2
 0,0,0,0,0
 copenhagen,bulgarian,21,1,0
 copenhagen,bulgarian,22,0,0
-copenhagen,bulgarian,22,1,0
-copenhagen,bulgarian,23,0,0
+copenhagen,bulgarian,22,1,1
+copenhagen,bulgarian,23,0,2
 copenhagen,bulgarian,23,1,0
 copenhagen,bulgarian,24,0,2
 copenhagen,bulgarian,24,1,0
@@ -2664,7 +2664,7 @@ copenhagen,bulgarian,25,1,0
 copenhagen,bulgarian,26,0,0
 copenhagen,bulgarian,26,1,0
 copenhagen,bulgarian,27,0,2
-copenhagen,bulgarian,27,1,0
+copenhagen,bulgarian,27,1,1
 copenhagen,bulgarian,28,0,0
 copenhagen,bulgarian,28,1,0
 copenhagen,bulgarian,29,0,0
@@ -2805,11 +2805,11 @@ copenhagen,cypriot,6,0,0
 copenhagen,cypriot,6,1,0
 copenhagen,cypriot,7,0,0
 copenhagen,cypriot,7,1,0
-copenhagen,cypriot,8,0,0
+copenhagen,cypriot,8,0,2
 copenhagen,cypriot,8,1,0
 copenhagen,cypriot,9,0,0
 copenhagen,cypriot,9,1,0
-copenhagen,cypriot,10,0,0
+copenhagen,cypriot,10,0,2
 copenhagen,cypriot,10,1,0
 copenhagen,cypriot,11,0,0
 copenhagen,cypriot,11,1,2
@@ -2848,7 +2848,7 @@ copenhagen,cypriot,27,1,0
 copenhagen,cypriot,28,0,0
 copenhagen,cypriot,28,1,0
 copenhagen,cypriot,29,0,0
-copenhagen,cypriot,29,1,0
+copenhagen,cypriot,29,1,1
 copenhagen,cypriot,30,0,0
 copenhagen,cypriot,30,1,2
 copenhagen,cypriot,31,0,0
@@ -2868,7 +2868,7 @@ copenhagen,cypriot,37,1,0
 copenhagen,cypriot,38,0,0
 copenhagen,cypriot,38,1,0
 copenhagen,cypriot,39,0,2
-copenhagen,cypriot,39,1,0
+copenhagen,cypriot,39,1,2
 copenhagen,cypriot,40,0,0
 copenhagen,cypriot,40,1,2
 copenhagen,cypriot,41,0,0
@@ -2956,7 +2956,7 @@ copenhagen,czech,36,1,0
 copenhagen,czech,37,0,0
 copenhagen,czech,37,1,0
 copenhagen,czech,38,0,0
-copenhagen,czech,38,1,0
+copenhagen,czech,38,1,2
 copenhagen,czech,39,0,0
 copenhagen,czech,39,1,2
 copenhagen,czech,40,0,0
@@ -2995,7 +2995,7 @@ copenhagen,danish,11,0,0
 copenhagen,danish,11,1,2
 copenhagen,danish,12,0,0
 copenhagen,danish,12,1,0
-copenhagen,danish,13,0,0
+copenhagen,danish,13,0,2
 copenhagen,danish,13,1,2
 copenhagen,danish,14,0,0
 copenhagen,danish,14,1,0
@@ -3004,7 +3004,7 @@ copenhagen,danish,15,1,0
 copenhagen,danish,16,0,0
 copenhagen,danish,16,1,2
 copenhagen,danish,17,0,0
-copenhagen,danish,17,1,0
+copenhagen,danish,17,1,2
 copenhagen,danish,18,0,0
 copenhagen,danish,18,1,2
 copenhagen,danish,19,0,0
@@ -3026,7 +3026,7 @@ copenhagen,danish,26,1,2
 copenhagen,danish,27,0,0
 copenhagen,danish,27,1,2
 copenhagen,danish,28,0,0
-copenhagen,danish,28,1,0
+copenhagen,danish,28,1,2
 copenhagen,danish,29,0,0
 copenhagen,danish,29,1,0
 copenhagen,danish,30,0,0
@@ -3059,7 +3059,7 @@ copenhagen,danish,43,0,0
 copenhagen,danish,43,1,0
 copenhagen,danish,44,0,0
 copenhagen,danish,44,1,2
-copenhagen,dutch,0,0,0
+copenhagen,dutch,0,0,2
 copenhagen,dutch,0,1,0
 copenhagen,dutch,1,0,0
 copenhagen,dutch,1,1,0
@@ -3092,7 +3092,7 @@ copenhagen,dutch,14,1,0
 copenhagen,dutch,15,0,0
 copenhagen,dutch,15,1,0
 copenhagen,dutch,16,0,0
-copenhagen,dutch,16,1,0
+copenhagen,dutch,16,1,2
 copenhagen,dutch,17,0,0
 copenhagen,dutch,17,1,0
 copenhagen,dutch,18,0,0
@@ -3118,7 +3118,7 @@ copenhagen,dutch,27,1,0
 copenhagen,dutch,28,0,2
 copenhagen,dutch,28,1,2
 copenhagen,dutch,29,0,0
-copenhagen,dutch,29,1,0
+copenhagen,dutch,29,1,1
 copenhagen,dutch,30,0,0
 copenhagen,dutch,30,1,2
 copenhagen,dutch,31,0,0
@@ -3157,7 +3157,7 @@ copenhagen,estonian,2,0,0
 copenhagen,estonian,2,1,0
 copenhagen,estonian,3,0,0
 copenhagen,estonian,3,1,0
-copenhagen,estonian,4,0,0
+copenhagen,estonian,4,0,2
 copenhagen,estonian,4,1,2
 copenhagen,estonian,5,0,0
 copenhagen,estonian,5,1,0
@@ -3173,7 +3173,7 @@ copenhagen,estonian,10,0,0
 copenhagen,estonian,10,1,0
 copenhagen,estonian,11,0,0
 copenhagen,estonian,11,1,0
-copenhagen,estonian,12,0,0
+copenhagen,estonian,12,0,2
 copenhagen,estonian,12,1,0
 copenhagen,estonian,13,0,0
 copenhagen,estonian,13,1,0
@@ -3281,8 +3281,8 @@ copenhagen,finnish,19,0,2
 copenhagen,finnish,19,1,0
 copenhagen,finnish,20,0,0
 copenhagen,finnish,20,1,0
-copenhagen,finnish,21,0,0
-copenhagen,finnish,21,1,0
+copenhagen,finnish,21,0,2
+copenhagen,finnish,21,1,2
 copenhagen,finnish,22,0,2
 copenhagen,finnish,22,1,2
 copenhagen,finnish,23,0,0
@@ -3299,7 +3299,7 @@ copenhagen,finnish,28,0,0
 copenhagen,finnish,28,1,0
 copenhagen,finnish,29,0,0
 copenhagen,finnish,29,1,0
-copenhagen,finnish,30,0,0
+copenhagen,finnish,30,0,2
 copenhagen,finnish,30,1,0
 copenhagen,finnish,31,0,0
 copenhagen,finnish,31,1,0
@@ -3355,7 +3355,7 @@ copenhagen,french,11,0,0
 copenhagen,french,11,1,0
 copenhagen,french,12,0,0
 copenhagen,french,12,1,0
-copenhagen,french,13,0,0
+copenhagen,french,13,0,1
 copenhagen,french,13,1,0
 copenhagen,french,14,0,0
 copenhagen,french,14,1,0
@@ -3365,7 +3365,7 @@ copenhagen,french,16,0,0
 copenhagen,french,16,1,0
 copenhagen,french,17,0,0
 copenhagen,french,17,1,0
-copenhagen,french,18,0,0
+copenhagen,french,18,0,2
 copenhagen,french,18,1,2
 copenhagen,french,19,0,0
 copenhagen,french,19,1,0
@@ -3444,8 +3444,8 @@ copenhagen,german,10,1,0
 copenhagen,german,11,0,2
 copenhagen,german,11,1,2
 copenhagen,german,12,0,0
-copenhagen,german,12,1,0
-copenhagen,german,13,0,0
+copenhagen,german,12,1,2
+copenhagen,german,13,0,2
 copenhagen,german,13,1,0
 copenhagen,german,14,0,0
 copenhagen,german,14,1,0
@@ -3467,7 +3467,7 @@ copenhagen,german,22,0,0
 copenhagen,german,22,1,0
 copenhagen,german,23,0,0
 copenhagen,german,23,1,0
-copenhagen,german,24,0,0
+copenhagen,german,24,0,2
 copenhagen,german,24,1,0
 copenhagen,german,25,0,0
 copenhagen,german,25,1,0
@@ -3490,7 +3490,7 @@ copenhagen,german,33,1,0
 copenhagen,german,34,0,2
 copenhagen,german,34,1,0
 copenhagen,german,35,0,2
-copenhagen,german,35,1,0
+copenhagen,german,35,1,2
 copenhagen,german,36,0,2
 copenhagen,german,36,1,0
 copenhagen,german,37,0,0
@@ -3523,7 +3523,7 @@ copenhagen,greek,5,0,0
 copenhagen,greek,5,1,0
 copenhagen,greek,6,0,0
 copenhagen,greek,6,1,0
-copenhagen,greek,7,0,0
+copenhagen,greek,7,0,2
 copenhagen,greek,7,1,0
 copenhagen,greek,8,0,0
 copenhagen,greek,8,1,2
@@ -3683,7 +3683,7 @@ copenhagen,hungarian,40,0,0
 copenhagen,hungarian,40,1,0
 copenhagen,hungarian,41,0,0
 copenhagen,hungarian,41,1,0
-copenhagen,hungarian,42,0,0
+copenhagen,hungarian,42,0,2
 copenhagen,hungarian,42,1,0
 copenhagen,hungarian,43,0,0
 copenhagen,hungarian,43,1,0
@@ -3782,7 +3782,7 @@ copenhagen,irish,44,1,0
 copenhagen,italian,0,0,0
 copenhagen,italian,0,1,0
 copenhagen,italian,1,0,0
-copenhagen,italian,1,1,0
+copenhagen,italian,1,1,2
 copenhagen,italian,2,0,0
 copenhagen,italian,2,1,0
 copenhagen,italian,3,0,0
@@ -3818,7 +3818,7 @@ copenhagen,italian,17,1,0
 copenhagen,italian,18,0,2
 copenhagen,italian,18,1,0
 copenhagen,italian,19,0,2
-copenhagen,italian,19,1,0
+copenhagen,italian,19,1,2
 copenhagen,italian,20,0,0
 copenhagen,italian,20,1,0
 copenhagen,italian,21,0,0
@@ -3864,7 +3864,7 @@ copenhagen,italian,40,1,0
 copenhagen,italian,41,0,0
 copenhagen,italian,41,1,2
 copenhagen,italian,42,0,0
-copenhagen,italian,42,1,0
+copenhagen,italian,42,1,2
 copenhagen,italian,43,0,0
 copenhagen,italian,43,1,0
 copenhagen,italian,44,0,0
@@ -3952,7 +3952,7 @@ copenhagen,latvian,39,1,0
 copenhagen,latvian,40,0,0
 copenhagen,latvian,40,1,0
 copenhagen,latvian,41,0,2
-copenhagen,latvian,41,1,0
+copenhagen,latvian,41,1,2
 copenhagen,latvian,42,0,0
 copenhagen,latvian,42,1,0
 copenhagen,latvian,43,0,0
@@ -3978,7 +3978,7 @@ copenhagen,lithuanian,7,1,0
 copenhagen,lithuanian,8,0,0
 copenhagen,lithuanian,8,1,0
 copenhagen,lithuanian,9,0,0
-copenhagen,lithuanian,9,1,0
+copenhagen,lithuanian,9,1,2
 copenhagen,lithuanian,10,0,0
 copenhagen,lithuanian,10,1,0
 copenhagen,lithuanian,11,0,0
@@ -4014,7 +4014,7 @@ copenhagen,lithuanian,25,1,2
 copenhagen,lithuanian,26,0,0
 copenhagen,lithuanian,26,1,0
 copenhagen,lithuanian,27,0,2
-copenhagen,lithuanian,27,1,0
+copenhagen,lithuanian,27,1,2
 copenhagen,lithuanian,28,0,2
 copenhagen,lithuanian,28,1,0
 copenhagen,lithuanian,29,0,2
@@ -4044,7 +4044,7 @@ copenhagen,lithuanian,40,1,0
 copenhagen,lithuanian,41,0,0
 copenhagen,lithuanian,41,1,0
 copenhagen,lithuanian,42,0,0
-copenhagen,lithuanian,42,1,0
+copenhagen,lithuanian,42,1,1
 copenhagen,lithuanian,43,0,0
 copenhagen,lithuanian,43,1,0
 copenhagen,lithuanian,44,0,0
@@ -4106,7 +4106,7 @@ copenhagen,luxembourgish,26,1,0
 copenhagen,luxembourgish,27,0,0
 copenhagen,luxembourgish,27,1,0
 copenhagen,luxembourgish,28,0,2
-copenhagen,luxembourgish,28,1,0
+copenhagen,luxembourgish,28,1,2
 copenhagen,luxembourgish,29,0,0
 copenhagen,luxembourgish,29,1,0
 copenhagen,luxembourgish,30,0,0
@@ -4114,7 +4114,7 @@ copenhagen,luxembourgish,30,1,2
 copenhagen,luxembourgish,31,0,0
 copenhagen,luxembourgish,31,1,0
 copenhagen,luxembourgish,32,0,0
-copenhagen,luxembourgish,32,1,0
+copenhagen,luxembourgish,32,1,1
 copenhagen,luxembourgish,33,0,0
 copenhagen,luxembourgish,33,1,0
 copenhagen,luxembourgish,34,0,0
@@ -4166,7 +4166,7 @@ copenhagen,maltese,11,1,0
 copenhagen,maltese,12,0,0
 copenhagen,maltese,12,1,0
 copenhagen,maltese,13,0,0
-copenhagen,maltese,13,1,0
+copenhagen,maltese,13,1,1
 copenhagen,maltese,14,0,0
 copenhagen,maltese,14,1,0
 copenhagen,maltese,15,0,2
@@ -4209,7 +4209,7 @@ copenhagen,maltese,33,0,0
 copenhagen,maltese,33,1,0
 copenhagen,maltese,34,0,0
 copenhagen,maltese,34,1,0
-copenhagen,maltese,35,0,1
+0,0,0,0,0
 copenhagen,maltese,35,1,0
 copenhagen,maltese,36,0,0
 copenhagen,maltese,36,1,0
@@ -4264,12 +4264,12 @@ copenhagen,polish,15,1,2
 copenhagen,polish,16,0,0
 copenhagen,polish,16,1,0
 copenhagen,polish,17,0,0
-copenhagen,polish,17,1,0
+copenhagen,polish,17,1,2
 copenhagen,polish,18,0,0
 copenhagen,polish,18,1,0
 copenhagen,polish,19,0,0
 copenhagen,polish,19,1,0
-copenhagen,polish,20,0,0
+copenhagen,polish,20,0,2
 copenhagen,polish,20,1,0
 copenhagen,polish,21,0,2
 copenhagen,polish,21,1,0
@@ -4322,7 +4322,7 @@ copenhagen,polish,44,1,0
 copenhagen,portuguese,0,0,0
 copenhagen,portuguese,0,1,2
 copenhagen,portuguese,1,0,0
-copenhagen,portuguese,1,1,0
+copenhagen,portuguese,1,1,2
 0,0,0,0,0
 copenhagen,portuguese,2,1,0
 copenhagen,portuguese,3,0,2
@@ -4347,7 +4347,7 @@ copenhagen,portuguese,12,0,2
 copenhagen,portuguese,12,1,0
 copenhagen,portuguese,13,0,0
 copenhagen,portuguese,13,1,0
-copenhagen,portuguese,14,0,0
+copenhagen,portuguese,14,0,2
 copenhagen,portuguese,14,1,0
 copenhagen,portuguese,15,0,0
 copenhagen,portuguese,15,1,0
@@ -4390,7 +4390,7 @@ copenhagen,portuguese,33,1,2
 copenhagen,portuguese,34,0,0
 copenhagen,portuguese,34,1,0
 copenhagen,portuguese,35,0,0
-copenhagen,portuguese,35,1,0
+copenhagen,portuguese,35,1,2
 copenhagen,portuguese,36,0,0
 copenhagen,portuguese,36,1,0
 copenhagen,portuguese,37,0,2
@@ -4416,7 +4416,7 @@ copenhagen,romanian,1,1,0
 copenhagen,romanian,2,0,2
 copenhagen,romanian,2,1,0
 copenhagen,romanian,3,0,0
-copenhagen,romanian,3,1,0
+copenhagen,romanian,3,1,1
 copenhagen,romanian,4,0,2
 copenhagen,romanian,4,1,0
 copenhagen,romanian,5,0,0
@@ -4439,7 +4439,7 @@ copenhagen,romanian,13,0,0
 copenhagen,romanian,13,1,0
 copenhagen,romanian,14,0,2
 copenhagen,romanian,14,1,0
-copenhagen,romanian,15,0,0
+copenhagen,romanian,15,0,2
 copenhagen,romanian,15,1,2
 copenhagen,romanian,16,0,2
 copenhagen,romanian,16,1,0
@@ -4466,7 +4466,7 @@ copenhagen,romanian,26,1,0
 copenhagen,romanian,27,0,0
 copenhagen,romanian,27,1,0
 copenhagen,romanian,28,0,2
-copenhagen,romanian,28,1,0
+copenhagen,romanian,28,1,1
 copenhagen,romanian,29,0,0
 copenhagen,romanian,29,1,0
 copenhagen,romanian,30,0,2
@@ -4500,7 +4500,7 @@ copenhagen,romanian,43,1,0
 copenhagen,romanian,44,0,0
 copenhagen,romanian,44,1,0
 copenhagen,slovakian,0,0,0
-copenhagen,slovakian,0,1,0
+copenhagen,slovakian,0,1,2
 copenhagen,slovakian,1,0,0
 copenhagen,slovakian,1,1,0
 copenhagen,slovakian,2,0,0
@@ -4574,7 +4574,7 @@ copenhagen,slovakian,35,1,0
 copenhagen,slovakian,36,0,0
 copenhagen,slovakian,36,1,0
 copenhagen,slovakian,37,0,0
-copenhagen,slovakian,37,1,0
+copenhagen,slovakian,37,1,2
 copenhagen,slovakian,38,0,0
 copenhagen,slovakian,38,1,0
 copenhagen,slovakian,39,0,0
@@ -4586,7 +4586,7 @@ copenhagen,slovakian,41,1,0
 copenhagen,slovakian,42,0,0
 copenhagen,slovakian,42,1,0
 copenhagen,slovakian,43,0,0
-copenhagen,slovakian,43,1,0
+copenhagen,slovakian,43,1,2
 copenhagen,slovakian,44,0,0
 copenhagen,slovakian,44,1,2
 copenhagen,slovene,0,0,0
@@ -4614,7 +4614,7 @@ copenhagen,slovene,10,1,0
 copenhagen,slovene,11,0,0
 copenhagen,slovene,11,1,0
 copenhagen,slovene,12,0,0
-copenhagen,slovene,12,1,0
+copenhagen,slovene,12,1,2
 copenhagen,slovene,13,0,0
 copenhagen,slovene,13,1,0
 copenhagen,slovene,14,0,0
@@ -4627,16 +4627,16 @@ copenhagen,slovene,17,0,0
 copenhagen,slovene,17,1,2
 copenhagen,slovene,18,0,0
 copenhagen,slovene,18,1,0
-copenhagen,slovene,19,0,0
+copenhagen,slovene,19,0,2
 copenhagen,slovene,19,1,0
 copenhagen,slovene,20,0,0
 copenhagen,slovene,20,1,0
 copenhagen,slovene,21,0,0
 copenhagen,slovene,21,1,0
 copenhagen,slovene,22,0,2
-copenhagen,slovene,22,1,0
+copenhagen,slovene,22,1,2
 copenhagen,slovene,23,0,0
-copenhagen,slovene,23,1,0
+copenhagen,slovene,23,1,1
 copenhagen,slovene,24,0,0
 copenhagen,slovene,24,1,0
 copenhagen,slovene,25,0,0
@@ -4700,7 +4700,7 @@ copenhagen,spanish,8,1,2
 copenhagen,spanish,9,0,0
 copenhagen,spanish,9,1,0
 copenhagen,spanish,10,0,0
-copenhagen,spanish,10,1,0
+copenhagen,spanish,10,1,2
 copenhagen,spanish,11,0,0
 copenhagen,spanish,11,1,0
 copenhagen,spanish,12,0,0
@@ -4799,15 +4799,15 @@ copenhagen,swedish,13,0,0
 copenhagen,swedish,13,1,0
 copenhagen,swedish,14,0,0
 copenhagen,swedish,14,1,0
-copenhagen,swedish,15,0,0
-copenhagen,swedish,15,1,0
+copenhagen,swedish,15,0,2
+copenhagen,swedish,15,1,2
 copenhagen,swedish,16,0,0
 copenhagen,swedish,16,1,2
 copenhagen,swedish,17,0,0
 copenhagen,swedish,17,1,0
 copenhagen,swedish,18,0,0
 copenhagen,swedish,18,1,0
-copenhagen,swedish,19,0,0
+copenhagen,swedish,19,0,2
 copenhagen,swedish,19,1,0
 copenhagen,swedish,20,0,0
 copenhagen,swedish,20,1,0
@@ -4822,7 +4822,7 @@ copenhagen,swedish,24,1,0
 copenhagen,swedish,25,0,0
 copenhagen,swedish,25,1,0
 copenhagen,swedish,26,0,0
-copenhagen,swedish,26,1,0
+copenhagen,swedish,26,1,1
 copenhagen,swedish,27,0,0
 copenhagen,swedish,27,1,0
 copenhagen,swedish,28,0,0
@@ -4838,8 +4838,8 @@ copenhagen,swedish,32,1,0
 copenhagen,swedish,33,0,2
 copenhagen,swedish,33,1,0
 copenhagen,swedish,34,0,0
-copenhagen,swedish,34,1,0
-copenhagen,swedish,35,0,0
+copenhagen,swedish,34,1,2
+copenhagen,swedish,35,0,2
 copenhagen,swedish,35,1,0
 copenhagen,swedish,36,0,0
 copenhagen,swedish,36,1,0
@@ -4858,10 +4858,10 @@ copenhagen,swedish,42,1,0
 copenhagen,swedish,43,0,0
 copenhagen,swedish,43,1,0
 copenhagen,swedish,44,0,0
-copenhagen,swedish,44,1,0
+copenhagen,swedish,44,1,2
 madrid,austrian,0,0,0
 madrid,austrian,0,1,0
-madrid,austrian,1,0,0
+madrid,austrian,1,0,2
 madrid,austrian,1,1,0
 madrid,austrian,2,0,0
 madrid,austrian,2,1,0
@@ -4926,7 +4926,7 @@ madrid,austrian,31,1,2
 madrid,austrian,32,0,0
 madrid,austrian,32,1,0
 madrid,austrian,33,0,0
-madrid,austrian,33,1,0
+madrid,austrian,33,1,2
 madrid,austrian,34,0,0
 madrid,austrian,34,1,2
 madrid,austrian,35,0,2
@@ -5040,7 +5040,7 @@ madrid,belgian,43,1,2
 madrid,belgian,44,0,2
 madrid,belgian,44,1,0
 madrid,bulgarian,0,0,2
-madrid,bulgarian,0,1,0
+madrid,bulgarian,0,1,2
 madrid,bulgarian,1,0,0
 madrid,bulgarian,1,1,0
 madrid,bulgarian,2,0,0
@@ -5067,7 +5067,7 @@ madrid,bulgarian,12,0,0
 madrid,bulgarian,12,1,2
 madrid,bulgarian,13,0,0
 madrid,bulgarian,13,1,2
-madrid,bulgarian,14,0,0
+madrid,bulgarian,14,0,2
 madrid,bulgarian,14,1,2
 madrid,bulgarian,15,0,0
 madrid,bulgarian,15,1,0
@@ -5082,7 +5082,7 @@ madrid,bulgarian,19,1,2
 madrid,bulgarian,20,0,0
 madrid,bulgarian,20,1,0
 madrid,bulgarian,21,0,0
-madrid,bulgarian,21,1,0
+madrid,bulgarian,21,1,2
 madrid,bulgarian,22,0,0
 madrid,bulgarian,22,1,2
 madrid,bulgarian,23,0,0
@@ -5099,7 +5099,7 @@ madrid,bulgarian,28,0,0
 madrid,bulgarian,28,1,0
 madrid,bulgarian,29,0,0
 madrid,bulgarian,29,1,0
-madrid,bulgarian,30,0,0
+madrid,bulgarian,30,0,2
 madrid,bulgarian,30,1,0
 madrid,bulgarian,31,0,2
 madrid,bulgarian,31,1,0
@@ -5208,7 +5208,7 @@ madrid,croatian,37,1,2
 madrid,croatian,38,0,0
 madrid,croatian,38,1,2
 madrid,croatian,39,0,2
-madrid,croatian,39,1,0
+madrid,croatian,39,1,2
 madrid,croatian,40,0,0
 madrid,croatian,40,1,0
 madrid,croatian,41,0,0
@@ -5247,7 +5247,7 @@ madrid,cypriot,12,0,0
 madrid,cypriot,12,1,0
 madrid,cypriot,13,0,0
 madrid,cypriot,13,1,0
-madrid,cypriot,14,0,0
+madrid,cypriot,14,0,2
 madrid,cypriot,14,1,0
 madrid,cypriot,15,0,0
 madrid,cypriot,15,1,2
@@ -5261,12 +5261,12 @@ madrid,cypriot,19,0,2
 madrid,cypriot,19,1,0
 madrid,cypriot,20,0,0
 madrid,cypriot,20,1,0
-madrid,cypriot,21,0,0
+madrid,cypriot,21,0,1
 madrid,cypriot,21,1,0
 madrid,cypriot,22,0,0
 madrid,cypriot,22,1,0
 madrid,cypriot,23,0,0
-madrid,cypriot,23,1,0
+madrid,cypriot,23,1,1
 madrid,cypriot,24,0,0
 madrid,cypriot,24,1,0
 madrid,cypriot,25,0,0
@@ -5372,7 +5372,7 @@ madrid,czech,29,1,0
 madrid,czech,30,0,0
 madrid,czech,30,1,0
 madrid,czech,31,0,0
-madrid,czech,31,1,0
+madrid,czech,31,1,2
 madrid,czech,32,0,0
 madrid,czech,32,1,2
 madrid,czech,33,0,0
@@ -5410,7 +5410,7 @@ madrid,danish,3,1,0
 madrid,danish,4,0,0
 madrid,danish,4,1,2
 madrid,danish,5,0,0
-madrid,danish,5,1,0
+madrid,danish,5,1,2
 madrid,danish,6,0,2
 madrid,danish,6,1,0
 madrid,danish,7,0,0
@@ -5429,7 +5429,7 @@ madrid,danish,13,0,0
 madrid,danish,13,1,0
 madrid,danish,14,0,0
 madrid,danish,14,1,2
-madrid,danish,15,0,0
+madrid,danish,15,0,2
 madrid,danish,15,1,0
 madrid,danish,16,0,0
 madrid,danish,16,1,0
@@ -5618,9 +5618,9 @@ madrid,estonian,17,1,0
 madrid,estonian,18,0,0
 madrid,estonian,18,1,0
 madrid,estonian,19,0,0
-madrid,estonian,19,1,0
+madrid,estonian,19,1,1
 madrid,estonian,20,0,0
-madrid,estonian,20,1,0
+madrid,estonian,20,1,2
 madrid,estonian,21,0,0
 madrid,estonian,21,1,0
 madrid,estonian,22,0,0
@@ -5724,7 +5724,7 @@ madrid,finnish,25,1,0
 madrid,finnish,26,0,0
 madrid,finnish,26,1,0
 madrid,finnish,27,0,0
-madrid,finnish,27,1,0
+madrid,finnish,27,1,2
 madrid,finnish,28,0,0
 madrid,finnish,28,1,0
 madrid,finnish,29,0,0
@@ -5759,7 +5759,7 @@ madrid,finnish,43,0,0
 madrid,finnish,43,1,0
 madrid,finnish,44,0,0
 madrid,finnish,44,1,0
-madrid,french,0,0,0
+madrid,french,0,0,2
 madrid,french,0,1,0
 madrid,french,1,0,0
 madrid,french,1,1,0
@@ -5991,7 +5991,7 @@ madrid,greek,24,0,0
 madrid,greek,24,1,0
 madrid,greek,25,0,0
 madrid,greek,25,1,0
-madrid,greek,26,0,0
+madrid,greek,26,0,2
 madrid,greek,26,1,2
 madrid,greek,27,0,0
 madrid,greek,27,1,0
@@ -6030,7 +6030,7 @@ madrid,greek,43,1,0
 madrid,greek,44,0,2
 madrid,greek,44,1,0
 madrid,hungarian,0,0,0
-madrid,hungarian,0,1,0
+madrid,hungarian,0,1,1
 madrid,hungarian,1,0,0
 madrid,hungarian,1,1,0
 madrid,hungarian,2,0,0
@@ -6049,7 +6049,7 @@ madrid,hungarian,8,0,0
 madrid,hungarian,8,1,0
 madrid,hungarian,9,0,2
 madrid,hungarian,9,1,0
-madrid,hungarian,10,0,0
+madrid,hungarian,10,0,1
 madrid,hungarian,10,1,0
 madrid,hungarian,11,0,0
 madrid,hungarian,11,1,0
@@ -6073,7 +6073,7 @@ madrid,hungarian,20,0,2
 madrid,hungarian,20,1,0
 madrid,hungarian,21,0,0
 madrid,hungarian,21,1,0
-madrid,hungarian,22,0,0
+madrid,hungarian,22,0,2
 madrid,hungarian,22,1,2
 madrid,hungarian,23,0,0
 madrid,hungarian,23,1,0
@@ -6095,7 +6095,7 @@ madrid,hungarian,31,0,2
 madrid,hungarian,31,1,0
 madrid,hungarian,32,0,0
 madrid,hungarian,32,1,0
-madrid,hungarian,33,0,0
+madrid,hungarian,33,0,1
 madrid,hungarian,33,1,0
 madrid,hungarian,34,0,0
 madrid,hungarian,34,1,2
@@ -6145,7 +6145,7 @@ madrid,irish,11,0,0
 madrid,irish,11,1,0
 madrid,irish,12,0,0
 madrid,irish,12,1,0
-madrid,irish,13,0,0
+madrid,irish,13,0,2
 madrid,irish,13,1,2
 madrid,irish,14,0,0
 0,0,0,0,0
@@ -6153,7 +6153,7 @@ madrid,irish,15,0,0
 madrid,irish,15,1,2
 madrid,irish,16,0,0
 madrid,irish,16,1,0
-madrid,irish,17,0,0
+madrid,irish,17,0,2
 madrid,irish,17,1,0
 madrid,irish,18,0,0
 madrid,irish,18,1,0
@@ -6211,7 +6211,7 @@ madrid,irish,44,0,0
 madrid,irish,44,1,0
 madrid,italian,0,0,2
 madrid,italian,0,1,0
-madrid,italian,1,0,0
+madrid,italian,1,0,2
 madrid,italian,1,1,0
 madrid,italian,2,0,0
 madrid,italian,2,1,2
@@ -6262,14 +6262,14 @@ madrid,italian,24,1,0
 madrid,italian,25,0,0
 madrid,italian,25,1,0
 madrid,italian,26,0,0
-madrid,italian,26,1,0
+madrid,italian,26,1,2
 madrid,italian,27,0,0
 madrid,italian,27,1,0
 madrid,italian,28,0,0
 madrid,italian,28,1,0
 madrid,italian,29,0,0
 madrid,italian,29,1,0
-madrid,italian,30,0,0
+madrid,italian,30,0,2
 madrid,italian,30,1,0
 madrid,italian,31,0,2
 madrid,italian,31,1,0
@@ -6288,7 +6288,7 @@ madrid,italian,37,1,0
 madrid,italian,38,0,0
 madrid,italian,38,1,0
 madrid,italian,39,0,0
-madrid,italian,39,1,0
+madrid,italian,39,1,2
 madrid,italian,40,0,0
 madrid,italian,40,1,0
 madrid,italian,41,0,0
@@ -6319,13 +6319,13 @@ madrid,latvian,8,0,0
 madrid,latvian,8,1,0
 madrid,latvian,9,0,0
 madrid,latvian,9,1,0
-madrid,latvian,10,0,0
+madrid,latvian,10,0,2
 madrid,latvian,10,1,0
 madrid,latvian,11,0,0
 madrid,latvian,11,1,0
 madrid,latvian,12,0,2
 madrid,latvian,12,1,0
-madrid,latvian,13,0,0
+madrid,latvian,13,0,1
 madrid,latvian,13,1,0
 madrid,latvian,14,0,0
 madrid,latvian,14,1,0
@@ -6368,7 +6368,7 @@ madrid,latvian,32,1,0
 madrid,latvian,33,0,0
 madrid,latvian,33,1,0
 madrid,latvian,34,0,0
-madrid,latvian,34,1,0
+madrid,latvian,34,1,2
 madrid,latvian,35,0,2
 madrid,latvian,35,1,0
 madrid,latvian,36,0,0
@@ -6413,7 +6413,7 @@ madrid,lithuanian,10,0,2
 madrid,lithuanian,10,1,0
 madrid,lithuanian,11,0,0
 madrid,lithuanian,11,1,0
-madrid,lithuanian,12,0,0
+madrid,lithuanian,12,0,2
 madrid,lithuanian,12,1,0
 madrid,lithuanian,13,0,0
 madrid,lithuanian,13,1,0
@@ -6480,7 +6480,7 @@ madrid,lithuanian,43,1,0
 madrid,lithuanian,44,0,0
 0,0,0,0,0
 madrid,luxembourgish,0,0,0
-madrid,luxembourgish,0,1,0
+madrid,luxembourgish,0,1,2
 madrid,luxembourgish,1,0,2
 madrid,luxembourgish,1,1,0
 madrid,luxembourgish,2,0,0
@@ -6494,7 +6494,7 @@ madrid,luxembourgish,5,1,0
 madrid,luxembourgish,6,0,0
 madrid,luxembourgish,6,1,0
 madrid,luxembourgish,7,0,0
-madrid,luxembourgish,7,1,0
+madrid,luxembourgish,7,1,2
 madrid,luxembourgish,8,0,0
 madrid,luxembourgish,8,1,0
 madrid,luxembourgish,9,0,2
@@ -6503,9 +6503,9 @@ madrid,luxembourgish,10,0,0
 madrid,luxembourgish,10,1,0
 madrid,luxembourgish,11,0,0
 madrid,luxembourgish,11,1,0
-madrid,luxembourgish,12,0,0
+madrid,luxembourgish,12,0,2
 madrid,luxembourgish,12,1,0
-madrid,luxembourgish,13,0,0
+madrid,luxembourgish,13,0,2
 madrid,luxembourgish,13,1,2
 madrid,luxembourgish,14,0,0
 madrid,luxembourgish,14,1,0
@@ -6556,7 +6556,7 @@ madrid,luxembourgish,36,1,0
 madrid,luxembourgish,37,0,0
 madrid,luxembourgish,37,1,0
 madrid,luxembourgish,38,0,0
-madrid,luxembourgish,38,1,0
+madrid,luxembourgish,38,1,2
 madrid,luxembourgish,39,0,2
 madrid,luxembourgish,39,1,0
 madrid,luxembourgish,40,0,0
@@ -6620,7 +6620,7 @@ madrid,maltese,23,1,0
 madrid,maltese,24,0,0
 madrid,maltese,24,1,0
 madrid,maltese,25,0,0
-madrid,maltese,25,1,0
+madrid,maltese,25,1,2
 madrid,maltese,26,0,0
 madrid,maltese,26,1,0
 madrid,maltese,27,0,0
@@ -6628,7 +6628,7 @@ madrid,maltese,27,1,0
 madrid,maltese,28,0,0
 madrid,maltese,28,1,0
 madrid,maltese,29,0,0
-madrid,maltese,29,1,0
+madrid,maltese,29,1,2
 madrid,maltese,30,0,2
 madrid,maltese,30,1,2
 madrid,maltese,31,0,0
@@ -6696,7 +6696,7 @@ madrid,polish,16,1,0
 madrid,polish,17,0,0
 0,0,0,0,0
 madrid,polish,18,0,0
-madrid,polish,18,1,0
+madrid,polish,18,1,2
 madrid,polish,19,0,0
 madrid,polish,19,1,0
 madrid,polish,20,0,0
@@ -6766,7 +6766,7 @@ madrid,portuguese,6,1,0
 madrid,portuguese,7,0,0
 madrid,portuguese,7,1,0
 madrid,portuguese,8,0,0
-madrid,portuguese,8,1,0
+madrid,portuguese,8,1,2
 madrid,portuguese,9,0,0
 madrid,portuguese,9,1,0
 madrid,portuguese,10,0,0
@@ -6817,7 +6817,7 @@ madrid,portuguese,32,0,0
 madrid,portuguese,32,1,0
 madrid,portuguese,33,0,0
 madrid,portuguese,33,1,0
-madrid,portuguese,34,0,0
+madrid,portuguese,34,0,2
 madrid,portuguese,34,1,0
 madrid,portuguese,35,0,0
 madrid,portuguese,35,1,0
@@ -6852,7 +6852,7 @@ madrid,romanian,4,1,0
 madrid,romanian,5,0,0
 madrid,romanian,5,1,2
 madrid,romanian,6,0,0
-madrid,romanian,6,1,0
+madrid,romanian,6,1,2
 madrid,romanian,7,0,0
 madrid,romanian,7,1,0
 0,0,0,0,0
@@ -6876,7 +6876,7 @@ madrid,romanian,16,1,0
 madrid,romanian,17,0,0
 madrid,romanian,17,1,2
 madrid,romanian,18,0,0
-madrid,romanian,18,1,0
+madrid,romanian,18,1,2
 madrid,romanian,19,0,0
 madrid,romanian,19,1,0
 madrid,romanian,20,0,2
@@ -6928,7 +6928,7 @@ madrid,romanian,42,1,0
 madrid,romanian,43,0,0
 madrid,romanian,43,1,0
 madrid,romanian,44,0,0
-madrid,romanian,44,1,0
+madrid,romanian,44,1,2
 madrid,slovakian,0,0,0
 madrid,slovakian,0,1,0
 madrid,slovakian,1,0,0
@@ -6941,7 +6941,7 @@ madrid,slovakian,4,0,0
 madrid,slovakian,4,1,0
 madrid,slovakian,5,0,0
 madrid,slovakian,5,1,2
-madrid,slovakian,6,0,0
+madrid,slovakian,6,0,1
 madrid,slovakian,6,1,0
 madrid,slovakian,7,0,0
 madrid,slovakian,7,1,0
@@ -7024,7 +7024,7 @@ madrid,slovene,0,1,2
 madrid,slovene,1,0,0
 madrid,slovene,1,1,0
 madrid,slovene,2,0,2
-madrid,slovene,2,1,0
+madrid,slovene,2,1,2
 madrid,slovene,3,0,0
 madrid,slovene,3,1,0
 madrid,slovene,4,0,0
@@ -7064,7 +7064,7 @@ madrid,slovene,20,1,0
 madrid,slovene,21,0,0
 madrid,slovene,21,1,0
 madrid,slovene,22,0,0
-madrid,slovene,22,1,0
+madrid,slovene,22,1,2
 madrid,slovene,23,0,0
 madrid,slovene,23,1,0
 madrid,slovene,24,0,0
@@ -7112,7 +7112,7 @@ madrid,slovene,44,1,0
 madrid,spanish,0,0,0
 madrid,spanish,0,1,0
 madrid,spanish,1,0,0
-madrid,spanish,1,1,0
+madrid,spanish,1,1,1
 madrid,spanish,2,0,0
 madrid,spanish,2,1,0
 madrid,spanish,3,0,0
@@ -7124,7 +7124,7 @@ madrid,spanish,5,1,0
 madrid,spanish,6,0,0
 madrid,spanish,6,1,0
 madrid,spanish,7,0,0
-madrid,spanish,7,1,0
+madrid,spanish,7,1,2
 madrid,spanish,8,0,0
 madrid,spanish,8,1,0
 madrid,spanish,9,0,0
@@ -7137,7 +7137,7 @@ madrid,spanish,12,0,0
 madrid,spanish,12,1,2
 madrid,spanish,13,0,0
 madrid,spanish,13,1,0
-madrid,spanish,14,0,0
+madrid,spanish,14,0,2
 madrid,spanish,14,1,0
 madrid,spanish,15,0,0
 madrid,spanish,15,1,0
@@ -7164,7 +7164,7 @@ madrid,spanish,25,1,0
 madrid,spanish,26,0,0
 madrid,spanish,26,1,0
 madrid,spanish,27,0,0
-madrid,spanish,27,1,0
+madrid,spanish,27,1,1
 madrid,spanish,28,0,0
 madrid,spanish,28,1,0
 madrid,spanish,29,0,2
@@ -7203,7 +7203,7 @@ madrid,swedish,0,0,0
 madrid,swedish,0,1,0
 madrid,swedish,1,0,0
 madrid,swedish,1,1,0
-madrid,swedish,2,0,0
+madrid,swedish,2,0,1
 madrid,swedish,2,1,0
 madrid,swedish,3,0,0
 madrid,swedish,3,1,2
@@ -7213,7 +7213,7 @@ madrid,swedish,5,0,0
 madrid,swedish,5,1,0
 madrid,swedish,6,0,0
 madrid,swedish,6,1,0
-madrid,swedish,7,0,0
+madrid,swedish,7,0,2
 madrid,swedish,7,1,0
 madrid,swedish,8,0,2
 madrid,swedish,8,1,0
@@ -7291,7 +7291,7 @@ madrid,swedish,44,0,0
 madrid,swedish,44,1,0
 paris,austrian,0,0,2
 paris,austrian,0,1,0
-paris,austrian,1,0,0
+paris,austrian,1,0,1
 paris,austrian,1,1,0
 paris,austrian,2,0,0
 paris,austrian,2,1,0
@@ -7314,7 +7314,7 @@ paris,austrian,10,1,2
 paris,austrian,11,0,0
 paris,austrian,11,1,0
 paris,austrian,12,0,0
-paris,austrian,12,1,0
+paris,austrian,12,1,2
 paris,austrian,13,0,0
 paris,austrian,13,1,0
 paris,austrian,14,0,0
@@ -7350,14 +7350,14 @@ paris,austrian,28,1,0
 paris,austrian,29,0,0
 paris,austrian,29,1,0
 paris,austrian,30,0,0
-paris,austrian,30,1,0
+paris,austrian,30,1,1
 paris,austrian,31,0,0
 paris,austrian,31,1,0
 paris,austrian,32,0,0
 paris,austrian,32,1,0
 paris,austrian,33,0,2
-paris,austrian,33,1,0
-paris,austrian,34,0,0
+paris,austrian,33,1,2
+paris,austrian,34,0,1
 paris,austrian,34,1,0
 paris,austrian,35,0,0
 paris,austrian,35,1,2
@@ -7372,7 +7372,7 @@ paris,austrian,39,0,0
 paris,austrian,40,0,0
 paris,austrian,40,1,0
 paris,austrian,41,0,0
-paris,austrian,41,1,0
+paris,austrian,41,1,2
 paris,austrian,42,0,0
 paris,austrian,42,1,0
 paris,austrian,43,0,2
@@ -7385,7 +7385,7 @@ paris,belgian,1,0,0
 paris,belgian,1,1,0
 paris,belgian,2,0,0
 paris,belgian,2,1,0
-paris,belgian,3,0,0
+paris,belgian,3,0,2
 paris,belgian,3,1,0
 paris,belgian,4,0,0
 paris,belgian,4,1,0
@@ -7445,12 +7445,12 @@ paris,belgian,31,0,0
 paris,belgian,31,1,2
 paris,belgian,32,0,0
 paris,belgian,32,1,0
-paris,belgian,33,0,0
+paris,belgian,33,0,2
 paris,belgian,33,1,0
 paris,belgian,34,0,0
 paris,belgian,34,1,0
 paris,belgian,35,0,0
-paris,belgian,35,1,0
+paris,belgian,35,1,2
 paris,belgian,36,0,0
 paris,belgian,36,1,2
 paris,belgian,37,0,0
@@ -7459,7 +7459,7 @@ paris,belgian,38,0,0
 paris,belgian,38,1,2
 paris,belgian,39,0,0
 paris,belgian,39,1,0
-paris,belgian,40,0,0
+paris,belgian,40,0,1
 paris,belgian,40,1,0
 paris,belgian,41,0,0
 paris,belgian,41,1,0
@@ -7501,7 +7501,7 @@ paris,bulgarian,14,0,0
 paris,bulgarian,14,1,0
 paris,bulgarian,15,0,0
 paris,bulgarian,15,1,0
-paris,bulgarian,16,0,0
+paris,bulgarian,16,0,2
 paris,bulgarian,16,1,0
 paris,bulgarian,17,0,0
 paris,bulgarian,17,1,0
@@ -7522,7 +7522,7 @@ paris,bulgarian,24,1,2
 paris,bulgarian,25,0,0
 paris,bulgarian,25,1,0
 paris,bulgarian,26,0,0
-paris,bulgarian,26,1,0
+paris,bulgarian,26,1,2
 paris,bulgarian,27,0,0
 paris,bulgarian,27,1,2
 paris,bulgarian,28,0,0
@@ -7532,7 +7532,7 @@ paris,bulgarian,29,1,0
 paris,bulgarian,30,0,0
 paris,bulgarian,30,1,0
 paris,bulgarian,31,0,2
-paris,bulgarian,31,1,0
+paris,bulgarian,31,1,2
 paris,bulgarian,32,0,0
 paris,bulgarian,32,1,0
 paris,bulgarian,33,0,0
@@ -7548,7 +7548,7 @@ paris,bulgarian,37,1,0
 paris,bulgarian,38,0,0
 paris,bulgarian,38,1,0
 paris,bulgarian,39,0,0
-paris,bulgarian,39,1,0
+paris,bulgarian,39,1,2
 paris,bulgarian,40,0,0
 paris,bulgarian,40,1,0
 paris,bulgarian,41,0,2
@@ -7557,7 +7557,7 @@ paris,bulgarian,42,0,0
 paris,bulgarian,42,1,0
 paris,bulgarian,43,0,0
 paris,bulgarian,43,1,2
-paris,bulgarian,44,0,0
+paris,bulgarian,44,0,2
 paris,bulgarian,44,1,0
 paris,croatian,0,0,0
 paris,croatian,0,1,0
@@ -7574,7 +7574,7 @@ paris,croatian,5,1,0
 paris,croatian,6,0,0
 paris,croatian,6,1,0
 paris,croatian,7,0,0
-paris,croatian,7,1,0
+paris,croatian,7,1,2
 paris,croatian,8,0,0
 paris,croatian,8,1,0
 paris,croatian,9,0,0
@@ -7627,9 +7627,9 @@ paris,croatian,32,0,0
 paris,croatian,32,1,0
 paris,croatian,33,0,0
 paris,croatian,33,1,0
-paris,croatian,34,0,0
+paris,croatian,34,0,2
 0,0,0,0,0
-paris,croatian,35,0,0
+paris,croatian,35,0,1
 paris,croatian,35,1,0
 paris,croatian,36,0,2
 paris,croatian,36,1,0
@@ -7753,7 +7753,7 @@ paris,czech,5,0,0
 paris,czech,5,1,0
 paris,czech,6,0,0
 paris,czech,6,1,2
-paris,czech,7,0,0
+paris,czech,7,0,2
 paris,czech,7,1,0
 paris,czech,8,0,0
 paris,czech,8,1,0
@@ -7767,7 +7767,7 @@ paris,czech,12,0,0
 paris,czech,12,1,0
 paris,czech,13,0,0
 paris,czech,13,1,0
-paris,czech,14,0,0
+paris,czech,14,0,1
 paris,czech,14,1,0
 paris,czech,15,0,0
 paris,czech,15,1,0
@@ -7792,7 +7792,7 @@ paris,czech,24,1,0
 paris,czech,25,0,2
 paris,czech,25,1,0
 paris,czech,26,0,0
-paris,czech,26,1,0
+paris,czech,26,1,2
 paris,czech,27,0,2
 paris,czech,27,1,2
 paris,czech,28,0,0
@@ -7862,22 +7862,22 @@ paris,danish,14,1,2
 paris,danish,15,0,0
 paris,danish,15,1,0
 paris,danish,16,0,2
-paris,danish,16,1,0
+paris,danish,16,1,2
 paris,danish,17,0,0
 paris,danish,17,1,0
 paris,danish,18,0,0
 paris,danish,18,1,0
 paris,danish,19,0,0
 paris,danish,19,1,0
-paris,danish,20,0,0
-paris,danish,20,1,0
+paris,danish,20,0,1
+paris,danish,20,1,2
 paris,danish,21,0,0
 paris,danish,21,1,0
 paris,danish,22,0,0
 0,0,0,0,0
 paris,danish,23,0,0
 paris,danish,23,1,2
-paris,danish,24,0,0
+paris,danish,24,0,1
 paris,danish,24,1,0
 paris,danish,25,0,2
 paris,danish,25,1,0
@@ -7892,7 +7892,7 @@ paris,danish,29,1,0
 paris,danish,30,0,2
 paris,danish,30,1,0
 paris,danish,31,0,0
-paris,danish,31,1,0
+paris,danish,31,1,2
 paris,danish,32,0,0
 paris,danish,32,1,0
 paris,danish,33,0,0
@@ -7905,7 +7905,7 @@ paris,danish,36,0,2
 paris,danish,36,1,0
 paris,danish,37,0,2
 paris,danish,37,1,0
-paris,danish,38,0,0
+paris,danish,38,0,1
 paris,danish,38,1,0
 paris,danish,39,0,0
 paris,danish,39,1,2
@@ -7918,9 +7918,9 @@ paris,danish,42,1,2
 paris,danish,43,0,0
 paris,danish,43,1,0
 0,0,0,0,0
-paris,danish,44,1,0
+paris,danish,44,1,1
 paris,dutch,0,0,0
-paris,dutch,0,1,0
+paris,dutch,0,1,2
 paris,dutch,1,0,2
 paris,dutch,1,1,0
 paris,dutch,2,0,0
@@ -7940,16 +7940,16 @@ paris,dutch,8,1,2
 paris,dutch,9,0,0
 paris,dutch,9,1,0
 paris,dutch,10,0,0
-paris,dutch,10,1,0
+paris,dutch,10,1,2
 paris,dutch,11,0,0
 paris,dutch,11,1,0
 paris,dutch,12,0,0
-paris,dutch,12,1,0
+paris,dutch,12,1,2
 paris,dutch,13,0,0
 paris,dutch,13,1,0
 paris,dutch,14,0,0
 paris,dutch,14,1,0
-paris,dutch,15,0,0
+paris,dutch,15,0,2
 paris,dutch,15,1,0
 paris,dutch,16,0,0
 paris,dutch,16,1,2
@@ -7958,7 +7958,7 @@ paris,dutch,17,1,0
 paris,dutch,18,0,2
 paris,dutch,18,1,0
 paris,dutch,19,0,0
-paris,dutch,19,1,0
+paris,dutch,19,1,2
 paris,dutch,20,0,0
 paris,dutch,20,1,0
 paris,dutch,21,0,0
@@ -7967,7 +7967,7 @@ paris,dutch,22,0,0
 paris,dutch,22,1,0
 paris,dutch,23,0,0
 paris,dutch,23,1,0
-paris,dutch,24,0,0
+paris,dutch,24,0,2
 paris,dutch,24,1,0
 paris,dutch,25,0,0
 paris,dutch,25,1,0
@@ -7977,7 +7977,7 @@ paris,dutch,27,0,0
 paris,dutch,27,1,0
 paris,dutch,28,0,0
 paris,dutch,28,1,0
-paris,dutch,29,0,0
+paris,dutch,29,0,2
 paris,dutch,29,1,0
 paris,dutch,30,0,0
 paris,dutch,30,1,0
@@ -8014,7 +8014,7 @@ paris,estonian,0,1,2
 paris,estonian,1,0,0
 paris,estonian,1,1,2
 paris,estonian,2,0,2
-paris,estonian,2,1,0
+paris,estonian,2,1,2
 paris,estonian,3,0,0
 paris,estonian,3,1,0
 paris,estonian,4,0,0
@@ -8040,7 +8040,7 @@ paris,estonian,13,1,0
 paris,estonian,14,0,0
 paris,estonian,14,1,0
 paris,estonian,15,0,0
-paris,estonian,15,1,0
+paris,estonian,15,1,1
 paris,estonian,16,0,0
 paris,estonian,16,1,0
 paris,estonian,17,0,0
@@ -8048,7 +8048,7 @@ paris,estonian,17,1,0
 paris,estonian,18,0,0
 paris,estonian,18,1,2
 paris,estonian,19,0,0
-paris,estonian,19,1,0
+paris,estonian,19,1,2
 paris,estonian,20,0,0
 paris,estonian,20,1,0
 paris,estonian,21,0,0
@@ -8079,7 +8079,7 @@ paris,estonian,33,0,2
 paris,estonian,33,1,0
 paris,estonian,34,0,0
 paris,estonian,34,1,0
-paris,estonian,35,0,0
+paris,estonian,35,0,2
 paris,estonian,35,1,0
 paris,estonian,36,0,0
 paris,estonian,36,1,0
@@ -8145,7 +8145,7 @@ paris,finnish,21,0,0
 paris,finnish,21,1,0
 paris,finnish,22,0,0
 paris,finnish,22,1,0
-paris,finnish,23,0,0
+paris,finnish,23,0,2
 paris,finnish,23,1,0
 paris,finnish,24,0,0
 paris,finnish,24,1,2
@@ -8160,7 +8160,7 @@ paris,finnish,28,1,0
 paris,finnish,29,0,0
 paris,finnish,29,1,0
 paris,finnish,30,0,2
-paris,finnish,30,1,0
+paris,finnish,30,1,1
 paris,finnish,31,0,0
 paris,finnish,31,1,0
 paris,finnish,32,0,2
@@ -8189,7 +8189,7 @@ paris,finnish,43,0,0
 paris,finnish,43,1,0
 paris,finnish,44,0,2
 paris,finnish,44,1,2
-paris,french,0,0,0
+paris,french,0,0,2
 paris,french,0,1,0
 paris,french,1,0,0
 paris,french,1,1,0
@@ -8264,7 +8264,7 @@ paris,french,35,1,0
 paris,french,36,0,0
 paris,french,36,1,2
 paris,french,37,0,0
-paris,french,37,1,0
+paris,french,37,1,1
 paris,french,38,0,0
 paris,french,38,1,0
 0,0,0,0,0
@@ -8293,11 +8293,11 @@ paris,german,5,0,0
 paris,german,5,1,0
 paris,german,6,0,0
 paris,german,6,1,0
-paris,german,7,0,0
+paris,german,7,0,2
 paris,german,7,1,0
 paris,german,8,0,0
 paris,german,8,1,0
-paris,german,9,0,0
+paris,german,9,0,2
 paris,german,9,1,2
 paris,german,10,0,2
 paris,german,10,1,2
@@ -8340,7 +8340,7 @@ paris,german,28,1,0
 paris,german,29,0,0
 paris,german,29,1,0
 paris,german,30,0,0
-paris,german,30,1,0
+paris,german,30,1,2
 paris,german,31,0,2
 paris,german,31,1,0
 paris,german,32,0,0
@@ -8386,7 +8386,7 @@ paris,greek,6,1,0
 paris,greek,7,0,0
 paris,greek,7,1,0
 paris,greek,8,0,0
-paris,greek,8,1,0
+paris,greek,8,1,2
 paris,greek,9,0,0
 paris,greek,9,1,0
 paris,greek,10,0,0
@@ -8418,7 +8418,7 @@ paris,greek,22,1,0
 paris,greek,23,0,0
 paris,greek,23,1,0
 paris,greek,24,0,2
-paris,greek,24,1,0
+paris,greek,24,1,2
 paris,greek,25,0,2
 paris,greek,25,1,0
 paris,greek,26,0,0
@@ -8456,7 +8456,7 @@ paris,greek,41,1,0
 paris,greek,42,0,2
 paris,greek,42,1,0
 paris,greek,43,0,0
-paris,greek,43,1,0
+paris,greek,43,1,2
 paris,greek,44,0,0
 paris,greek,44,1,2
 paris,hungarian,0,0,0
@@ -8484,11 +8484,11 @@ paris,hungarian,10,1,0
 paris,hungarian,11,0,2
 paris,hungarian,11,1,0
 paris,hungarian,12,0,0
-paris,hungarian,12,1,0
+paris,hungarian,12,1,2
 paris,hungarian,13,0,0
 paris,hungarian,13,1,2
 paris,hungarian,14,0,0
-paris,hungarian,14,1,0
+paris,hungarian,14,1,2
 paris,hungarian,15,0,0
 paris,hungarian,15,1,0
 paris,hungarian,16,0,0
@@ -8515,7 +8515,7 @@ paris,hungarian,26,0,2
 paris,hungarian,26,1,0
 paris,hungarian,27,0,0
 paris,hungarian,27,1,0
-paris,hungarian,28,0,0
+paris,hungarian,28,0,2
 paris,hungarian,28,1,0
 paris,hungarian,29,0,0
 paris,hungarian,29,1,0
@@ -8546,7 +8546,7 @@ paris,hungarian,41,1,0
 paris,hungarian,42,0,0
 paris,hungarian,42,1,2
 paris,hungarian,43,0,0
-paris,hungarian,43,1,0
+paris,hungarian,43,1,1
 paris,hungarian,44,0,2
 paris,hungarian,44,1,0
 paris,irish,0,0,2
@@ -8559,7 +8559,7 @@ paris,irish,3,0,0
 paris,irish,3,1,0
 paris,irish,4,0,0
 paris,irish,4,1,0
-paris,irish,5,0,0
+paris,irish,5,0,2
 0,0,0,0,0
 paris,irish,6,0,0
 paris,irish,6,1,0
@@ -8595,7 +8595,7 @@ paris,irish,21,0,2
 paris,irish,21,1,0
 paris,irish,22,0,0
 paris,irish,22,1,0
-paris,irish,23,0,0
+paris,irish,23,0,2
 paris,irish,23,1,0
 paris,irish,24,0,0
 paris,irish,24,1,0
@@ -8657,7 +8657,7 @@ paris,italian,7,0,0
 paris,italian,7,1,0
 paris,italian,8,0,0
 paris,italian,8,1,2
-paris,italian,9,0,0
+paris,italian,9,0,1
 paris,italian,9,1,0
 paris,italian,10,0,0
 paris,italian,10,1,0
@@ -8682,7 +8682,7 @@ paris,italian,19,1,0
 paris,italian,20,0,0
 paris,italian,20,1,2
 paris,italian,21,0,0
-paris,italian,21,1,0
+paris,italian,21,1,2
 paris,italian,22,0,0
 paris,italian,22,1,0
 paris,italian,23,0,2
@@ -8700,7 +8700,7 @@ paris,italian,28,1,0
 paris,italian,29,0,0
 paris,italian,29,1,0
 paris,italian,30,0,0
-paris,italian,30,1,0
+paris,italian,30,1,2
 paris,italian,31,0,0
 paris,italian,31,1,2
 paris,italian,32,0,0
@@ -8718,7 +8718,7 @@ paris,italian,37,1,0
 paris,italian,38,0,0
 paris,italian,38,1,0
 paris,italian,39,0,0
-paris,italian,39,1,0
+paris,italian,39,1,2
 paris,italian,40,0,0
 paris,italian,40,1,0
 paris,italian,41,0,0
@@ -8735,7 +8735,7 @@ paris,latvian,1,0,0
 paris,latvian,1,1,0
 paris,latvian,2,0,0
 paris,latvian,2,1,0
-paris,latvian,3,0,0
+paris,latvian,3,0,2
 paris,latvian,3,1,0
 paris,latvian,4,0,0
 paris,latvian,4,1,0
@@ -8807,7 +8807,7 @@ paris,latvian,37,0,2
 paris,latvian,37,1,0
 paris,latvian,38,0,0
 paris,latvian,38,1,0
-paris,latvian,39,0,0
+paris,latvian,39,0,2
 paris,latvian,39,1,0
 paris,latvian,40,0,0
 paris,latvian,40,1,0
@@ -8875,7 +8875,7 @@ paris,lithuanian,26,0,2
 paris,lithuanian,26,1,2
 paris,lithuanian,27,0,0
 paris,lithuanian,27,1,0
-paris,lithuanian,28,0,0
+paris,lithuanian,28,0,2
 paris,lithuanian,28,1,0
 paris,lithuanian,29,0,0
 paris,lithuanian,29,1,2
@@ -8898,7 +8898,7 @@ paris,lithuanian,37,1,2
 paris,lithuanian,38,0,2
 paris,lithuanian,38,1,2
 paris,lithuanian,39,0,0
-paris,lithuanian,39,1,0
+paris,lithuanian,39,1,1
 paris,lithuanian,40,0,2
 paris,lithuanian,40,1,0
 paris,lithuanian,41,0,0
@@ -8922,14 +8922,14 @@ paris,luxembourgish,4,1,0
 paris,luxembourgish,5,0,0
 paris,luxembourgish,5,1,0
 paris,luxembourgish,6,0,0
-paris,luxembourgish,6,1,0
+paris,luxembourgish,6,1,2
 paris,luxembourgish,7,0,0
 paris,luxembourgish,7,1,0
 paris,luxembourgish,8,0,0
 paris,luxembourgish,8,1,0
 paris,luxembourgish,9,0,0
 paris,luxembourgish,9,1,0
-paris,luxembourgish,10,0,0
+paris,luxembourgish,10,0,1
 paris,luxembourgish,10,1,0
 paris,luxembourgish,11,0,0
 paris,luxembourgish,11,1,0
@@ -8958,9 +8958,9 @@ paris,luxembourgish,22,1,0
 paris,luxembourgish,23,0,0
 paris,luxembourgish,23,1,0
 paris,luxembourgish,24,0,2
-paris,luxembourgish,24,1,0
+paris,luxembourgish,24,1,2
 paris,luxembourgish,25,0,0
-paris,luxembourgish,25,1,0
+paris,luxembourgish,25,1,2
 paris,luxembourgish,26,0,0
 paris,luxembourgish,26,1,0
 paris,luxembourgish,27,0,0
@@ -8968,12 +8968,12 @@ paris,luxembourgish,27,1,0
 paris,luxembourgish,28,0,2
 paris,luxembourgish,28,1,0
 paris,luxembourgish,29,0,0
-paris,luxembourgish,29,1,0
+paris,luxembourgish,29,1,2
 paris,luxembourgish,30,0,2
 paris,luxembourgish,30,1,0
-paris,luxembourgish,31,0,0
-paris,luxembourgish,31,1,0
-paris,luxembourgish,32,0,0
+paris,luxembourgish,31,0,2
+paris,luxembourgish,31,1,2
+paris,luxembourgish,32,0,2
 paris,luxembourgish,32,1,0
 paris,luxembourgish,33,0,2
 paris,luxembourgish,33,1,2
@@ -8984,7 +8984,7 @@ paris,luxembourgish,35,1,0
 paris,luxembourgish,36,0,0
 paris,luxembourgish,36,1,0
 paris,luxembourgish,37,0,0
-paris,luxembourgish,37,1,0
+paris,luxembourgish,37,1,2
 paris,luxembourgish,38,0,0
 paris,luxembourgish,38,1,0
 paris,luxembourgish,39,0,0
@@ -9035,14 +9035,14 @@ paris,maltese,16,0,0
 paris,maltese,16,1,0
 paris,maltese,17,0,2
 paris,maltese,17,1,0
-paris,maltese,18,0,0
+paris,maltese,18,0,1
 paris,maltese,18,1,0
 paris,maltese,19,0,2
-paris,maltese,19,1,0
+paris,maltese,19,1,2
 paris,maltese,20,0,0
 paris,maltese,20,1,0
 paris,maltese,21,0,0
-paris,maltese,21,1,0
+paris,maltese,21,1,2
 paris,maltese,22,0,0
 paris,maltese,22,1,0
 paris,maltese,23,0,0
@@ -9060,14 +9060,14 @@ paris,maltese,28,1,2
 paris,maltese,29,0,0
 paris,maltese,29,1,0
 paris,maltese,30,0,0
-paris,maltese,30,1,0
+paris,maltese,30,1,2
 paris,maltese,31,0,0
 paris,maltese,31,1,0
 paris,maltese,32,0,0
 paris,maltese,32,1,0
 paris,maltese,33,0,0
 paris,maltese,33,1,0
-paris,maltese,34,0,0
+paris,maltese,34,0,2
 paris,maltese,34,1,0
 paris,maltese,35,0,0
 paris,maltese,35,1,0
@@ -9104,7 +9104,7 @@ paris,polish,5,1,0
 paris,polish,6,0,0
 paris,polish,6,1,0
 paris,polish,7,0,0
-paris,polish,7,1,0
+paris,polish,7,1,1
 paris,polish,8,0,2
 paris,polish,8,1,0
 paris,polish,9,0,0
@@ -9130,7 +9130,7 @@ paris,polish,18,1,0
 paris,polish,19,0,0
 paris,polish,19,1,0
 paris,polish,20,0,0
-paris,polish,20,1,0
+paris,polish,20,1,2
 paris,polish,21,0,0
 paris,polish,21,1,0
 paris,polish,22,0,0
@@ -9145,7 +9145,7 @@ paris,polish,26,0,0
 paris,polish,26,1,0
 paris,polish,27,0,0
 paris,polish,27,1,0
-paris,polish,28,0,0
+paris,polish,28,0,1
 paris,polish,28,1,0
 0,0,0,0,0
 paris,polish,29,1,0
@@ -9172,7 +9172,7 @@ paris,polish,39,1,0
 paris,polish,40,0,0
 paris,polish,40,1,0
 paris,polish,41,0,2
-paris,polish,41,1,0
+paris,polish,41,1,2
 paris,polish,42,0,0
 paris,polish,42,1,0
 paris,polish,43,0,2
@@ -9197,15 +9197,15 @@ paris,portuguese,7,0,0
 paris,portuguese,7,1,0
 paris,portuguese,8,0,2
 paris,portuguese,8,1,2
-paris,portuguese,9,0,0
+paris,portuguese,9,0,2
 paris,portuguese,9,1,0
 paris,portuguese,10,0,2
 paris,portuguese,10,1,2
 paris,portuguese,11,0,2
 paris,portuguese,11,1,2
 paris,portuguese,12,0,2
-paris,portuguese,12,1,0
-paris,portuguese,13,0,0
+paris,portuguese,12,1,2
+paris,portuguese,13,0,2
 paris,portuguese,13,1,0
 paris,portuguese,14,0,0
 paris,portuguese,14,1,0
@@ -9214,7 +9214,7 @@ paris,portuguese,15,1,0
 paris,portuguese,16,0,0
 paris,portuguese,16,1,2
 paris,portuguese,17,0,0
-paris,portuguese,17,1,0
+paris,portuguese,17,1,2
 paris,portuguese,18,0,0
 paris,portuguese,18,1,0
 paris,portuguese,19,0,0
@@ -9263,7 +9263,7 @@ paris,portuguese,39,1,0
 paris,portuguese,40,1,0
 paris,portuguese,41,0,0
 paris,portuguese,41,1,0
-paris,portuguese,42,0,0
+paris,portuguese,42,0,2
 paris,portuguese,42,1,2
 paris,portuguese,43,0,0
 paris,portuguese,43,1,0
@@ -9281,7 +9281,7 @@ paris,romanian,4,0,0
 paris,romanian,4,1,0
 paris,romanian,5,0,2
 paris,romanian,5,1,0
-paris,romanian,6,0,0
+paris,romanian,6,0,2
 paris,romanian,6,1,0
 paris,romanian,7,0,0
 paris,romanian,7,1,2
@@ -9321,14 +9321,14 @@ paris,romanian,24,0,0
 paris,romanian,24,1,0
 paris,romanian,25,0,2
 paris,romanian,25,1,0
-paris,romanian,26,0,0
+paris,romanian,26,0,1
 paris,romanian,26,1,0
 paris,romanian,27,0,0
 paris,romanian,27,1,2
 paris,romanian,28,0,0
 paris,romanian,28,1,2
 paris,romanian,29,0,0
-paris,romanian,29,1,0
+paris,romanian,29,1,2
 paris,romanian,30,0,0
 paris,romanian,30,1,0
 paris,romanian,31,0,0
@@ -9427,7 +9427,7 @@ paris,slovakian,32,0,0
 paris,slovakian,32,1,0
 paris,slovakian,33,0,0
 paris,slovakian,33,1,0
-paris,slovakian,34,0,0
+paris,slovakian,34,0,2
 paris,slovakian,34,1,2
 paris,slovakian,35,0,0
 paris,slovakian,35,1,2
@@ -9448,7 +9448,7 @@ paris,slovakian,42,1,0
 paris,slovakian,43,0,0
 paris,slovakian,43,1,0
 paris,slovakian,44,0,0
-paris,slovakian,44,1,0
+paris,slovakian,44,1,1
 paris,slovene,0,0,0
 paris,slovene,0,1,0
 paris,slovene,1,0,0
@@ -9468,7 +9468,7 @@ paris,slovene,7,1,0
 paris,slovene,8,0,0
 paris,slovene,8,1,0
 paris,slovene,9,0,0
-paris,slovene,9,1,1
+0,0,0,0,0
 0,0,0,0,0
 paris,slovene,10,1,0
 paris,slovene,11,0,2
@@ -9496,7 +9496,7 @@ paris,slovene,21,1,0
 paris,slovene,22,0,0
 paris,slovene,22,1,0
 paris,slovene,23,0,0
-paris,slovene,23,1,0
+paris,slovene,23,1,1
 paris,slovene,24,0,0
 paris,slovene,24,1,0
 paris,slovene,25,0,0
@@ -9513,11 +9513,11 @@ paris,slovene,30,0,0
 paris,slovene,30,1,0
 paris,slovene,31,0,0
 paris,slovene,31,1,0
-paris,slovene,32,0,0
+paris,slovene,32,0,2
 paris,slovene,32,1,0
 paris,slovene,33,0,0
 paris,slovene,33,1,0
-paris,slovene,34,0,0
+paris,slovene,34,0,2
 paris,slovene,34,1,0
 paris,slovene,35,0,0
 paris,slovene,35,1,0
@@ -9564,7 +9564,7 @@ paris,spanish,10,1,0
 paris,spanish,11,0,0
 paris,spanish,11,1,0
 paris,spanish,12,0,0
-paris,spanish,12,1,0
+paris,spanish,12,1,2
 paris,spanish,13,0,0
 paris,spanish,13,1,0
 paris,spanish,14,0,2
@@ -9611,7 +9611,7 @@ paris,spanish,34,0,0
 paris,spanish,34,1,0
 paris,spanish,35,0,0
 paris,spanish,35,1,0
-paris,spanish,36,0,0
+paris,spanish,36,0,2
 paris,spanish,36,1,0
 paris,spanish,37,0,2
 paris,spanish,37,1,0
@@ -9620,7 +9620,7 @@ paris,spanish,38,1,0
 paris,spanish,39,0,0
 paris,spanish,39,1,0
 paris,spanish,40,0,0
-paris,spanish,40,1,0
+paris,spanish,40,1,2
 paris,spanish,41,0,0
 paris,spanish,41,1,2
 paris,spanish,42,0,0
@@ -9646,7 +9646,7 @@ paris,swedish,6,1,0
 paris,swedish,7,0,0
 paris,swedish,7,1,2
 paris,swedish,8,0,0
-paris,swedish,8,1,0
+paris,swedish,8,1,2
 paris,swedish,9,0,0
 paris,swedish,9,1,0
 paris,swedish,10,0,2
@@ -9669,7 +9669,7 @@ paris,swedish,18,0,0
 paris,swedish,18,1,0
 paris,swedish,19,0,0
 paris,swedish,19,1,0
-paris,swedish,20,0,0
+paris,swedish,20,0,2
 paris,swedish,20,1,0
 paris,swedish,21,0,0
 paris,swedish,21,1,0
@@ -9701,7 +9701,7 @@ paris,swedish,34,0,2
 paris,swedish,34,1,2
 paris,swedish,35,0,0
 paris,swedish,35,1,0
-paris,swedish,36,0,0
+paris,swedish,36,0,2
 paris,swedish,36,1,0
 paris,swedish,37,0,0
 paris,swedish,37,1,0
@@ -9739,7 +9739,7 @@ rome,austrian,8,0,0
 rome,austrian,8,1,2
 rome,austrian,9,0,0
 rome,austrian,9,1,0
-rome,austrian,10,0,0
+rome,austrian,10,0,2
 rome,austrian,10,1,0
 rome,austrian,11,0,0
 rome,austrian,11,1,0
@@ -9769,7 +9769,7 @@ rome,austrian,23,0,0
 rome,austrian,23,1,0
 rome,austrian,24,0,0
 rome,austrian,24,1,0
-rome,austrian,25,0,0
+rome,austrian,25,0,2
 rome,austrian,25,1,0
 rome,austrian,26,0,0
 rome,austrian,26,1,2
@@ -9789,7 +9789,7 @@ rome,austrian,33,0,0
 rome,austrian,33,1,0
 rome,austrian,34,0,0
 rome,austrian,34,1,0
-rome,austrian,35,0,0
+rome,austrian,35,0,2
 rome,austrian,35,1,0
 rome,austrian,36,0,0
 rome,austrian,36,1,0
@@ -9809,7 +9809,7 @@ rome,austrian,43,0,0
 rome,austrian,43,1,0
 rome,austrian,44,0,0
 rome,austrian,44,1,0
-rome,belgian,0,0,0
+rome,belgian,0,0,2
 rome,belgian,0,1,0
 rome,belgian,1,0,0
 rome,belgian,1,1,0
@@ -9833,7 +9833,7 @@ rome,belgian,10,0,0
 rome,belgian,10,1,0
 rome,belgian,11,0,0
 rome,belgian,11,1,0
-rome,belgian,12,0,0
+rome,belgian,12,0,2
 rome,belgian,12,1,0
 rome,belgian,13,0,0
 rome,belgian,13,1,0
@@ -9857,12 +9857,12 @@ rome,belgian,22,0,0
 rome,belgian,22,1,0
 rome,belgian,23,0,0
 rome,belgian,23,1,0
-rome,belgian,24,0,0
+rome,belgian,24,0,1
 rome,belgian,24,1,0
 rome,belgian,25,0,0
 rome,belgian,25,1,0
 rome,belgian,26,0,0
-rome,belgian,26,1,0
+rome,belgian,26,1,1
 rome,belgian,27,0,0
 rome,belgian,27,1,0
 rome,belgian,28,0,0
@@ -9917,7 +9917,7 @@ rome,bulgarian,7,0,0
 rome,bulgarian,7,1,0
 rome,bulgarian,8,0,0
 rome,bulgarian,8,1,0
-rome,bulgarian,9,0,0
+rome,bulgarian,9,0,2
 rome,bulgarian,9,1,0
 rome,bulgarian,10,0,0
 rome,bulgarian,10,1,2
@@ -9953,7 +9953,7 @@ rome,bulgarian,25,0,0
 rome,bulgarian,25,1,0
 rome,bulgarian,26,0,0
 rome,bulgarian,26,1,0
-rome,bulgarian,27,0,0
+rome,bulgarian,27,0,2
 rome,bulgarian,27,1,0
 rome,bulgarian,28,0,2
 rome,bulgarian,28,1,0
@@ -9971,14 +9971,14 @@ rome,bulgarian,34,0,2
 rome,bulgarian,34,1,0
 rome,bulgarian,35,0,0
 rome,bulgarian,35,1,2
-rome,bulgarian,36,0,0
+rome,bulgarian,36,0,1
 rome,bulgarian,36,1,0
 rome,bulgarian,37,0,0
 rome,bulgarian,37,1,0
 rome,bulgarian,38,0,0
 rome,bulgarian,38,1,0
 rome,bulgarian,39,0,0
-rome,bulgarian,39,1,0
+rome,bulgarian,39,1,2
 rome,bulgarian,40,0,0
 rome,bulgarian,40,1,0
 rome,bulgarian,41,0,0
@@ -10037,18 +10037,18 @@ rome,croatian,22,0,0
 rome,croatian,22,1,0
 rome,croatian,23,0,0
 rome,croatian,23,1,2
-rome,croatian,24,0,0
+rome,croatian,24,0,2
 rome,croatian,24,1,0
 rome,croatian,25,0,2
 rome,croatian,25,1,0
-rome,croatian,26,0,1
+0,0,0,0,0
 rome,croatian,26,1,0
 rome,croatian,27,0,0
 rome,croatian,27,1,0
 rome,croatian,28,0,0
 rome,croatian,28,1,0
 rome,croatian,29,0,0
-rome,croatian,29,1,0
+rome,croatian,29,1,2
 rome,croatian,30,0,0
 rome,croatian,30,1,0
 rome,croatian,31,0,2
@@ -10093,7 +10093,7 @@ rome,cypriot,5,0,0
 rome,cypriot,5,1,0
 rome,cypriot,6,0,0
 rome,cypriot,6,1,0
-rome,cypriot,7,0,0
+rome,cypriot,7,0,2
 rome,cypriot,7,1,0
 rome,cypriot,8,0,0
 rome,cypriot,8,1,0
@@ -10190,8 +10190,8 @@ rome,czech,8,1,0
 rome,czech,9,0,0
 rome,czech,9,1,0
 rome,czech,10,0,0
-rome,czech,10,1,0
-rome,czech,11,0,0
+rome,czech,10,1,2
+rome,czech,11,0,2
 rome,czech,11,1,0
 rome,czech,12,0,2
 rome,czech,12,1,0
@@ -10238,7 +10238,7 @@ rome,czech,32,0,0
 rome,czech,33,0,2
 rome,czech,33,1,0
 rome,czech,34,0,0
-rome,czech,34,1,0
+rome,czech,34,1,2
 rome,czech,35,0,0
 rome,czech,35,1,0
 rome,czech,36,0,0
@@ -10257,8 +10257,8 @@ rome,czech,42,0,0
 rome,czech,42,1,0
 rome,czech,43,0,0
 rome,czech,43,1,0
-rome,czech,44,0,0
-rome,czech,44,1,0
+rome,czech,44,0,1
+rome,czech,44,1,2
 rome,danish,0,0,0
 rome,danish,0,1,2
 rome,danish,1,0,0
@@ -10285,7 +10285,7 @@ rome,danish,11,0,0
 rome,danish,11,1,0
 rome,danish,12,0,0
 rome,danish,12,1,0
-rome,danish,13,0,0
+rome,danish,13,0,2
 rome,danish,13,1,0
 rome,danish,14,0,0
 rome,danish,14,1,2
@@ -10327,7 +10327,7 @@ rome,danish,32,0,0
 rome,danish,32,1,0
 rome,danish,33,0,0
 rome,danish,33,1,0
-rome,danish,34,0,0
+rome,danish,34,0,1
 rome,danish,34,1,0
 rome,danish,35,0,0
 rome,danish,35,1,2
@@ -10399,7 +10399,7 @@ rome,dutch,23,0,0
 rome,dutch,23,1,2
 rome,dutch,24,0,2
 rome,dutch,24,1,0
-rome,dutch,25,0,0
+rome,dutch,25,0,2
 rome,dutch,25,1,2
 rome,dutch,26,0,0
 rome,dutch,26,1,0
@@ -10441,7 +10441,7 @@ rome,dutch,44,0,2
 rome,dutch,44,1,0
 rome,estonian,0,0,2
 rome,estonian,0,1,2
-rome,estonian,1,0,0
+rome,estonian,1,0,2
 rome,estonian,1,1,0
 rome,estonian,2,0,0
 rome,estonian,2,1,0
@@ -10525,7 +10525,7 @@ rome,estonian,41,0,0
 rome,estonian,41,1,0
 rome,estonian,42,0,2
 rome,estonian,42,1,0
-rome,estonian,43,0,0
+rome,estonian,43,0,2
 rome,estonian,43,1,0
 rome,estonian,44,0,0
 rome,estonian,44,1,2
@@ -10536,7 +10536,7 @@ rome,finnish,1,1,0
 rome,finnish,2,0,0
 rome,finnish,2,1,0
 rome,finnish,3,0,0
-rome,finnish,3,1,0
+rome,finnish,3,1,2
 rome,finnish,4,0,2
 rome,finnish,4,1,0
 rome,finnish,5,0,0
@@ -10563,10 +10563,10 @@ rome,finnish,15,0,0
 rome,finnish,15,1,0
 rome,finnish,16,0,0
 rome,finnish,16,1,0
-rome,finnish,17,0,0
+rome,finnish,17,0,2
 rome,finnish,17,1,0
 rome,finnish,18,0,0
-rome,finnish,18,1,0
+rome,finnish,18,1,2
 rome,finnish,19,0,0
 rome,finnish,19,1,0
 rome,finnish,20,0,0
@@ -10577,13 +10577,13 @@ rome,finnish,22,0,0
 rome,finnish,22,1,0
 rome,finnish,23,0,0
 rome,finnish,23,1,0
-rome,finnish,24,0,0
+rome,finnish,24,0,2
 rome,finnish,24,1,0
 rome,finnish,25,0,0
 rome,finnish,25,1,0
 rome,finnish,26,0,0
 rome,finnish,26,1,0
-rome,finnish,27,0,0
+rome,finnish,27,0,2
 rome,finnish,27,1,0
 rome,finnish,28,0,0
 rome,finnish,28,1,0
@@ -10639,7 +10639,7 @@ rome,french,8,0,2
 rome,french,8,1,2
 rome,french,9,0,0
 rome,french,9,1,0
-rome,french,10,0,0
+rome,french,10,0,2
 rome,french,10,1,0
 rome,french,11,0,0
 rome,french,11,1,0
@@ -10708,7 +10708,7 @@ rome,french,42,1,0
 rome,french,43,0,2
 rome,french,43,1,0
 rome,french,44,0,0
-rome,french,44,1,0
+rome,french,44,1,2
 rome,german,0,0,0
 rome,german,0,1,0
 rome,german,1,0,0
@@ -10755,7 +10755,7 @@ rome,german,21,0,0
 rome,german,21,1,0
 rome,german,22,0,0
 rome,german,22,1,0
-rome,german,23,0,0
+rome,german,23,0,2
 rome,german,23,1,0
 rome,german,24,0,0
 rome,german,24,1,0
@@ -10791,7 +10791,7 @@ rome,german,39,0,0
 rome,german,39,1,0
 rome,german,40,0,0
 rome,german,40,1,0
-rome,german,41,0,0
+rome,german,41,0,1
 rome,german,41,1,0
 rome,german,42,0,0
 rome,german,42,1,0
@@ -10879,13 +10879,13 @@ rome,greek,38,0,0
 rome,greek,38,1,0
 rome,greek,39,0,0
 rome,greek,39,1,2
-rome,greek,40,0,0
+rome,greek,40,0,2
 rome,greek,40,1,0
 rome,greek,41,0,0
 rome,greek,41,1,0
 rome,greek,42,0,2
 rome,greek,42,1,0
-rome,greek,43,0,0
+rome,greek,43,0,2
 rome,greek,43,1,0
 rome,greek,44,0,0
 rome,greek,44,1,0
@@ -10969,7 +10969,7 @@ rome,hungarian,38,0,0
 rome,hungarian,38,1,0
 rome,hungarian,39,0,0
 rome,hungarian,39,1,0
-rome,hungarian,40,0,0
+rome,hungarian,40,0,2
 rome,hungarian,40,1,0
 rome,hungarian,41,0,0
 rome,hungarian,41,1,0
@@ -10983,7 +10983,7 @@ rome,irish,0,0,0
 rome,irish,0,1,2
 rome,irish,1,0,0
 rome,irish,1,1,0
-rome,irish,2,0,0
+rome,irish,2,0,2
 rome,irish,2,1,0
 rome,irish,3,0,0
 rome,irish,3,1,0
@@ -10993,14 +10993,14 @@ rome,irish,5,0,0
 rome,irish,5,1,0
 rome,irish,6,0,0
 rome,irish,6,1,0
-rome,irish,7,0,0
+rome,irish,7,0,1
 rome,irish,7,1,0
 rome,irish,8,0,0
 rome,irish,8,1,0
 rome,irish,9,0,0
 rome,irish,9,1,0
 rome,irish,10,0,0
-rome,irish,10,1,0
+rome,irish,10,1,2
 rome,irish,11,0,2
 rome,irish,11,1,2
 rome,irish,12,0,2
@@ -11013,7 +11013,7 @@ rome,irish,15,0,0
 rome,irish,15,1,0
 rome,irish,16,0,2
 rome,irish,16,1,0
-rome,irish,17,0,0
+rome,irish,17,0,2
 rome,irish,17,1,0
 rome,irish,18,0,0
 rome,irish,18,1,0
@@ -11084,7 +11084,7 @@ rome,italian,5,1,0
 rome,italian,6,0,0
 rome,italian,6,1,0
 rome,italian,7,0,0
-rome,italian,7,1,0
+rome,italian,7,1,2
 rome,italian,8,0,0
 rome,italian,8,1,0
 rome,italian,9,0,2
@@ -11166,12 +11166,12 @@ rome,latvian,1,1,0
 rome,latvian,2,0,0
 rome,latvian,2,1,0
 rome,latvian,3,0,0
-rome,latvian,3,1,0
+rome,latvian,3,1,2
 rome,latvian,4,0,0
 rome,latvian,4,1,0
 rome,latvian,5,0,0
 rome,latvian,5,1,0
-rome,latvian,6,0,0
+rome,latvian,6,0,2
 rome,latvian,6,1,0
 rome,latvian,7,0,0
 rome,latvian,7,1,0
@@ -11181,7 +11181,7 @@ rome,latvian,9,0,0
 rome,latvian,9,1,0
 rome,latvian,10,0,0
 rome,latvian,10,1,0
-rome,latvian,11,0,0
+rome,latvian,11,0,2
 rome,latvian,11,1,0
 rome,latvian,12,0,0
 rome,latvian,12,1,0
@@ -11193,7 +11193,7 @@ rome,latvian,15,0,0
 rome,latvian,15,1,0
 rome,latvian,16,0,0
 rome,latvian,16,1,0
-rome,latvian,17,0,0
+rome,latvian,17,0,2
 rome,latvian,17,1,2
 rome,latvian,18,0,0
 rome,latvian,18,1,0
@@ -11206,7 +11206,7 @@ rome,latvian,21,1,0
 rome,latvian,22,0,0
 rome,latvian,22,1,0
 0,0,0,0,0
-rome,latvian,23,1,0
+rome,latvian,23,1,2
 rome,latvian,24,0,0
 rome,latvian,24,1,0
 rome,latvian,25,0,0
@@ -11273,7 +11273,7 @@ rome,lithuanian,10,0,2
 rome,lithuanian,10,1,0
 rome,lithuanian,11,0,0
 rome,lithuanian,11,1,0
-rome,lithuanian,12,0,0
+rome,lithuanian,12,0,2
 rome,lithuanian,12,1,0
 rome,lithuanian,13,0,0
 rome,lithuanian,13,1,0
@@ -11287,7 +11287,7 @@ rome,lithuanian,16,1,0
 rome,lithuanian,17,1,0
 rome,lithuanian,18,0,0
 rome,lithuanian,18,1,0
-rome,lithuanian,19,0,0
+rome,lithuanian,19,0,2
 rome,lithuanian,19,1,0
 rome,lithuanian,20,0,0
 rome,lithuanian,20,1,0
@@ -11322,7 +11322,7 @@ rome,lithuanian,34,1,0
 rome,lithuanian,35,0,0
 rome,lithuanian,35,1,0
 rome,lithuanian,36,0,0
-rome,lithuanian,36,1,0
+rome,lithuanian,36,1,2
 rome,lithuanian,37,0,0
 rome,lithuanian,37,1,0
 rome,lithuanian,38,0,0
@@ -11332,7 +11332,7 @@ rome,lithuanian,39,1,2
 rome,lithuanian,40,0,0
 rome,lithuanian,40,1,0
 rome,lithuanian,41,0,2
-rome,lithuanian,41,1,0
+rome,lithuanian,41,1,2
 rome,lithuanian,42,0,2
 rome,lithuanian,42,1,0
 rome,lithuanian,43,0,2
@@ -11346,7 +11346,7 @@ rome,luxembourgish,1,1,2
 rome,luxembourgish,2,0,0
 rome,luxembourgish,2,1,0
 rome,luxembourgish,3,0,0
-rome,luxembourgish,3,1,0
+rome,luxembourgish,3,1,1
 rome,luxembourgish,4,0,0
 0,0,0,0,0
 rome,luxembourgish,5,0,2
@@ -11382,7 +11382,7 @@ rome,luxembourgish,19,1,2
 rome,luxembourgish,20,0,0
 rome,luxembourgish,20,1,0
 rome,luxembourgish,21,0,0
-rome,luxembourgish,21,1,0
+rome,luxembourgish,21,1,2
 rome,luxembourgish,22,0,0
 rome,luxembourgish,22,1,0
 rome,luxembourgish,23,0,2
@@ -11401,7 +11401,7 @@ rome,luxembourgish,29,0,0
 rome,luxembourgish,29,1,0
 rome,luxembourgish,30,0,0
 rome,luxembourgish,30,1,0
-rome,luxembourgish,31,0,0
+rome,luxembourgish,31,0,2
 rome,luxembourgish,31,1,0
 rome,luxembourgish,32,0,0
 rome,luxembourgish,32,1,0
@@ -11454,7 +11454,7 @@ rome,maltese,10,1,0
 rome,maltese,11,0,0
 rome,maltese,11,1,0
 rome,maltese,12,0,0
-rome,maltese,12,1,0
+rome,maltese,12,1,2
 rome,maltese,13,0,0
 rome,maltese,13,1,0
 rome,maltese,14,0,2
@@ -11508,7 +11508,7 @@ rome,maltese,37,1,0
 rome,maltese,38,0,2
 rome,maltese,38,1,0
 rome,maltese,39,0,0
-rome,maltese,39,1,0
+rome,maltese,39,1,2
 rome,maltese,40,0,0
 rome,maltese,40,1,0
 rome,maltese,41,0,0
@@ -11543,14 +11543,14 @@ rome,polish,10,0,0
 rome,polish,10,1,0
 rome,polish,11,0,0
 rome,polish,11,1,0
-rome,polish,12,0,0
+rome,polish,12,0,2
 rome,polish,12,1,0
 rome,polish,13,0,0
 rome,polish,13,1,0
 rome,polish,14,0,0
 rome,polish,14,1,0
 rome,polish,15,0,0
-rome,polish,15,1,0
+rome,polish,15,1,2
 rome,polish,16,0,0
 rome,polish,16,1,0
 rome,polish,17,0,0
@@ -11618,17 +11618,17 @@ rome,portuguese,2,1,0
 rome,portuguese,3,0,0
 rome,portuguese,3,1,0
 rome,portuguese,4,0,0
-rome,portuguese,4,1,0
+rome,portuguese,4,1,2
 rome,portuguese,5,0,0
 rome,portuguese,5,1,0
 rome,portuguese,6,0,0
 rome,portuguese,6,1,0
-rome,portuguese,7,0,0
+rome,portuguese,7,0,2
 rome,portuguese,7,1,0
 rome,portuguese,8,0,2
 rome,portuguese,8,1,2
 rome,portuguese,9,0,0
-rome,portuguese,9,1,0
+rome,portuguese,9,1,2
 rome,portuguese,10,0,0
 rome,portuguese,10,1,0
 rome,portuguese,11,0,0
@@ -11641,7 +11641,7 @@ rome,portuguese,14,0,0
 rome,portuguese,14,1,0
 rome,portuguese,15,0,2
 rome,portuguese,15,1,0
-rome,portuguese,16,0,0
+rome,portuguese,16,0,1
 rome,portuguese,16,1,0
 rome,portuguese,17,0,0
 rome,portuguese,17,1,0
@@ -11652,7 +11652,7 @@ rome,portuguese,19,1,0
 rome,portuguese,20,0,0
 rome,portuguese,20,1,0
 rome,portuguese,21,0,0
-rome,portuguese,21,1,0
+rome,portuguese,21,1,1
 rome,portuguese,22,0,0
 rome,portuguese,22,1,0
 rome,portuguese,23,0,2
@@ -11685,7 +11685,7 @@ rome,portuguese,36,0,0
 rome,portuguese,36,1,0
 0,0,0,0,0
 rome,portuguese,37,1,2
-rome,portuguese,38,0,0
+rome,portuguese,38,0,2
 rome,portuguese,38,1,0
 rome,portuguese,39,0,0
 rome,portuguese,39,1,2
@@ -11703,7 +11703,7 @@ rome,romanian,0,0,0
 rome,romanian,0,1,2
 rome,romanian,1,0,0
 rome,romanian,1,1,0
-rome,romanian,2,0,0
+rome,romanian,2,0,2
 rome,romanian,2,1,2
 rome,romanian,3,0,0
 rome,romanian,3,1,0
@@ -11724,10 +11724,10 @@ rome,romanian,10,1,2
 rome,romanian,11,0,0
 rome,romanian,11,1,0
 rome,romanian,12,0,0
-rome,romanian,12,1,0
+rome,romanian,12,1,2
 rome,romanian,13,0,0
 rome,romanian,13,1,0
-rome,romanian,14,0,0
+rome,romanian,14,0,2
 rome,romanian,14,1,0
 rome,romanian,15,0,0
 rome,romanian,15,1,0
@@ -11750,10 +11750,10 @@ rome,romanian,23,1,0
 rome,romanian,24,0,0
 rome,romanian,24,1,0
 rome,romanian,25,0,0
-rome,romanian,25,1,0
+rome,romanian,25,1,2
 rome,romanian,26,0,0
 rome,romanian,26,1,0
-rome,romanian,27,0,0
+rome,romanian,27,0,2
 rome,romanian,27,1,0
 rome,romanian,28,0,2
 rome,romanian,28,1,0
@@ -11823,7 +11823,7 @@ rome,slovakian,15,0,0
 rome,slovakian,15,1,0
 rome,slovakian,16,0,0
 rome,slovakian,16,1,0
-rome,slovakian,17,0,0
+rome,slovakian,17,0,2
 rome,slovakian,17,1,0
 rome,slovakian,18,0,0
 rome,slovakian,18,1,0
@@ -11943,7 +11943,7 @@ rome,slovene,30,0,2
 rome,slovene,30,1,0
 rome,slovene,31,0,0
 rome,slovene,31,1,0
-rome,slovene,32,0,0
+rome,slovene,32,0,2
 rome,slovene,32,1,0
 rome,slovene,33,0,0
 rome,slovene,33,1,0
@@ -11966,7 +11966,7 @@ rome,slovene,41,1,2
 rome,slovene,42,0,2
 rome,slovene,42,1,0
 rome,slovene,43,0,0
-rome,slovene,43,1,0
+rome,slovene,43,1,2
 rome,slovene,44,0,0
 rome,slovene,44,1,0
 rome,spanish,0,0,0
@@ -12101,7 +12101,7 @@ rome,swedish,19,0,0
 rome,swedish,19,1,0
 rome,swedish,20,0,0
 rome,swedish,20,1,0
-rome,swedish,21,0,0
+rome,swedish,21,0,2
 rome,swedish,21,1,0
 rome,swedish,22,0,0
 rome,swedish,22,1,2
@@ -12117,7 +12117,7 @@ rome,swedish,27,0,2
 rome,swedish,27,1,0
 rome,swedish,28,0,0
 rome,swedish,28,1,0
-rome,swedish,29,0,0
+rome,swedish,29,0,1
 rome,swedish,29,1,0
 rome,swedish,30,0,2
 rome,swedish,30,1,2
@@ -12144,7 +12144,7 @@ rome,swedish,40,1,0
 rome,swedish,41,0,2
 rome,swedish,41,1,0
 rome,swedish,42,0,0
-rome,swedish,42,1,0
+rome,swedish,42,1,1
 rome,swedish,43,0,0
 rome,swedish,43,1,0
 rome,swedish,44,0,2
@@ -12184,11 +12184,11 @@ sofia,austrian,15,1,0
 sofia,austrian,16,0,0
 sofia,austrian,16,1,0
 sofia,austrian,17,0,0
-sofia,austrian,17,1,0
+sofia,austrian,17,1,2
 sofia,austrian,18,0,0
 sofia,austrian,18,1,0
 sofia,austrian,19,0,0
-sofia,austrian,19,1,0
+sofia,austrian,19,1,2
 sofia,austrian,20,0,0
 sofia,austrian,20,1,0
 sofia,austrian,21,0,0
@@ -12235,7 +12235,7 @@ sofia,austrian,41,0,0
 sofia,austrian,41,1,0
 sofia,austrian,42,0,0
 sofia,austrian,42,1,0
-sofia,austrian,43,0,0
+sofia,austrian,43,0,2
 sofia,austrian,43,1,0
 sofia,austrian,44,0,0
 sofia,austrian,44,1,0
@@ -12499,7 +12499,7 @@ sofia,croatian,38,0,0
 sofia,croatian,38,1,0
 sofia,croatian,39,0,0
 sofia,croatian,39,1,0
-sofia,croatian,40,0,0
+sofia,croatian,40,0,2
 sofia,croatian,40,1,0
 sofia,croatian,41,0,0
 sofia,croatian,41,1,0
@@ -12557,7 +12557,7 @@ sofia,cypriot,22,0,0
 sofia,cypriot,22,1,0
 sofia,cypriot,23,0,0
 sofia,cypriot,23,1,0
-sofia,cypriot,24,0,0
+sofia,cypriot,24,0,1
 sofia,cypriot,24,1,0
 sofia,cypriot,25,0,0
 sofia,cypriot,25,1,0
@@ -12578,7 +12578,7 @@ sofia,cypriot,32,1,0
 sofia,cypriot,33,0,2
 sofia,cypriot,33,1,2
 sofia,cypriot,34,0,0
-sofia,cypriot,34,1,0
+sofia,cypriot,34,1,2
 sofia,cypriot,35,0,0
 sofia,cypriot,35,1,0
 sofia,cypriot,36,0,0
@@ -12638,7 +12638,7 @@ sofia,czech,17,1,0
 sofia,czech,18,0,0
 sofia,czech,18,1,0
 sofia,czech,19,0,2
-sofia,czech,19,1,0
+sofia,czech,19,1,2
 sofia,czech,20,0,0
 sofia,czech,20,1,0
 sofia,czech,21,0,0
@@ -12667,7 +12667,7 @@ sofia,czech,32,0,0
 sofia,czech,32,1,0
 sofia,czech,33,0,0
 sofia,czech,33,1,0
-sofia,czech,34,0,0
+sofia,czech,34,0,2
 sofia,czech,34,1,0
 sofia,czech,35,0,2
 sofia,czech,35,1,0
@@ -12769,11 +12769,11 @@ sofia,danish,38,0,0
 sofia,danish,38,1,0
 sofia,danish,39,0,0
 sofia,danish,39,1,0
-sofia,danish,40,0,0
+sofia,danish,40,0,2
 sofia,danish,40,1,0
 sofia,danish,41,0,0
 sofia,danish,41,1,0
-sofia,danish,42,0,0
+sofia,danish,42,0,2
 sofia,danish,42,1,0
 sofia,danish,43,0,0
 sofia,danish,43,1,0
@@ -12823,7 +12823,7 @@ sofia,dutch,20,0,0
 sofia,dutch,20,1,0
 sofia,dutch,21,0,0
 sofia,dutch,21,1,0
-sofia,dutch,22,0,0
+sofia,dutch,22,0,2
 sofia,dutch,22,1,0
 sofia,dutch,23,0,0
 sofia,dutch,23,1,0
@@ -12847,7 +12847,7 @@ sofia,dutch,32,0,0
 sofia,dutch,32,1,0
 sofia,dutch,33,0,0
 sofia,dutch,33,1,0
-sofia,dutch,34,0,0
+sofia,dutch,34,0,2
 sofia,dutch,34,1,0
 sofia,dutch,35,0,0
 sofia,dutch,35,1,0
@@ -12926,7 +12926,7 @@ sofia,estonian,26,1,0
 sofia,estonian,27,0,2
 sofia,estonian,27,1,0
 sofia,estonian,28,0,0
-sofia,estonian,28,1,0
+sofia,estonian,28,1,2
 sofia,estonian,29,0,0
 sofia,estonian,29,1,0
 sofia,estonian,30,0,0
@@ -12942,7 +12942,7 @@ sofia,estonian,34,1,0
 sofia,estonian,35,0,0
 sofia,estonian,35,1,0
 sofia,estonian,36,0,0
-sofia,estonian,36,1,0
+sofia,estonian,36,1,1
 sofia,estonian,37,0,0
 sofia,estonian,37,1,0
 sofia,estonian,38,0,0
@@ -12990,7 +12990,7 @@ sofia,finnish,13,1,0
 sofia,finnish,14,0,0
 sofia,finnish,14,1,0
 sofia,finnish,15,0,0
-sofia,finnish,15,1,1
+0,0,0,0,0
 sofia,finnish,16,0,0
 sofia,finnish,16,1,2
 sofia,finnish,17,0,0
@@ -13075,7 +13075,7 @@ sofia,french,11,0,0
 sofia,french,11,1,0
 sofia,french,12,0,0
 sofia,french,12,1,0
-sofia,french,13,0,0
+sofia,french,13,0,1
 sofia,french,13,1,0
 sofia,french,14,0,0
 sofia,french,14,1,0
@@ -13115,7 +13115,7 @@ sofia,french,31,0,0
 sofia,french,31,1,0
 sofia,french,32,0,0
 sofia,french,32,1,0
-sofia,french,33,0,0
+sofia,french,33,0,2
 sofia,french,33,1,0
 sofia,french,34,0,2
 sofia,french,34,1,0
@@ -13236,7 +13236,7 @@ sofia,greek,1,1,0
 sofia,greek,2,0,0
 sofia,greek,2,1,0
 sofia,greek,3,0,0
-sofia,greek,3,1,0
+sofia,greek,3,1,2
 sofia,greek,4,0,0
 sofia,greek,4,1,0
 sofia,greek,5,0,0
@@ -13383,7 +13383,7 @@ sofia,hungarian,30,0,0
 sofia,hungarian,30,1,0
 sofia,hungarian,31,0,0
 sofia,hungarian,31,1,0
-sofia,hungarian,32,0,0
+sofia,hungarian,32,0,1
 sofia,hungarian,32,1,0
 sofia,hungarian,33,0,0
 sofia,hungarian,33,1,0
@@ -13552,7 +13552,7 @@ sofia,italian,24,1,0
 sofia,italian,25,0,0
 sofia,italian,25,1,2
 sofia,italian,26,0,0
-sofia,italian,26,1,0
+sofia,italian,26,1,2
 sofia,italian,27,0,0
 sofia,italian,27,1,0
 sofia,italian,28,0,0
@@ -13568,7 +13568,7 @@ sofia,italian,32,1,0
 sofia,italian,33,0,0
 sofia,italian,33,1,0
 sofia,italian,34,0,0
-sofia,italian,34,1,0
+sofia,italian,34,1,2
 sofia,italian,35,0,0
 sofia,italian,35,1,0
 sofia,italian,36,0,0
@@ -13611,7 +13611,7 @@ sofia,latvian,9,0,0
 sofia,latvian,9,1,0
 sofia,latvian,10,0,2
 sofia,latvian,10,1,0
-sofia,latvian,11,0,0
+sofia,latvian,11,0,2
 sofia,latvian,11,1,0
 sofia,latvian,12,0,0
 sofia,latvian,12,1,0
@@ -13624,7 +13624,7 @@ sofia,latvian,15,1,0
 sofia,latvian,16,0,0
 sofia,latvian,16,1,0
 sofia,latvian,17,0,0
-sofia,latvian,17,1,0
+sofia,latvian,17,1,2
 sofia,latvian,18,0,0
 sofia,latvian,18,1,2
 sofia,latvian,19,0,0
@@ -13823,7 +13823,7 @@ sofia,luxembourgish,25,0,0
 sofia,luxembourgish,25,1,0
 sofia,luxembourgish,26,0,0
 sofia,luxembourgish,26,1,0
-sofia,luxembourgish,27,0,0
+sofia,luxembourgish,27,0,2
 sofia,luxembourgish,27,1,0
 sofia,luxembourgish,28,0,0
 sofia,luxembourgish,28,1,2
@@ -14187,7 +14187,7 @@ sofia,romanian,27,0,0
 sofia,romanian,27,1,0
 sofia,romanian,28,0,0
 sofia,romanian,28,1,0
-sofia,romanian,29,0,0
+sofia,romanian,29,0,2
 sofia,romanian,29,1,0
 sofia,romanian,30,0,0
 sofia,romanian,30,1,0
@@ -14397,7 +14397,7 @@ sofia,slovene,42,0,0
 sofia,slovene,42,1,2
 sofia,slovene,43,0,0
 sofia,slovene,43,1,0
-sofia,slovene,44,0,0
+sofia,slovene,44,0,2
 sofia,slovene,44,1,0
 sofia,spanish,0,0,0
 sofia,spanish,0,1,0
@@ -14524,7 +14524,7 @@ sofia,swedish,15,1,0
 sofia,swedish,16,0,0
 sofia,swedish,16,1,0
 sofia,swedish,17,0,0
-sofia,swedish,17,1,0
+sofia,swedish,17,1,2
 sofia,swedish,18,0,0
 sofia,swedish,18,1,0
 sofia,swedish,19,0,0
@@ -14626,7 +14626,7 @@ valletta,austrian,21,1,0
 valletta,austrian,22,0,0
 valletta,austrian,22,1,0
 valletta,austrian,23,0,0
-valletta,austrian,23,1,0
+valletta,austrian,23,1,1
 valletta,austrian,24,0,0
 valletta,austrian,24,1,0
 valletta,austrian,25,0,0
@@ -14656,7 +14656,7 @@ valletta,austrian,36,1,0
 valletta,austrian,37,0,0
 valletta,austrian,37,1,0
 valletta,austrian,38,0,0
-valletta,austrian,38,1,0
+valletta,austrian,38,1,2
 valletta,austrian,39,0,0
 valletta,austrian,39,1,0
 valletta,austrian,40,0,0
@@ -14682,7 +14682,7 @@ valletta,belgian,4,1,0
 valletta,belgian,5,0,0
 valletta,belgian,5,1,0
 valletta,belgian,6,0,0
-valletta,belgian,6,1,0
+valletta,belgian,6,1,1
 valletta,belgian,7,0,0
 valletta,belgian,7,1,0
 valletta,belgian,8,0,0
@@ -14751,7 +14751,7 @@ valletta,belgian,39,0,0
 valletta,belgian,39,1,0
 valletta,belgian,40,0,0
 valletta,belgian,40,1,0
-valletta,belgian,41,0,0
+valletta,belgian,41,0,2
 valletta,belgian,41,1,0
 valletta,belgian,42,0,0
 valletta,belgian,42,1,0
@@ -14874,7 +14874,7 @@ valletta,croatian,10,1,0
 valletta,croatian,11,0,0
 valletta,croatian,11,1,0
 valletta,croatian,12,0,0
-valletta,croatian,12,1,0
+valletta,croatian,12,1,2
 valletta,croatian,13,0,0
 valletta,croatian,13,1,0
 valletta,croatian,14,0,0
@@ -14917,7 +14917,7 @@ valletta,croatian,32,0,0
 valletta,croatian,32,1,0
 valletta,croatian,33,0,0
 valletta,croatian,33,1,0
-valletta,croatian,34,0,0
+valletta,croatian,34,0,2
 valletta,croatian,34,1,0
 valletta,croatian,35,0,0
 valletta,croatian,35,1,0
@@ -15115,7 +15115,7 @@ valletta,czech,41,0,0
 valletta,czech,41,1,0
 valletta,czech,42,0,0
 valletta,czech,42,1,0
-valletta,czech,43,0,0
+valletta,czech,43,0,2
 valletta,czech,43,1,0
 valletta,czech,44,0,0
 valletta,czech,44,1,0
@@ -15302,7 +15302,7 @@ valletta,dutch,44,1,0
 valletta,estonian,0,0,2
 valletta,estonian,0,1,0
 valletta,estonian,1,0,0
-valletta,estonian,1,1,0
+valletta,estonian,1,1,2
 valletta,estonian,2,0,0
 valletta,estonian,2,1,0
 valletta,estonian,3,0,0
@@ -15418,7 +15418,7 @@ valletta,finnish,12,1,0
 valletta,finnish,13,0,0
 valletta,finnish,13,1,0
 valletta,finnish,14,0,0
-valletta,finnish,14,1,0
+valletta,finnish,14,1,2
 valletta,finnish,15,0,0
 valletta,finnish,15,1,0
 valletta,finnish,16,0,0
@@ -15474,7 +15474,7 @@ valletta,finnish,40,1,0
 valletta,finnish,41,0,0
 valletta,finnish,41,1,0
 valletta,finnish,42,0,0
-valletta,finnish,42,1,0
+valletta,finnish,42,1,1
 valletta,finnish,43,0,0
 valletta,finnish,43,1,0
 valletta,finnish,44,0,0
@@ -15486,7 +15486,7 @@ valletta,french,1,1,0
 valletta,french,2,0,0
 valletta,french,2,1,0
 valletta,french,3,0,0
-valletta,french,3,1,0
+valletta,french,3,1,2
 valletta,french,4,0,2
 valletta,french,4,1,0
 valletta,french,5,0,0
@@ -15532,7 +15532,7 @@ valletta,french,24,1,0
 valletta,french,25,0,0
 valletta,french,25,1,0
 valletta,french,26,0,0
-valletta,french,26,1,0
+valletta,french,26,1,1
 valletta,french,27,0,0
 valletta,french,27,1,2
 valletta,french,28,0,0
@@ -15797,7 +15797,7 @@ valletta,hungarian,22,0,0
 valletta,hungarian,22,1,0
 valletta,hungarian,23,0,0
 valletta,hungarian,23,1,0
-valletta,hungarian,24,0,0
+valletta,hungarian,24,0,2
 valletta,hungarian,24,1,0
 valletta,hungarian,25,0,0
 valletta,hungarian,25,1,0
@@ -15812,7 +15812,7 @@ valletta,hungarian,29,1,0
 valletta,hungarian,30,0,0
 valletta,hungarian,30,1,0
 valletta,hungarian,31,0,0
-valletta,hungarian,31,1,0
+valletta,hungarian,31,1,1
 valletta,hungarian,32,0,0
 valletta,hungarian,32,1,0
 valletta,hungarian,33,0,0
@@ -15842,7 +15842,7 @@ valletta,hungarian,44,1,0
 valletta,irish,0,0,0
 valletta,irish,0,1,0
 valletta,irish,1,0,0
-valletta,irish,1,1,0
+valletta,irish,1,1,2
 valletta,irish,2,0,2
 valletta,irish,2,1,0
 valletta,irish,3,0,0
@@ -15884,7 +15884,7 @@ valletta,irish,20,1,0
 valletta,irish,21,0,0
 valletta,irish,21,1,0
 valletta,irish,22,0,0
-valletta,irish,22,1,0
+valletta,irish,22,1,2
 valletta,irish,23,0,0
 valletta,irish,23,1,0
 valletta,irish,24,0,0
@@ -15927,7 +15927,7 @@ valletta,irish,42,0,0
 valletta,irish,42,1,0
 valletta,irish,43,0,0
 valletta,irish,43,1,0
-valletta,irish,44,0,0
+valletta,irish,44,0,2
 valletta,irish,44,1,0
 valletta,italian,0,0,2
 valletta,italian,0,1,0
@@ -15983,7 +15983,7 @@ valletta,italian,25,0,0
 valletta,italian,25,1,0
 valletta,italian,26,0,0
 valletta,italian,26,1,0
-valletta,italian,27,0,0
+valletta,italian,27,0,2
 valletta,italian,27,1,0
 valletta,italian,28,0,0
 valletta,italian,28,1,0
@@ -16190,7 +16190,7 @@ valletta,lithuanian,38,1,0
 valletta,lithuanian,39,0,0
 valletta,lithuanian,39,1,0
 valletta,lithuanian,40,0,0
-valletta,lithuanian,40,1,0
+valletta,lithuanian,40,1,2
 valletta,lithuanian,41,0,0
 valletta,lithuanian,41,1,0
 valletta,lithuanian,42,0,0
@@ -16359,7 +16359,7 @@ valletta,maltese,33,0,0
 valletta,maltese,33,1,0
 valletta,maltese,34,0,0
 valletta,maltese,34,1,0
-valletta,maltese,35,0,0
+valletta,maltese,35,0,2
 valletta,maltese,35,1,0
 valletta,maltese,36,0,0
 valletta,maltese,36,1,0
@@ -16527,7 +16527,7 @@ valletta,portuguese,27,0,0
 valletta,portuguese,27,1,0
 valletta,portuguese,28,0,0
 valletta,portuguese,28,1,0
-valletta,portuguese,29,0,0
+valletta,portuguese,29,0,2
 valletta,portuguese,29,1,0
 valletta,portuguese,30,0,0
 valletta,portuguese,30,1,0
@@ -16703,7 +16703,7 @@ valletta,slovakian,25,0,0
 valletta,slovakian,25,1,0
 valletta,slovakian,26,0,0
 valletta,slovakian,26,1,0
-valletta,slovakian,27,0,0
+valletta,slovakian,27,0,2
 valletta,slovakian,27,1,0
 valletta,slovakian,28,0,0
 valletta,slovakian,28,1,0
@@ -16784,7 +16784,7 @@ valletta,slovene,20,1,0
 valletta,slovene,21,0,2
 valletta,slovene,21,1,0
 valletta,slovene,22,0,0
-valletta,slovene,22,1,0
+valletta,slovene,22,1,2
 valletta,slovene,23,0,0
 valletta,slovene,23,1,0
 valletta,slovene,24,0,0
@@ -16825,7 +16825,7 @@ valletta,slovene,41,0,0
 valletta,slovene,41,1,0
 valletta,slovene,42,0,0
 valletta,slovene,42,1,0
-valletta,slovene,43,0,0
+valletta,slovene,43,0,2
 valletta,slovene,43,1,0
 valletta,slovene,44,0,0
 valletta,slovene,44,1,0
@@ -16896,7 +16896,7 @@ valletta,spanish,31,1,0
 valletta,spanish,32,0,0
 valletta,spanish,32,1,0
 valletta,spanish,33,0,0
-valletta,spanish,33,1,0
+valletta,spanish,33,1,2
 valletta,spanish,34,0,0
 valletta,spanish,34,1,0
 valletta,spanish,35,0,0
@@ -17099,12 +17099,12 @@ vienna,austrian,43,0,0
 vienna,austrian,43,1,2
 vienna,austrian,44,0,0
 vienna,austrian,44,1,0
-vienna,belgian,0,0,0
+vienna,belgian,0,0,2
 vienna,belgian,0,1,0
 vienna,belgian,1,0,0
 vienna,belgian,1,1,0
 vienna,belgian,2,0,0
-vienna,belgian,2,1,0
+vienna,belgian,2,1,2
 vienna,belgian,3,0,0
 vienna,belgian,3,1,0
 vienna,belgian,4,0,0
@@ -17116,12 +17116,12 @@ vienna,belgian,6,1,0
 vienna,belgian,7,0,0
 vienna,belgian,7,1,0
 vienna,belgian,8,0,0
-vienna,belgian,8,1,0
+vienna,belgian,8,1,2
 vienna,belgian,9,0,0
 vienna,belgian,9,1,2
 vienna,belgian,10,0,0
 vienna,belgian,10,1,0
-vienna,belgian,11,0,0
+vienna,belgian,11,0,2
 vienna,belgian,11,1,2
 vienna,belgian,12,0,0
 vienna,belgian,12,1,0
@@ -17229,7 +17229,7 @@ vienna,bulgarian,18,0,0
 vienna,bulgarian,18,1,0
 vienna,bulgarian,19,0,0
 vienna,bulgarian,19,1,0
-vienna,bulgarian,20,0,0
+vienna,bulgarian,20,0,2
 vienna,bulgarian,20,1,0
 vienna,bulgarian,21,0,0
 vienna,bulgarian,21,1,0
@@ -17280,10 +17280,10 @@ vienna,bulgarian,43,1,0
 vienna,bulgarian,44,0,0
 0,0,0,0,0
 vienna,croatian,0,0,0
-vienna,croatian,0,1,0
+vienna,croatian,0,1,2
 vienna,croatian,1,0,0
-vienna,croatian,1,1,0
-vienna,croatian,2,0,0
+vienna,croatian,1,1,2
+vienna,croatian,2,0,2
 vienna,croatian,2,1,0
 vienna,croatian,3,0,0
 vienna,croatian,3,1,0
@@ -17363,7 +17363,7 @@ vienna,croatian,40,0,0
 vienna,croatian,40,1,2
 vienna,croatian,41,0,0
 vienna,croatian,41,1,0
-vienna,croatian,42,0,0
+vienna,croatian,42,0,2
 vienna,croatian,42,1,0
 vienna,croatian,43,0,0
 vienna,croatian,43,1,0
@@ -17371,7 +17371,7 @@ vienna,croatian,44,0,0
 vienna,croatian,44,1,0
 vienna,cypriot,0,0,0
 vienna,cypriot,0,1,0
-vienna,cypriot,1,0,0
+vienna,cypriot,1,0,2
 vienna,cypriot,1,1,0
 vienna,cypriot,2,0,0
 vienna,cypriot,2,1,0
@@ -17414,7 +17414,7 @@ vienna,cypriot,20,1,0
 vienna,cypriot,21,0,0
 vienna,cypriot,21,1,0
 vienna,cypriot,22,0,0
-vienna,cypriot,22,1,0
+vienna,cypriot,22,1,2
 vienna,cypriot,23,0,0
 vienna,cypriot,23,1,0
 vienna,cypriot,24,0,0
@@ -17490,7 +17490,7 @@ vienna,czech,13,1,0
 vienna,czech,14,0,0
 vienna,czech,14,1,0
 vienna,czech,15,0,0
-vienna,czech,15,1,0
+vienna,czech,15,1,2
 vienna,czech,16,0,0
 vienna,czech,16,1,0
 vienna,czech,17,0,0
@@ -17507,8 +17507,8 @@ vienna,czech,22,0,0
 vienna,czech,22,1,0
 vienna,czech,23,0,0
 vienna,czech,23,1,0
-vienna,czech,24,0,0
-vienna,czech,24,1,0
+vienna,czech,24,0,2
+vienna,czech,24,1,2
 0,0,0,0,0
 vienna,czech,25,1,0
 vienna,czech,26,0,0
@@ -17547,7 +17547,7 @@ vienna,czech,42,0,0
 vienna,czech,42,1,0
 vienna,czech,43,0,0
 vienna,czech,43,1,0
-vienna,czech,44,0,0
+vienna,czech,44,0,2
 vienna,czech,44,1,0
 vienna,danish,0,0,2
 vienna,danish,0,1,0
@@ -17613,7 +17613,7 @@ vienna,danish,30,0,0
 vienna,danish,30,1,0
 vienna,danish,31,0,0
 vienna,danish,31,1,0
-vienna,danish,32,0,0
+vienna,danish,32,0,2
 vienna,danish,32,1,0
 vienna,danish,33,0,0
 vienna,danish,33,1,0
@@ -17654,7 +17654,7 @@ vienna,dutch,5,1,0
 vienna,dutch,6,0,0
 vienna,dutch,6,1,2
 vienna,dutch,7,0,0
-vienna,dutch,7,1,0
+vienna,dutch,7,1,1
 vienna,dutch,8,0,0
 vienna,dutch,8,1,2
 vienna,dutch,9,0,2
@@ -17696,7 +17696,7 @@ vienna,dutch,26,1,0
 vienna,dutch,27,0,0
 vienna,dutch,27,1,0
 vienna,dutch,28,0,0
-vienna,dutch,28,1,0
+vienna,dutch,28,1,2
 vienna,dutch,29,0,2
 vienna,dutch,29,1,2
 vienna,dutch,30,0,2
@@ -17723,7 +17723,7 @@ vienna,dutch,40,0,0
 vienna,dutch,40,1,0
 vienna,dutch,41,0,0
 vienna,dutch,41,1,0
-vienna,dutch,42,0,0
+vienna,dutch,42,0,2
 vienna,dutch,42,1,0
 vienna,dutch,43,0,0
 vienna,dutch,43,1,0
@@ -17782,11 +17782,11 @@ vienna,estonian,24,1,0
 vienna,estonian,25,0,0
 vienna,estonian,25,1,0
 vienna,estonian,26,0,0
-vienna,estonian,26,1,0
+vienna,estonian,26,1,2
 vienna,estonian,27,0,0
 vienna,estonian,27,1,0
 vienna,estonian,28,0,0
-vienna,estonian,28,1,0
+vienna,estonian,28,1,2
 vienna,estonian,29,0,0
 vienna,estonian,29,1,0
 vienna,estonian,30,0,0
@@ -17832,7 +17832,7 @@ vienna,finnish,4,1,0
 vienna,finnish,5,0,0
 vienna,finnish,5,1,0
 vienna,finnish,6,0,0
-vienna,finnish,6,1,0
+vienna,finnish,6,1,2
 vienna,finnish,7,0,0
 vienna,finnish,7,1,0
 vienna,finnish,8,0,0
@@ -17852,7 +17852,7 @@ vienna,finnish,14,1,0
 vienna,finnish,15,0,0
 vienna,finnish,15,1,0
 vienna,finnish,16,0,0
-vienna,finnish,16,1,0
+vienna,finnish,16,1,2
 vienna,finnish,17,0,0
 vienna,finnish,17,1,0
 vienna,finnish,18,0,2
@@ -17875,7 +17875,7 @@ vienna,finnish,26,0,0
 vienna,finnish,26,1,0
 vienna,finnish,27,0,0
 vienna,finnish,27,1,0
-vienna,finnish,28,0,0
+vienna,finnish,28,0,2
 vienna,finnish,28,1,0
 vienna,finnish,29,0,0
 vienna,finnish,29,1,0
@@ -17921,7 +17921,7 @@ vienna,french,4,0,0
 vienna,french,4,1,0
 vienna,french,5,0,0
 vienna,french,5,1,0
-vienna,french,6,0,0
+vienna,french,6,0,2
 vienna,french,6,1,0
 vienna,french,7,0,0
 vienna,french,7,1,2
@@ -17968,11 +17968,11 @@ vienna,french,27,1,0
 vienna,french,28,0,0
 vienna,french,28,1,0
 vienna,french,29,0,0
-vienna,french,29,1,0
+vienna,french,29,1,1
 vienna,french,30,0,2
 vienna,french,30,1,0
 vienna,french,31,0,0
-vienna,french,31,1,0
+vienna,french,31,1,1
 vienna,french,32,0,0
 vienna,french,32,1,0
 vienna,french,33,0,0
@@ -17993,7 +17993,7 @@ vienna,french,40,0,0
 vienna,french,40,1,0
 vienna,french,41,0,0
 vienna,french,41,1,0
-vienna,french,42,0,0
+vienna,french,42,0,2
 vienna,french,42,1,0
 vienna,french,43,0,0
 vienna,french,43,1,0
@@ -18056,7 +18056,7 @@ vienna,german,26,1,0
 vienna,german,27,0,0
 vienna,german,27,1,0
 vienna,german,28,0,2
-vienna,german,28,1,0
+vienna,german,28,1,2
 vienna,german,29,0,0
 vienna,german,29,1,0
 vienna,german,30,0,0
@@ -18107,7 +18107,7 @@ vienna,greek,7,0,0
 vienna,greek,7,1,0
 vienna,greek,8,0,0
 vienna,greek,8,1,0
-vienna,greek,9,0,0
+vienna,greek,9,0,2
 vienna,greek,9,1,0
 vienna,greek,10,0,0
 vienna,greek,10,1,0
@@ -18197,7 +18197,7 @@ vienna,hungarian,7,0,0
 vienna,hungarian,7,1,0
 vienna,hungarian,8,0,0
 vienna,hungarian,8,1,0
-vienna,hungarian,9,0,0
+vienna,hungarian,9,0,2
 vienna,hungarian,9,1,2
 vienna,hungarian,10,0,0
 vienna,hungarian,10,1,0
@@ -18259,7 +18259,7 @@ vienna,hungarian,38,0,0
 vienna,hungarian,38,1,0
 vienna,hungarian,39,0,0
 vienna,hungarian,39,1,0
-vienna,hungarian,40,0,0
+vienna,hungarian,40,0,2
 vienna,hungarian,40,1,2
 vienna,hungarian,41,0,0
 vienna,hungarian,41,1,0
@@ -18334,7 +18334,7 @@ vienna,irish,30,1,0
 vienna,irish,31,0,0
 vienna,irish,31,1,0
 vienna,irish,32,0,2
-vienna,irish,32,1,0
+vienna,irish,32,1,2
 0,0,0,0,0
 vienna,irish,33,1,2
 vienna,irish,34,0,0
@@ -18368,7 +18368,7 @@ vienna,italian,2,1,0
 vienna,italian,3,0,0
 vienna,italian,3,1,0
 vienna,italian,4,0,0
-vienna,italian,4,1,0
+vienna,italian,4,1,1
 vienna,italian,5,0,0
 vienna,italian,5,1,0
 vienna,italian,6,0,0
@@ -18421,7 +18421,7 @@ vienna,italian,29,0,0
 vienna,italian,29,1,0
 vienna,italian,30,0,2
 vienna,italian,30,1,0
-vienna,italian,31,0,0
+vienna,italian,31,0,2
 vienna,italian,31,1,0
 vienna,italian,32,0,0
 vienna,italian,32,1,0
@@ -18497,7 +18497,7 @@ vienna,latvian,22,0,0
 vienna,latvian,22,1,0
 vienna,latvian,23,0,0
 vienna,latvian,23,1,0
-vienna,latvian,24,0,0
+vienna,latvian,24,0,2
 vienna,latvian,24,1,0
 vienna,latvian,25,0,0
 vienna,latvian,25,1,0
@@ -18510,7 +18510,7 @@ vienna,latvian,28,1,0
 vienna,latvian,29,0,0
 vienna,latvian,29,1,0
 vienna,latvian,30,0,0
-vienna,latvian,30,1,0
+vienna,latvian,30,1,2
 vienna,latvian,31,0,2
 vienna,latvian,31,1,2
 vienna,latvian,32,0,0
@@ -18521,7 +18521,7 @@ vienna,latvian,34,0,0
 vienna,latvian,34,1,0
 0,0,0,0,0
 vienna,latvian,35,1,0
-vienna,latvian,36,0,0
+vienna,latvian,36,0,2
 vienna,latvian,36,1,2
 vienna,latvian,37,0,0
 vienna,latvian,37,1,0
@@ -18532,7 +18532,7 @@ vienna,latvian,39,1,0
 vienna,latvian,40,0,0
 vienna,latvian,40,1,0
 vienna,latvian,41,0,0
-vienna,latvian,41,1,0
+vienna,latvian,41,1,2
 vienna,latvian,42,0,0
 vienna,latvian,42,1,0
 vienna,latvian,43,0,0
@@ -18548,7 +18548,7 @@ vienna,lithuanian,2,1,0
 vienna,lithuanian,3,0,0
 vienna,lithuanian,3,1,0
 vienna,lithuanian,4,0,0
-vienna,lithuanian,4,1,0
+vienna,lithuanian,4,1,2
 vienna,lithuanian,5,0,0
 vienna,lithuanian,5,1,0
 vienna,lithuanian,6,0,0
@@ -18573,7 +18573,7 @@ vienna,lithuanian,15,0,0
 vienna,lithuanian,15,1,0
 vienna,lithuanian,16,0,0
 vienna,lithuanian,16,1,0
-vienna,lithuanian,17,0,0
+vienna,lithuanian,17,0,2
 vienna,lithuanian,17,1,2
 vienna,lithuanian,18,0,0
 vienna,lithuanian,18,1,0
@@ -18633,7 +18633,7 @@ vienna,luxembourgish,0,0,0
 vienna,luxembourgish,0,1,0
 vienna,luxembourgish,1,0,0
 vienna,luxembourgish,1,1,0
-vienna,luxembourgish,2,0,0
+vienna,luxembourgish,2,0,2
 vienna,luxembourgish,2,1,0
 vienna,luxembourgish,3,0,0
 vienna,luxembourgish,3,1,0
@@ -18646,7 +18646,7 @@ vienna,luxembourgish,6,1,0
 vienna,luxembourgish,7,0,0
 vienna,luxembourgish,7,1,0
 vienna,luxembourgish,8,0,0
-vienna,luxembourgish,8,1,0
+vienna,luxembourgish,8,1,2
 vienna,luxembourgish,9,0,0
 vienna,luxembourgish,9,1,0
 vienna,luxembourgish,10,0,0
@@ -18664,7 +18664,7 @@ vienna,luxembourgish,15,1,0
 vienna,luxembourgish,16,0,0
 vienna,luxembourgish,16,1,2
 vienna,luxembourgish,17,0,0
-vienna,luxembourgish,17,1,0
+vienna,luxembourgish,17,1,2
 vienna,luxembourgish,18,0,2
 vienna,luxembourgish,18,1,0
 vienna,luxembourgish,19,0,0
@@ -18758,7 +18758,7 @@ vienna,maltese,17,1,0
 vienna,maltese,18,0,0
 vienna,maltese,18,1,0
 vienna,maltese,19,0,2
-vienna,maltese,19,1,0
+vienna,maltese,19,1,2
 vienna,maltese,20,0,0
 vienna,maltese,20,1,0
 vienna,maltese,21,0,0
@@ -18770,7 +18770,7 @@ vienna,maltese,23,1,0
 vienna,maltese,24,0,0
 vienna,maltese,24,1,0
 vienna,maltese,25,0,0
-vienna,maltese,25,1,0
+vienna,maltese,25,1,2
 vienna,maltese,26,0,0
 vienna,maltese,26,1,0
 vienna,maltese,27,0,0
@@ -18817,7 +18817,7 @@ vienna,polish,2,0,0
 vienna,polish,2,1,0
 vienna,polish,3,0,0
 vienna,polish,3,1,0
-vienna,polish,4,0,0
+vienna,polish,4,0,2
 vienna,polish,4,1,0
 vienna,polish,5,0,0
 vienna,polish,5,1,0
@@ -18841,7 +18841,7 @@ vienna,polish,14,0,2
 vienna,polish,14,1,0
 vienna,polish,15,0,0
 vienna,polish,15,1,0
-vienna,polish,16,0,0
+vienna,polish,16,0,2
 vienna,polish,16,1,0
 vienna,polish,17,0,0
 vienna,polish,17,1,0
@@ -18856,7 +18856,7 @@ vienna,polish,21,1,0
 vienna,polish,22,0,0
 vienna,polish,22,1,2
 vienna,polish,23,0,2
-vienna,polish,23,1,0
+vienna,polish,23,1,2
 vienna,polish,24,0,2
 vienna,polish,24,1,0
 vienna,polish,25,0,0
@@ -18911,7 +18911,7 @@ vienna,portuguese,4,0,0
 vienna,portuguese,4,1,0
 vienna,portuguese,5,0,0
 vienna,portuguese,5,1,2
-vienna,portuguese,6,0,0
+vienna,portuguese,6,0,2
 vienna,portuguese,6,1,0
 vienna,portuguese,7,0,0
 vienna,portuguese,7,1,0
@@ -19060,7 +19060,7 @@ vienna,romanian,33,1,0
 vienna,romanian,34,0,0
 vienna,romanian,34,1,0
 vienna,romanian,35,0,0
-vienna,romanian,35,1,0
+vienna,romanian,35,1,1
 vienna,romanian,36,0,0
 vienna,romanian,36,1,0
 vienna,romanian,37,0,0
@@ -19119,7 +19119,7 @@ vienna,slovakian,18,0,0
 vienna,slovakian,18,1,0
 vienna,slovakian,19,0,0
 vienna,slovakian,19,1,0
-vienna,slovakian,20,0,0
+vienna,slovakian,20,0,1
 vienna,slovakian,20,1,0
 vienna,slovakian,21,0,0
 vienna,slovakian,21,1,0
@@ -19222,7 +19222,7 @@ vienna,slovene,24,1,0
 vienna,slovene,25,0,0
 vienna,slovene,25,1,0
 vienna,slovene,26,0,2
-vienna,slovene,26,1,0
+vienna,slovene,26,1,2
 vienna,slovene,27,0,0
 vienna,slovene,27,1,2
 0,0,0,0,0
@@ -19231,13 +19231,13 @@ vienna,slovene,29,0,0
 vienna,slovene,29,1,0
 vienna,slovene,30,0,0
 vienna,slovene,30,1,0
-vienna,slovene,31,0,0
+vienna,slovene,31,0,2
 vienna,slovene,31,1,0
 vienna,slovene,32,0,2
 vienna,slovene,32,1,0
 vienna,slovene,33,0,0
 vienna,slovene,33,1,0
-vienna,slovene,34,0,0
+vienna,slovene,34,0,1
 vienna,slovene,34,1,0
 vienna,slovene,35,0,0
 vienna,slovene,35,1,0
@@ -19260,7 +19260,7 @@ vienna,slovene,43,1,0
 vienna,slovene,44,0,0
 vienna,slovene,44,1,0
 vienna,spanish,0,0,0
-vienna,spanish,0,1,0
+vienna,spanish,0,1,2
 vienna,spanish,1,0,0
 vienna,spanish,1,1,2
 vienna,spanish,2,0,0
@@ -19278,7 +19278,7 @@ vienna,spanish,7,1,0
 vienna,spanish,8,0,0
 vienna,spanish,8,1,0
 vienna,spanish,9,0,0
-vienna,spanish,9,1,0
+vienna,spanish,9,1,1
 vienna,spanish,10,0,0
 vienna,spanish,10,1,0
 vienna,spanish,11,0,0
@@ -19409,7 +19409,7 @@ vienna,swedish,28,0,0
 vienna,swedish,28,1,0
 vienna,swedish,29,0,0
 vienna,swedish,29,1,2
-vienna,swedish,30,0,0
+vienna,swedish,30,0,2
 vienna,swedish,30,1,0
 vienna,swedish,31,0,0
 vienna,swedish,31,1,0
@@ -19421,7 +19421,7 @@ vienna,swedish,34,0,0
 vienna,swedish,34,1,0
 vienna,swedish,35,0,0
 vienna,swedish,35,1,0
-vienna,swedish,36,0,0
+vienna,swedish,36,0,2
 vienna,swedish,36,1,2
 vienna,swedish,37,0,0
 vienna,swedish,37,1,0
@@ -19433,7 +19433,7 @@ vienna,swedish,40,0,0
 vienna,swedish,40,1,0
 vienna,swedish,41,0,2
 vienna,swedish,41,1,0
-vienna,swedish,42,0,0
+vienna,swedish,42,0,2
 vienna,swedish,42,1,0
 vienna,swedish,43,0,0
 vienna,swedish,43,1,0
@@ -19474,7 +19474,7 @@ vilnius,austrian,15,1,0
 vilnius,austrian,16,0,0
 vilnius,austrian,16,1,0
 vilnius,austrian,17,0,0
-vilnius,austrian,17,1,0
+vilnius,austrian,17,1,2
 vilnius,austrian,18,0,0
 vilnius,austrian,18,1,0
 vilnius,austrian,19,0,0
@@ -19578,7 +19578,7 @@ vilnius,belgian,22,1,0
 vilnius,belgian,23,0,0
 vilnius,belgian,23,1,0
 vilnius,belgian,24,0,0
-vilnius,belgian,24,1,0
+vilnius,belgian,24,1,2
 vilnius,belgian,25,0,0
 vilnius,belgian,25,1,2
 vilnius,belgian,26,0,2
@@ -19650,7 +19650,7 @@ vilnius,bulgarian,13,1,2
 vilnius,bulgarian,14,0,0
 vilnius,bulgarian,14,1,0
 vilnius,bulgarian,15,0,0
-vilnius,bulgarian,15,1,0
+vilnius,bulgarian,15,1,2
 vilnius,bulgarian,16,0,2
 vilnius,bulgarian,16,1,0
 vilnius,bulgarian,17,0,0
@@ -19708,7 +19708,7 @@ vilnius,bulgarian,42,1,0
 vilnius,bulgarian,43,0,0
 vilnius,bulgarian,43,1,0
 vilnius,bulgarian,44,0,0
-vilnius,bulgarian,44,1,0
+vilnius,bulgarian,44,1,2
 vilnius,croatian,0,0,0
 vilnius,croatian,0,1,0
 vilnius,croatian,1,0,0
@@ -19759,7 +19759,7 @@ vilnius,croatian,23,0,0
 vilnius,croatian,23,1,0
 vilnius,croatian,24,0,0
 vilnius,croatian,24,1,2
-vilnius,croatian,25,0,0
+vilnius,croatian,25,0,2
 vilnius,croatian,25,1,0
 vilnius,croatian,26,0,0
 vilnius,croatian,26,1,0
@@ -19981,7 +19981,7 @@ vilnius,czech,44,0,2
 vilnius,czech,44,1,0
 vilnius,danish,0,0,0
 vilnius,danish,0,1,0
-vilnius,danish,1,0,0
+vilnius,danish,1,0,1
 vilnius,danish,1,1,0
 vilnius,danish,2,0,0
 vilnius,danish,2,1,0
@@ -20036,7 +20036,7 @@ vilnius,danish,26,1,0
 vilnius,danish,27,0,0
 vilnius,danish,27,1,0
 vilnius,danish,28,0,0
-vilnius,danish,28,1,1
+0,0,0,0,0
 vilnius,danish,29,0,0
 vilnius,danish,29,1,0
 vilnius,danish,30,0,0
@@ -20051,7 +20051,7 @@ vilnius,danish,34,0,2
 vilnius,danish,34,1,0
 vilnius,danish,35,0,0
 vilnius,danish,35,1,0
-vilnius,danish,36,0,0
+vilnius,danish,36,0,1
 vilnius,danish,36,1,0
 vilnius,danish,37,0,0
 vilnius,danish,37,1,0
@@ -20061,7 +20061,7 @@ vilnius,danish,39,0,0
 vilnius,danish,39,1,0
 vilnius,danish,40,0,0
 vilnius,danish,40,1,0
-vilnius,danish,41,0,0
+vilnius,danish,41,0,2
 vilnius,danish,41,1,0
 vilnius,danish,42,0,0
 vilnius,danish,42,1,2
@@ -20270,7 +20270,7 @@ vilnius,finnish,8,1,0
 vilnius,finnish,9,0,0
 vilnius,finnish,9,1,0
 vilnius,finnish,10,0,0
-vilnius,finnish,10,1,1
+0,0,0,0,0
 vilnius,finnish,11,0,0
 vilnius,finnish,11,1,0
 vilnius,finnish,12,0,2
@@ -20311,12 +20311,12 @@ vilnius,finnish,29,0,0
 vilnius,finnish,29,1,0
 vilnius,finnish,30,0,0
 vilnius,finnish,30,1,0
-vilnius,finnish,31,0,0
+vilnius,finnish,31,0,2
 vilnius,finnish,31,1,0
 vilnius,finnish,32,0,0
 vilnius,finnish,32,1,0
 vilnius,finnish,33,0,0
-vilnius,finnish,33,1,0
+vilnius,finnish,33,1,2
 vilnius,finnish,34,0,2
 vilnius,finnish,34,1,0
 vilnius,finnish,35,0,0
@@ -20330,10 +20330,10 @@ vilnius,finnish,38,1,0
 vilnius,finnish,39,0,0
 vilnius,finnish,39,1,0
 vilnius,finnish,40,0,0
-vilnius,finnish,40,1,0
+vilnius,finnish,40,1,2
 vilnius,finnish,41,0,0
 vilnius,finnish,41,1,0
-vilnius,finnish,42,0,0
+vilnius,finnish,42,0,1
 vilnius,finnish,42,1,0
 vilnius,finnish,43,0,0
 vilnius,finnish,43,1,0
@@ -20367,7 +20367,7 @@ vilnius,french,12,0,0
 vilnius,french,12,1,2
 vilnius,french,13,0,0
 vilnius,french,13,1,0
-vilnius,french,14,0,0
+vilnius,french,14,0,2
 vilnius,french,14,1,0
 vilnius,french,15,0,2
 vilnius,french,15,1,0
@@ -20394,7 +20394,7 @@ vilnius,french,25,1,0
 vilnius,french,26,0,0
 vilnius,french,26,1,0
 vilnius,french,27,0,0
-vilnius,french,27,1,0
+vilnius,french,27,1,2
 vilnius,french,28,0,0
 vilnius,french,28,1,2
 vilnius,french,29,0,0
@@ -20473,7 +20473,7 @@ vilnius,german,20,0,0
 vilnius,german,20,1,0
 vilnius,german,21,0,2
 vilnius,german,21,1,0
-vilnius,german,22,0,0
+vilnius,german,22,0,2
 vilnius,german,22,1,0
 vilnius,german,23,0,0
 vilnius,german,23,1,0
@@ -20681,7 +20681,7 @@ vilnius,hungarian,34,0,0
 vilnius,hungarian,34,1,0
 vilnius,hungarian,35,0,0
 vilnius,hungarian,35,1,0
-vilnius,hungarian,36,0,0
+vilnius,hungarian,36,0,2
 vilnius,hungarian,36,1,0
 vilnius,hungarian,37,0,0
 vilnius,hungarian,37,1,0
@@ -20871,11 +20871,11 @@ vilnius,italian,39,0,0
 vilnius,italian,39,1,0
 vilnius,italian,40,0,0
 vilnius,italian,40,1,0
-vilnius,italian,41,0,0
+vilnius,italian,41,0,2
 vilnius,italian,41,1,0
 vilnius,italian,42,0,0
 vilnius,italian,42,1,2
-vilnius,italian,43,0,0
+vilnius,italian,43,0,2
 vilnius,italian,43,1,0
 vilnius,italian,44,0,0
 vilnius,italian,44,1,0
@@ -20891,7 +20891,7 @@ vilnius,latvian,4,0,2
 vilnius,latvian,4,1,0
 vilnius,latvian,5,0,0
 vilnius,latvian,5,1,0
-vilnius,latvian,6,0,0
+vilnius,latvian,6,0,2
 vilnius,latvian,6,1,0
 vilnius,latvian,7,0,0
 vilnius,latvian,7,1,0
@@ -21106,7 +21106,7 @@ vilnius,luxembourgish,21,1,0
 vilnius,luxembourgish,22,0,0
 vilnius,luxembourgish,22,1,0
 vilnius,luxembourgish,23,0,0
-vilnius,luxembourgish,23,1,0
+vilnius,luxembourgish,23,1,2
 vilnius,luxembourgish,24,0,0
 vilnius,luxembourgish,24,1,0
 vilnius,luxembourgish,25,0,0
@@ -21229,7 +21229,7 @@ vilnius,maltese,38,0,0
 vilnius,maltese,38,1,2
 vilnius,maltese,39,0,0
 vilnius,maltese,39,1,0
-vilnius,maltese,40,0,0
+vilnius,maltese,40,0,2
 vilnius,maltese,40,1,0
 vilnius,maltese,41,0,0
 vilnius,maltese,41,1,0
@@ -21267,7 +21267,7 @@ vilnius,polish,12,0,0
 vilnius,polish,12,1,0
 vilnius,polish,13,0,0
 vilnius,polish,13,1,0
-vilnius,polish,14,0,0
+vilnius,polish,14,0,2
 vilnius,polish,14,1,0
 vilnius,polish,15,0,0
 vilnius,polish,15,1,0
@@ -21297,7 +21297,7 @@ vilnius,polish,27,0,0
 vilnius,polish,27,1,0
 vilnius,polish,28,0,0
 vilnius,polish,28,1,0
-vilnius,polish,29,0,0
+vilnius,polish,29,0,2
 vilnius,polish,29,1,0
 vilnius,polish,30,0,0
 vilnius,polish,30,1,0
@@ -21325,7 +21325,7 @@ vilnius,polish,41,0,0
 vilnius,polish,41,1,0
 vilnius,polish,42,0,0
 vilnius,polish,42,1,0
-vilnius,polish,43,0,0
+vilnius,polish,43,0,2
 vilnius,polish,43,1,0
 vilnius,polish,44,0,0
 vilnius,polish,44,1,0
@@ -21345,7 +21345,7 @@ vilnius,portuguese,6,0,0
 vilnius,portuguese,6,1,0
 vilnius,portuguese,7,0,0
 vilnius,portuguese,7,1,0
-vilnius,portuguese,8,0,0
+vilnius,portuguese,8,0,2
 vilnius,portuguese,8,1,0
 vilnius,portuguese,9,0,0
 vilnius,portuguese,9,1,0
@@ -21373,7 +21373,7 @@ vilnius,portuguese,20,0,0
 vilnius,portuguese,20,1,0
 vilnius,portuguese,21,0,0
 vilnius,portuguese,21,1,0
-vilnius,portuguese,22,0,0
+vilnius,portuguese,22,0,2
 vilnius,portuguese,22,1,2
 vilnius,portuguese,23,0,0
 vilnius,portuguese,23,1,0
@@ -21497,12 +21497,12 @@ vilnius,romanian,37,0,0
 vilnius,romanian,37,1,0
 vilnius,romanian,38,0,0
 vilnius,romanian,38,1,0
-vilnius,romanian,39,0,0
+vilnius,romanian,39,0,2
 vilnius,romanian,39,1,0
 vilnius,romanian,40,0,0
 vilnius,romanian,40,1,2
 vilnius,romanian,41,0,0
-vilnius,romanian,41,1,0
+vilnius,romanian,41,1,1
 vilnius,romanian,42,0,0
 vilnius,romanian,42,1,0
 vilnius,romanian,43,0,0
@@ -21552,7 +21552,7 @@ vilnius,slovakian,19,1,2
 vilnius,slovakian,20,0,0
 vilnius,slovakian,20,1,0
 vilnius,slovakian,21,0,0
-vilnius,slovakian,21,1,0
+vilnius,slovakian,21,1,1
 vilnius,slovakian,22,0,0
 vilnius,slovakian,22,1,0
 vilnius,slovakian,23,0,0
@@ -21586,7 +21586,7 @@ vilnius,slovakian,36,1,2
 vilnius,slovakian,37,0,0
 vilnius,slovakian,37,1,0
 vilnius,slovakian,38,0,0
-vilnius,slovakian,38,1,0
+vilnius,slovakian,38,1,1
 vilnius,slovakian,39,0,2
 vilnius,slovakian,39,1,0
 vilnius,slovakian,40,0,0
@@ -21620,11 +21620,11 @@ vilnius,slovene,8,1,0
 vilnius,slovene,9,0,0
 vilnius,slovene,9,1,2
 vilnius,slovene,10,0,0
-vilnius,slovene,10,1,0
+vilnius,slovene,10,1,1
 vilnius,slovene,11,0,0
 vilnius,slovene,11,1,0
 vilnius,slovene,12,0,0
-vilnius,slovene,12,1,0
+vilnius,slovene,12,1,2
 vilnius,slovene,13,0,2
 vilnius,slovene,13,1,2
 vilnius,slovene,14,0,0
@@ -21768,10 +21768,10 @@ vilnius,spanish,37,1,0
 vilnius,spanish,38,0,0
 0,0,0,0,0
 vilnius,spanish,39,0,0
-vilnius,spanish,39,1,0
+vilnius,spanish,39,1,2
 vilnius,spanish,40,0,0
 vilnius,spanish,40,1,2
-vilnius,spanish,41,0,0
+vilnius,spanish,41,0,2
 vilnius,spanish,41,1,0
 vilnius,spanish,42,0,0
 vilnius,spanish,42,1,0
@@ -21818,7 +21818,7 @@ vilnius,swedish,17,1,0
 vilnius,swedish,18,0,2
 vilnius,swedish,18,1,0
 vilnius,swedish,19,0,0
-vilnius,swedish,19,1,0
+vilnius,swedish,19,1,2
 vilnius,swedish,20,0,0
 vilnius,swedish,20,1,0
 vilnius,swedish,21,0,2

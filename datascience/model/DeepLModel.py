@@ -89,6 +89,7 @@ class DeepLearningModel(MLModel):
     def load_test_set(self, path):
         index, x = torch_test_set(path, self.features_hotels)
         index = index.to_numpy()
+        x = x.to_numpy()
         return index, x
 
     def submission(self, test_set='meta_data/test_set.csv'):
