@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs, make_circles
-from sklearn.metrics import accuracy_score, log_loss
+from sklearn.metrics import accuracy_score, mean_squared_error
 from tqdm import tqdm
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -28,10 +28,15 @@ def forward_propagation(X, parametres):
     # C est le nombre de couches si on a 4 paramètres cela signifie qu'on a deux couches
     C = len(parametres) // 2
 
-    for c in range(1, C + 1):
+    for c in range(1, C):
         Z = parametres['W' + str(c)].dot(activations['A' + str(c - 1)]) + parametres['b' + str(c)]
+        Z = Z.astype(np.float64)
         activations['A' + str(c)] = 1 / (1 + np.exp(-Z))
 
+    # print(activations)
+    Z = parametres['W' + str(C)].dot(activations['A' + str(C - 1)]) + parametres['b' + str(C)]
+    Z = Z.astype(np.float64)
+    activations['A' + str(C)] = Z
     return activations
 
 
@@ -66,7 +71,7 @@ def predict(X, parametres):
     activations = forward_propagation(X, parametres)
     C = len(parametres) // 2
     Af = activations['A' + str(C)]
-    return Af >= 0.5
+    return Af
 
 
 def prep_data(X, y):
@@ -96,23 +101,31 @@ def deep_neural_network(X, y, hidden_layers=(16, 16, 16), learning_rate=0.001, n
     # gradient descent
     for i in tqdm(range(n_iter)):
         activations = forward_propagation(X, parametres)
+
         gradients = back_propagation(y, parametres, activations)
         parametres = update(gradients, parametres, learning_rate)
         Af = activations['A' + str(C)]
-
+        print(Af)
         # calcul du log_loss et de l'accuracy
-        training_history[i, 0] = (log_loss(y.flatten().astype(np.int32), Af.flatten()))
+        # print(y.flatten().astype(np.int32).shape)
+        # print(Af.flatten().shape)
+        training_history[i, 0] = (mean_squared_error(y.flatten().astype(np.int32), Af.flatten(), squared=False))
         y_pred = predict(X, parametres)
-        training_history[i, 1] = (accuracy_score(y.flatten().astype(np.int32), y_pred.flatten()))
+        print(y_pred)
+        # print(y_pred.flatten().shape)
+        # print(y.flatten().astype(np.int32).shape)
+        # training_history[i, 1] = (accuracy_score(y.flatten().astype(np.int32), y_pred.flatten()))
 
+    y_pred = predict(X, parametres)
+    print(y_pred)
     # Plot courbe d'apprentissage
     plt.figure(figsize=(12, 4))
     plt.subplot(1, 2, 1)
     plt.plot(training_history[:, 0], label='train loss')
     plt.legend()
     plt.subplot(1, 2, 2)
-    plt.plot(training_history[:, 1], label='train acc')
-    plt.legend()
+    # plt.plot(training_history[:, 1], label='train acc')
+    # plt.legend()
     plt.show()
 
     return parametres
@@ -154,17 +167,16 @@ class AmbreNet(MLModel):
         super().__init__(dataset=dataset, features_hotels=features_hotels)
         self.parametres = None
 
-    def train(self, hidden_layers=(16, 16, 16), learning_rate=0.01):
-        print(self.dataset.x.shape)
-        print(self.dataset.y.shape)
+    def train(self, hidden_layers=(16, 16), learning_rate=0.00001):
         self.parametres = deep_neural_network(self.dataset.x, self.dataset.y, hidden_layers=hidden_layers,
                                               learning_rate=learning_rate,
-                                              n_iter=5000)
+                                              n_iter=10)
 
     def predict(self, x):
         return predict(x, self.parametres)
 
 
 if __name__ == '__main__':
-    model = AmbreNet()
-    model.train()
+
+    #model = AmbreNet()
+    #model.train()
