@@ -5,8 +5,7 @@ from sklearn.metrics import mean_squared_error
 
 class MLModel:
     def __init__(self, dataset='../dataset', features_hotels='../meta_data/features_hotels.csv'):
-        self.dataset = load_dataset(dataset, features_hotels)
-        self.dataset.to_numpy()
+        self.dataset = load_dataset(dataset, features_hotels, dtype="pandas")
         self.features_hotels = features_hotels
 
     def train(self, **kwargs):

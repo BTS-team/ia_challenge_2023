@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 from datascience.model import MLModel
-
+from datascience.data_loading import one_hot_encoding
 
 def initialisation(dimensions):
     parametres = {}
@@ -75,9 +75,7 @@ def predict(X, parametres):
 
 
 def prep_data(X, y):
-    centrereduit = StandardScaler()
-    X_cr = centrereduit.fit_transform(X)
-    X_train_transpose = X_cr.T
+    X_train_transpose = X.T
     Y_train_transpose = y.T
     return X_train_transpose, Y_train_transpose
 
@@ -166,11 +164,13 @@ class AmbreNet(MLModel):
     def __init__(self, dataset='./dataset', features_hotels='./meta_data/features_hotels.csv'):
         super().__init__(dataset=dataset, features_hotels=features_hotels)
         self.parametres = None
+        self.dataset.x = one_hot_encoding(self.dataset.x)
+        self.dataset.to_numpy()
 
-    def train(self, hidden_layers=(16, 16), learning_rate=0.00001):
+    def train(self, hidden_layers=(108,16), learning_rate=0.01):
         self.parametres = deep_neural_network(self.dataset.x, self.dataset.y, hidden_layers=hidden_layers,
                                               learning_rate=learning_rate,
-                                              n_iter=10)
+                                              n_iter=2)
 
     def predict(self, x):
         return predict(x, self.parametres)
@@ -178,5 +178,5 @@ class AmbreNet(MLModel):
 
 if __name__ == '__main__':
 
-    #model = AmbreNet()
-    #model.train()
+    model = AmbreNet()
+    model.train()
