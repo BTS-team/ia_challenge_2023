@@ -40,6 +40,6 @@ class NNModel(Module):
 if __name__ == '__main__':
     model = NNModel()
     nn = DeepLearningModel(model)
-    nn.train("test.pth", epochs=15, show=True, learning_rate=0.001, batch_size=16)
+    nn.train("test.pth", epochs=30, show=True, learning_rate=0.001, batch_size=16)
     # print("training done")
     nn.submission().to_csv("nnet_submission_epoch_more_data.csv", index=False)

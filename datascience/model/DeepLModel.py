@@ -26,6 +26,7 @@ class DeepLearningModel(MLModel):
     def train(self, out, optimizer=Adam, loss_fn=MSELoss(), epochs=150, learning_rate=0.01, show=False, batch_size=64):
         optimizer = optimizer(self.model.parameters(), learning_rate, weight_decay=0.01)
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        print(device)
         self.model.to(device)
         loss_values = []
         val_loss_values = []

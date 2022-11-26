@@ -70,10 +70,20 @@ def torch_test_set(test_set='meta_data/test_set.csv', features_hotels='meta_data
         return index, to_matrix(test_set)
 
 
+def divide_by_max(x):
+    print(x.max())
+
+
 class Data(Dataset):
-    def __init__(self, dataset_path, features_hotels, matrix=False):
+    def __init__(self, dataset_path, features_hotels, matrix=False, oneHot=False, divideByMax=False):
         dataset = load_dataset(dataset_path, features_hotels, dtype="pandas")
-        x = one_hot_encoding(dataset.x)
+        x = dataset.x
+
+        if oneHot:
+            x = one_hot_encoding(x)
+
+        if divideByMax:
+            divide_by_max(x)
 
         if matrix:
             x = to_matrix(x)
@@ -104,7 +114,8 @@ def prepare_dataloader(dataset_path, features_hotels, dist=[0.8, 0.19, 0.01], ba
 
 
 if __name__ == '__main__':
-    dataset = Data('../../dataset', "../../meta_data/features_hotels.csv", matrix=True)
+    dataset = Data('../../dataset', "../../meta_data/features_hotels.csv", divideByMax=True)
+
     # loader = prepare_dataloader('../../dataset', "../meta_data/features_hotels.csv", batch_size=1)
     """ for batch, (X, y) in enumerate(loader[0]):
         print(f"Batch: {batch + 1}")
