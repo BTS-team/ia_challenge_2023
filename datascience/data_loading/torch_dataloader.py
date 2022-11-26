@@ -33,7 +33,8 @@ def one_hot_encoding(x):
         'mobile',
         'parking',
         'pool',
-        'stock'
+        'stock',
+        'order_request'
     ]]
     city_df = torch.from_numpy(x['city'].to_numpy())
     language_df = torch.from_numpy(x['language'].to_numpy())

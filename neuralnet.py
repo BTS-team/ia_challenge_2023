@@ -12,11 +12,11 @@ warnings.filterwarnings("ignore")
 class NNModel(Module):
     def __init__(self):
         super().__init__()
-        self.input = Linear(108, 108)
+        self.input = Linear(109, 109)
         #self.hid_1 = Linear(20, 20)
         # self.hid_2 = Linear(20, 20)
         # self.hid_3 = Linear(20, 20)
-        self.output = Linear(108, 1)
+        self.output = Linear(109, 1)
         self.dropout = Dropout(0.2)
 
     def forward(self, x):
