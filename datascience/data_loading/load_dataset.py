@@ -113,7 +113,7 @@ def load_dataset(dataset_path, features_hotels, dtype="numpy"):
 
     np.random.shuffle(rows)
     rows = pd.DataFrame(rows,
-                        columns=['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id'])
+                        columns=['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id','order_requests'])
     hotels = pd.read_csv(features_hotels, index_col=['hotel_id', 'city'])
     pricing_requests = rows.join(hotels, on=['hotel_id', 'city'])
     y_data_set = pricing_requests[['price']]
@@ -127,7 +127,8 @@ def load_dataset(dataset_path, features_hotels, dtype="numpy"):
         'brand',
         'parking',
         'pool',
-        'children_policy'
+        'children_policy',
+        'order_requests'
     ]]
     x_data_set = x_data_set.applymap(apply)
     if dtype == "numpy":

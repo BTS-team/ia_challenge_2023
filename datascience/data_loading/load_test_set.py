@@ -19,5 +19,5 @@ def load_test_set(test_set='meta_data/test_set.csv', features_hotels='meta_data/
         'parking',
         'pool',
         'children_policy',
-        'order_request'
+        'order_requests'
     ]]

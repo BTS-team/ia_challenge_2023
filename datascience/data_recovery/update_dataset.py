@@ -79,7 +79,7 @@ def change_name_order_request(dataset="../../dataset"):
         for j in language_file:
             temp = pd.read_csv(f"{dataset}/{i}/{j}")
             temp = temp.rename(columns={'order_request': 'order_requests'})
-            temp.to_csv(f"{dataset}/{i}/{j}",index=False)
+            temp.to_csv(f"{dataset}/{i}/{j}", index=False)
 
 
 def add_order_request(dataset="../../dataset", gen_request="../../meta_data/generated_requests.csv"):
@@ -100,8 +100,24 @@ def add_order_request(dataset="../../dataset", gen_request="../../meta_data/gene
         temp.to_csv(f"{dataset}/{i[0]}/{i[0]}_{i[1]}.csv", index=False)
 
 
+def update_test_set(test_set_path="../../meta_data/test_set.csv"):
+    test_set = pd.read_csv(test_set_path)
+    columns = list(test_set.columns)
+    test_set = test_set.to_numpy()
+
+    count = test_set[0][1]
+
+    for i in range(1, len(test_set)):
+        if test_set[i][6] != test_set[i - 1][6]:
+            count = test_set[i][1]
+
+        test_set[i][1] += -count + 1
+    test_set = pd.DataFrame(test_set, columns=columns)
+    test_set.to_csv(test_set_path, index=False)
+
+
 if __name__ == '__main__':
     # update_csvfile('data/stored_requests.csv')
     # update_csvfile('backup/stored_requests_3.csv')
     # print(get_nb_row_dataset())
-    change_name_order_request()
+    update_test_set()

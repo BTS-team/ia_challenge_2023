@@ -34,8 +34,9 @@ def one_hot_encoding(x):
         'parking',
         'pool',
         'stock',
-        'order_request'
+        'order_requests'
     ]]
+    city_test = x['city'].to_numpy()
     city_df = torch.from_numpy(x['city'].to_numpy())
     language_df = torch.from_numpy(x['language'].to_numpy())
     brand_df = torch.from_numpy(x['brand'].to_numpy())
@@ -76,15 +77,10 @@ def divide_by_max(x):
 
 
 class Data(Dataset):
-    def __init__(self, dataset_path, features_hotels, matrix=False, oneHot=False, divideByMax=False):
+    def __init__(self, dataset_path, features_hotels, matrix=False):
         dataset = load_dataset(dataset_path, features_hotels, dtype="pandas")
-        x = dataset.x
 
-        if oneHot:
-            x = one_hot_encoding(x)
-
-        if divideByMax:
-            divide_by_max(x)
+        x = one_hot_encoding(dataset.x)
 
         if matrix:
             x = to_matrix(x)
@@ -103,15 +99,18 @@ class Data(Dataset):
         return self.len
 
 
-def prepare_dataloader(dataset_path, features_hotels, dist=[0.8, 0.19, 0.01], batch_size=64, matrix=False):
+def prepare_dataloader(dataset_path, features_hotels, dist=[0.8, 0.2], batch_size=64, matrix=False):
     dataset = Data(dataset_path, features_hotels, matrix)
     rep = list(map(lambda x: int(x * dataset.__len__()), dist))
     rep[-1] += dataset.__len__() - sum(rep)
-    train, valid, test = torch.utils.data.random_split(dataset, rep)
-    train_dataloader = DataLoader(dataset=train, batch_size=batch_size, shuffle=True, drop_last=True)
-    test_dataloader = DataLoader(dataset=test, batch_size=batch_size, shuffle=True, drop_last=True)
-    validation_dataloader = DataLoader(dataset=valid, batch_size=batch_size, shuffle=True, drop_last=True)
-    return train_dataloader, test_dataloader, validation_dataloader
+
+    split = torch.utils.data.random_split(dataset, rep)
+    data = []
+
+    for i in split:
+        data.append(DataLoader(dataset=i, batch_size=batch_size, shuffle=True, drop_last=True))
+
+    return tuple(data)
 
 
 if __name__ == '__main__':
