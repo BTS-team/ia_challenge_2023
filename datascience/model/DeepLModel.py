@@ -1,7 +1,6 @@
 import os
 from datetime import datetime
 from sklearn.metrics import mean_squared_error
-import matplotlib
 from datascience.model import MLModel
 from datascience.data_loading import prepare_dataloader
 from datascience.data_loading import torch_test_set
@@ -11,9 +10,6 @@ from torch import Tensor
 from torch.nn import MSELoss
 from torch.optim import Adam
 import pandas as pd
-
-matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
 
 
 class DeepLearningModel(MLModel):
@@ -51,14 +47,7 @@ class DeepLearningModel(MLModel):
                 learning_rate /= 10
             print(
                 f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
-
-        if show:
-            x = list(range(1, epochs + 1))
-            plt.plot(x, loss_values, color='b', label='train')
-            plt.plot(x, val_loss_values, color='r', label='validation')
-            plt.xlabel("Epoch")
-            plt.ylabel("Loss")
-            plt.show()
+        return loss_values, val_loss_values
 
     def predict(self, x):
         row = Tensor([x])
