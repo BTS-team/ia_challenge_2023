@@ -40,6 +40,7 @@ class CustomDataset:
     :param x: The features of the dataset
     :param y: The output
     """
+
     def __init__(self, x, y):
         assert_equal(x, y)
         assert_argument(x)
@@ -55,7 +56,7 @@ class CustomDataset:
         """
         return self.x.shape[0]
 
-    def split(self, dist=[0.8, 0.15]):
+    def split(self, dist=[0.8, 0.2]):
         """ Split the data set in multiple subset
 
         If n is the number of subset, the list dist should contain n-1 values
@@ -73,8 +74,8 @@ class CustomDataset:
             for i in range(1, len(dist)):
                 x = self.x.iloc[dist[i - 1]:dist[i], :]
                 y = self.y.iloc[dist[i - 1]:dist[i], :]
-                x.reset_index(drop=True,inplace=True)
-                y.reset_index(drop=True,inplace=True)
+                x.reset_index(drop=True, inplace=True)
+                y.reset_index(drop=True, inplace=True)
                 result.append(CustomDataset(x, y))
         elif isinstance(self.x, np.ndarray):
             x_split = np.array_split(self.x, dist)
@@ -113,7 +114,8 @@ def load_dataset(dataset_path, features_hotels, dtype="numpy"):
 
     np.random.shuffle(rows)
     rows = pd.DataFrame(rows,
-                        columns=['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id','order_requests'])
+                        columns=['hotel_id', 'price', 'stock', 'city', 'date', 'language', 'mobile', 'avatar_id',
+                                 'order_requests'])
     hotels = pd.read_csv(features_hotels, index_col=['hotel_id', 'city'])
     pricing_requests = rows.join(hotels, on=['hotel_id', 'city'])
     y_data_set = pricing_requests[['price']]
