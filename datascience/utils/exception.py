@@ -29,3 +29,20 @@ class NotEqualDataTypeError(Exception):
 
     def __str__(self):
         return f"{type(self.x)} and {type(self.y)} --> {self.message}"
+
+
+class ModelAlreadyExist(Exception):
+    """ Exception raised when a model with the same name and date already exist in the target folder
+
+    :param name: Name of the model
+    :param date: Date of the model
+    """
+    def __init__(self,name,date):
+        self.name = name
+        self.date = date
+        self.message = "This model already exist in the target folder"
+        super().__init__(self,self.message)
+
+    def __str__(self):
+        return f"{self.name} & {self.date} --> {self.message}"
+
