@@ -1,15 +1,15 @@
-import numpy as np
+import os
+from datetime import datetime
 from sklearn.metrics import mean_squared_error
 import matplotlib
 from datascience.model import MLModel
 from datascience.data_loading import prepare_dataloader
 from datascience.data_loading import torch_test_set
+from datascience.utils import get_folder, ModelAlreadyExist
 import torch
 from torch import Tensor
-from torch.nn import Linear, MSELoss, Module, Dropout
-from torch.nn.functional import relu, sigmoid
+from torch.nn import MSELoss
 from torch.optim import Adam
-import warnings
 import pandas as pd
 
 matplotlib.use('TkAgg')
@@ -20,10 +20,9 @@ class DeepLearningModel(MLModel):
     def __init__(self, model, dataset='dataset/', features_hotels='meta_data/features_hotels.csv'):
         self.dataset = prepare_dataloader(dataset, features_hotels)
         self.model = model
-        print(self.model)
         self.features_hotels = features_hotels
 
-    def train(self, out, optimizer=Adam, loss_fn=MSELoss(), epochs=150, learning_rate=0.01, show=False, batch_size=64):
+    def train(self, optimizer=Adam, loss_fn=MSELoss(), epochs=150, learning_rate=0.01, show=False, batch_size=64):
         optimizer = optimizer(self.model.parameters(), learning_rate, weight_decay=0.01)
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         print(device)
@@ -52,8 +51,6 @@ class DeepLearningModel(MLModel):
                 learning_rate /= 10
             print(
                 f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
-
-        torch.save(self.model, out)
 
         if show:
             x = list(range(1, epochs + 1))
@@ -103,9 +100,24 @@ class DeepLearningModel(MLModel):
         submission_df = pd.DataFrame(submission_df, columns=['index', 'price'])
         return submission_df
 
+    def save(self, path, name):
+        model = get_folder(path)
+        if name not in model:
+            os.mkdir(f"{path}/{name}")
+
+        attempt = get_folder(f"{path}/{name}")
+        now = datetime.now()
+        dt_string = now.strftime("%d_%m_%Y-%H_%M")
+        if dt_string not in attempt:
+            os.mkdir(f"{path}/{name}/{dt_string}")
+            torch.save(self.model, f"{path}/{name}/{dt_string}/model.pth")
+            f = open(f"{path}/{name}/{dt_string}/architecture.txt", "w")
+            f.write(self.model.__str__())
+            f.close()
+            self.submission().to_csv(f"{path}/{name}/{dt_string}/submission.csv", index=False)
+        else:
+            raise ModelAlreadyExist(name, dt_string)
+
 
 if __name__ == '__main__':
-    nn = DeepLearningModel()
-    nn.train(epochs=23)
-    # print("training done")
-    nn.submission().to_csv("nnet_submission_epoch_one_hot.csv", index=False)
+    pass
