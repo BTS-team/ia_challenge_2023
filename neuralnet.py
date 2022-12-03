@@ -20,9 +20,7 @@ class NNModel(Module):
         x = tanh(self.input(x))
         return self.output(x)
 
-    def load(self, model_path):
-        self.load_state_dict(torch.load(model_path))
-        self.eval()
+
 
 
 if __name__ == '__main__':
