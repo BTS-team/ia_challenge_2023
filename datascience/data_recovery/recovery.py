@@ -30,7 +30,7 @@ def update_dataset(city, language, queries, dataset):
             temp.to_csv(f"{dataset}/{city}/{city}_{language}.csv", index=False)
 
 
-def request(connector, params, dataset, path_generated_request, poss_request):
+def request(connector, params, dataset, path_generated_request, poss_request, avatar_path):
     """ A function to perform and save the result of a request
 
     :param connector: A Connector object to communicate with the API
@@ -42,30 +42,53 @@ def request(connector, params, dataset, path_generated_request, poss_request):
     """
     r = connector.query(params=params)
     if r != 422:
-        queries = pd.DataFrame(r['prices']).assign(**r['request'])
-        update_dataset(params['city'], params['language'], queries, dataset)
+        try:
+            queries = pd.DataFrame(r['prices']).assign(**r['request'])
+            update_dataset(params['city'], params['language'], queries, dataset)
 
-        gen = pd.read_csv(path_generated_request)
-        gen = pd.concat([
-            gen,
-            pd.DataFrame.from_records([params])[[
-                'city',
-                'language',
-                'date',
-                'mobile'
-            ]]
-        ])
-        gen.to_csv(path_generated_request, index=False)
+            gen = pd.read_csv(path_generated_request)
+            gen = pd.concat([
+                gen,
+                pd.DataFrame.from_records([params])[[
+                    'city',
+                    'language',
+                    'date',
+                    'mobile'
+                ]]
+            ])
+            gen.to_csv(path_generated_request, index=False)
 
-        poss_api_requests = pd.read_csv(poss_request)
-        poss_api_requests.loc[
-            (poss_api_requests['city'] == params['city']) &
-            (poss_api_requests['date'] == params['date']) &
-            (poss_api_requests['language'] == params['language']) &
-            (poss_api_requests['mobile'] == params['mobile']), 'used'
-        ] = 2
-        poss_api_requests.to_csv(poss_request, index=False)
-        print(f"Request({params['city']},{params['language']},{params['date']},{params['mobile']}) ==> Done")
+            poss_api_requests = pd.read_csv(poss_request)
+            poss_api_requests.loc[
+                (poss_api_requests['city'] == params['city']) &
+                (poss_api_requests['date'] == params['date']) &
+                (poss_api_requests['language'] == params['language']) &
+                (poss_api_requests['mobile'] == params['mobile']), 'used'
+            ] = 2
+            poss_api_requests.to_csv(poss_request, index=False)
+            avatar_use = pd.read_csv(avatar_path)
+            avatar = connector.get_avatar()
+            avatar_id = list(avatar.keys())[list(avatar.values()).index(str(params['avatar_name']))]
+
+            temp = avatar_use.loc[
+                (avatar_use['avatar_id'] == avatar_id)
+            ]
+            if temp.shape[0] < 1:
+                avatar_use.append({
+                    'avatar_id': avatar_id,
+                    'date': params['date'],
+                    'order_requests': 1
+                }, ignore_index=True).to_csv(avatar_path, index=False)
+                # print(f"created {avatar_id}")
+            else:
+                avatar_use.loc[
+                    (avatar_use['avatar_id'] == avatar_id), 'order_requests'
+                ] += 1
+                avatar_use.to_csv(avatar_path, index=False)
+                # print(f"modified {avatar_id}")
+            print(f"Request({params['city']},{params['language']},{params['date']},{params['mobile']}) ==> Done")
+        except:
+            print(params)
 
 
 def take_n_requests(path_requests, path_city, nb_requests, generated_r):
@@ -83,7 +106,6 @@ def take_n_requests(path_requests, path_city, nb_requests, generated_r):
     real_dist['hotels'] = theo['distribution']
     real_dist['difference'] = theo['distribution'] - real_dist['dataset']
     real_dist['corrige'] = real_dist['hotels'] + real_dist['difference']
-    print(real_dist)
     poss_api_requests = pd.read_csv(path_requests)
 
     cities_weights = real_dist['corrige'].tolist()
@@ -116,30 +138,49 @@ def take_n_requests(path_requests, path_city, nb_requests, generated_r):
     return generated_requests
 
 
-def assigning_avatar(queries, connector):
+def create_avatar(connector):
+    avatar = connector.get_avatar()
+    name = max(list(map(lambda x: int(x), list(avatar.values())))) + 1
+    connector.create_avatar(str(name))
+    avatar = connector.get_avatar()
+    avatar_id = list(avatar.keys())[list(avatar.values()).index(str(name))]
+    return avatar_id, name
+
+
+def random_avatar(date, connector, avatar_use):
+    temp = np.array(avatar_use)
+    poss_avatar = temp[(temp[:, 1] > date)]
+
+    if poss_avatar.shape[0] == 0:
+        avatar_id, name = create_avatar(connector)
+        avatar_use.append([avatar_id, date, 1])
+        return name
+    else:
+        avatar_id = random.choice(poss_avatar[:, 0])
+        return connector.get_avatar()[avatar_id]
+
+
+def assigning_avatar(queries, connector, avatar_path):
     """ A function to create and assign avatar to requests.
     This function is used to create the right amount of avatar for a group a request and assign an avatar to each request depending of the date of this request.
 
+    :param avatar_path: The path of the csv file listing all the avatars used for the project, theirs start date and number of requests
     :param queries: A pandas.DataFrame containing all requests
     :param connector: A Connector object to communicate with the API
     :return: None
     """
-    avatars = np.array(connector.get_avatar())
-    start_avatar = max(list(map(lambda x: int(x), avatars[:, 1]))) + 1
-    avatar_dict = dict()
-    date = sorted(list(set(queries['date'].tolist())))
-
-    for i in range(len(date)):
-        temp = start_avatar + i
-        avatar_dict[date[i]] = temp
-        connector.create_avatar(f"{temp}")
-
-    queries['avatar_name'] = queries['date'].apply(lambda x: avatar_dict[x])
+    avatar_use = pd.read_csv(avatar_path)
+    avatar_use = avatar_use.loc[
+        (avatar_use['order_requests'] <= 8)
+    ]
+    avatar_use = avatar_use.to_numpy().tolist()
+    queries['avatar_name'] = queries['date'].apply(lambda x: random_avatar(x, connector, avatar_use))
 
 
-def making_n_requests(path_requests, path_city, nb_requests, private_key, dataset, path_gen_request):
+def making_n_requests(path_requests, path_city, nb_requests, private_key, dataset, path_gen_request, avatar_path):
     """ A function used to perform n different requests to the api
 
+    :param avatar_path: The path of the csv file listing all the avatars used for the project, theirs start date and number of requests
     :param path_requests: The path of the file containing all possible requests that can be made
     :param path_city: The path of the csv file containing the distribution of hotels among the different cities
     :param nb_requests: The number of request to perform
@@ -150,11 +191,11 @@ def making_n_requests(path_requests, path_city, nb_requests, private_key, datase
     """
     queries = take_n_requests(path_requests, path_city, nb_requests, path_gen_request)
     connector = Connector(private_key)
-    assigning_avatar(queries, connector)
+    assigning_avatar(queries, connector, avatar_path)
     queries_dict = list(queries.to_dict('index').values())
 
     for i in queries_dict:
-        request(connector, i, dataset, path_gen_request, path_requests)
+        request(connector, i, dataset, path_gen_request, path_requests, avatar_path)
 
 
 if __name__ == '__main__':

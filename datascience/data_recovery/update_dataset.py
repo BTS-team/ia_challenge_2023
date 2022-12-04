@@ -1,8 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-from datascience.utils import utils
-
+from datascience.utils import utils, Connector
 
 def update_csvfile(path, dataset="./dataset"):
     requests = pd.read_csv(path).to_dict('index').values()
@@ -116,8 +115,46 @@ def update_test_set(test_set_path="../../meta_data/test_set.csv"):
     test_set.to_csv(test_set_path, index=False)
 
 
+def generate_avatar_file(dataset="../../dataset", generated_request="../../meta_data/generated_requests.csv"):
+    con = Connector('c760f776-e640-4d8c-a26e-dba910cc7218')
+    avatars = con.get_avatar()
+    gen_r = pd.read_csv(generated_request).to_numpy()
+    avatar = {}
+    for city, lang, date, mobile in gen_r:
+        temp = pd.read_csv(f"{dataset}/{city}/{city}_{lang}.csv")
+        temp = temp.loc[
+            (temp['city'] == city) &
+            (temp['date'] == date) &
+            (temp['language'] == lang) &
+            (temp['mobile'] == mobile)
+            ]
+        avatar_id = temp['avatar_id'].tolist()[0]
+
+        if avatar_id not in avatars.keys():
+            print(f"request = {city, lang, date, mobile}")
+            print(f"id = {avatar_id}\n")
+            continue
+
+        if avatar_id not in avatar.keys():
+            avatar[avatar_id] = {
+                "date": date,
+                "order_requests": 1
+            }
+        else:
+            avatar[avatar_id]['order_requests'] += 1
+    avatar_df = []
+    for i in avatar.keys():
+        avatar_df.append({
+            'avatar_id': i,
+            'date': avatar[i]['date'],
+            'order_requests': avatar[i]['order_requests']
+        })
+    avatar_df = pd.DataFrame.from_records(avatar_df)
+    avatar_df.to_csv("../../meta_data/avatar_utilization.csv", index=False)
+
+
 if __name__ == '__main__':
     # update_csvfile('data/stored_requests.csv')
     # update_csvfile('backup/stored_requests_3.csv')
     # print(get_nb_row_dataset())
-    update_test_set()
+    add_order_request()

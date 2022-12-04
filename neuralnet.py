@@ -26,5 +26,5 @@ class NNModel(Module):
 if __name__ == '__main__':
     model = NNModel()
     nn = DeepLearningModel(model)
-    nn.train(epochs=10, learning_rate=0.001, batch_size=16)
+    nn.train(epochs=25, learning_rate=0.001, batch_size=16)
     nn.save(path="./model", name="3_layer_tanh")
