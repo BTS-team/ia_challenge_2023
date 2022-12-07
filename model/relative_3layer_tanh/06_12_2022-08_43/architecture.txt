@@ -1,0 +1,7 @@
+NNModel(
+  (input): Linear(in_features=11, out_features=22, bias=True)
+  (hid): Linear(in_features=22, out_features=22, bias=True)
+  (hid_2): Linear(in_features=22, out_features=22, bias=True)
+  (output): Linear(in_features=22, out_features=1, bias=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+)

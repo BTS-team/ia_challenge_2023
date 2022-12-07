@@ -13,10 +13,11 @@ import pandas as pd
 
 
 class DeepLearningModel(MLModel):
-    def __init__(self, model, dataset='dataset/', features_hotels='meta_data/features_hotels.csv'):
-        self.dataset = prepare_dataloader(dataset, features_hotels)
+    def __init__(self, model, dataset='dataset/', features_hotels='meta_data/features_hotels.csv', dtype="onehot"):
+        self.dataset = prepare_dataloader(dataset, features_hotels, dtype=dtype)
         self.model = model
         self.features_hotels = features_hotels
+        self.dtype = dtype
 
     def train(self, optimizer=Adam, loss_fn=MSELoss(), epochs=150, learning_rate=0.01, show=False, batch_size=64):
         optimizer = optimizer(self.model.parameters(), learning_rate, weight_decay=0.01)
@@ -74,7 +75,7 @@ class DeepLearningModel(MLModel):
         return val_loss_value, rmse
 
     def load_test_set(self, path):
-        index, x = torch_test_set(path, self.features_hotels)
+        index, x = torch_test_set(path, self.features_hotels, dtype=self.dtype)
         index = index.to_numpy()
         x = x.to_numpy()
         return index, x

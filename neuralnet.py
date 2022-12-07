@@ -12,19 +12,21 @@ warnings.filterwarnings("ignore")
 class NNModel(Module):
     def __init__(self):
         super().__init__()
-        self.input = Linear(109, 109)
-        self.output = Linear(109, 1)
+        self.input = Linear(11, 22)
+        self.hid = Linear(22, 22)
+        self.hid_2 = Linear(22, 22)
+        self.output = Linear(22, 1)
         self.dropout = Dropout(0.2)
 
     def forward(self, x):
         x = tanh(self.input(x))
+        x = tanh(self.hid(x))
+        x = tanh(self.hid_2(x))
         return self.output(x)
-
-
 
 
 if __name__ == '__main__':
     model = NNModel()
-    nn = DeepLearningModel(model)
-    nn.train(epochs=25, learning_rate=0.001, batch_size=16)
-    nn.save(path="./model", name="3_layer_tanh")
+    nn = DeepLearningModel(model, dtype="relative")
+    nn.train(epochs=16, learning_rate=0.01, batch_size=16)
+    nn.save(path="./model", name="relative_3layer_tanh")
