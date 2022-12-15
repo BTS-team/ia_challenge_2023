@@ -14,7 +14,7 @@ import pandas as pd
 
 class DeepLearningModel(MLModel):
     def __init__(self, model, dataset='dataset/', features_hotels='meta_data/features_hotels.csv', dtype="onehot"):
-        self.dataset = prepare_dataloader(dataset, features_hotels, dtype=dtype)
+        self.train_set,self.test_set = prepare_dataloader(dataset, features_hotels, dtype=dtype)
         self.model = model
         self.features_hotels = features_hotels
         self.dtype = dtype
@@ -30,7 +30,7 @@ class DeepLearningModel(MLModel):
             epoch_train_loss = 0.0
 
             # Training Loop
-            for X_train, y_train in self.dataset[0]:
+            for X_train, y_train in self.train_set:
                 self.model.zero_grad()
                 prediction = self.model(X_train)
                 loss = loss_fn(prediction, y_train)
@@ -39,7 +39,7 @@ class DeepLearningModel(MLModel):
                 epoch_train_loss += loss.item()
 
             # Calculate training loss value
-            train_loss_value = epoch_train_loss / len(self.dataset[0])
+            train_loss_value = epoch_train_loss / len(self.train_set)
             val_loss_value, rmse = self.validate(loss_fn)
             loss_values.append(train_loss_value)
             val_loss_values.append(val_loss_value)
@@ -62,14 +62,14 @@ class DeepLearningModel(MLModel):
         vall_loss = 0
         with torch.no_grad():
             self.model.eval()
-            for X_val, y_val in self.dataset[1]:
+            for X_val, y_val in self.test_set:
                 prediction = self.model(X_val)
                 val_loss = loss_fn(prediction, y_val)
                 vall_loss += val_loss.item()
                 y_predicted.extend(prediction.tolist())
                 y_actual.extend(y_val.tolist())
 
-        val_loss_value = vall_loss / len(self.dataset[1])
+        val_loss_value = vall_loss / len(self.test_set)
         rmse = mean_squared_error(y_actual, y_predicted, squared=False)
 
         return val_loss_value, rmse
@@ -80,8 +80,8 @@ class DeepLearningModel(MLModel):
         x = x.to_numpy()
         return index, x
 
-    def submission(self, test_set='meta_data/test_set.csv'):
-        index, x = self.load_test_set(test_set)
+    def submission(self, submission_set='meta_data/test_set.csv'):
+        index, x = self.load_test_set(submission_set)
         submission_df = []
         for i in range(len(x)):
             prediction = self.predict(x[i])
