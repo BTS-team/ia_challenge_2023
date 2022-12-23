@@ -8,6 +8,7 @@ class Mse(Metric):
     Implementation of the mean squared error.
     See https://en.wikipedia.org/wiki/Mean_squared_error for more details.
     """
+
     def __call__(self, y_true, y_pred):
         """ MSE calculation
 
@@ -20,7 +21,11 @@ class Mse(Metric):
         :return: A float or a numpy array containing the MSE values corresponding to the input values
         :rtype: Float or numpy.ndarray
         """
-        return np.sum(np.power(y_true - y_pred, 2)) / y_true.shape[0]
+        try:
+            return np.mean(np.power(y_true-y_pred, 2))
+        except Exception as err:
+            print(y_true, y_pred)
+            raise "error"
 
     def prime(self, y_true, y_pred):
         """ MSE prime
@@ -34,7 +39,7 @@ class Mse(Metric):
         :return: A float or a numpy array containing the MSE prime values corresponding to the input values
         :rtype: Float or numpy.ndarray
         """
-        return (1 / y_true.shape[0]) * (np.sum(-2 * (y_true - y_pred)))
+        return 2*(y_pred-y_true)/y_true.size
 
     def __str__(self):
         return "MSE()"

@@ -8,8 +8,9 @@ class SGD(Optimizer):
 
     def step(self, layer):
         for i in layer:
-            i.weights += -self.learning_rate * i.dWeights
-            i.biases += -self.learning_rate * i.dBiases
+            print(i.dWeights)
+            i.weights -= self.learning_rate * i.dWeights
+            i.biases -= self.learning_rate * i.dBiases
 
     def __str__(self):
         return f"SGB(lr={self.learning_rate})"
