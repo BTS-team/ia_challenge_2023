@@ -22,7 +22,7 @@ class DeepLearningModel(MLModel):
     def train(self, optimizer=Adam, loss_fn=MSELoss(), epochs=150, learning_rate=0.01, show=False, batch_size=64):
         optimizer = optimizer(self.model.parameters(), learning_rate, weight_decay=0.01)
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        print(device)
+        #print(device)
         self.model.to(device)
         loss_values = []
         val_loss_values = []
@@ -46,8 +46,7 @@ class DeepLearningModel(MLModel):
 
             if epochs % 10 == 9:
                 learning_rate /= 10
-            print(
-                f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
+            #print(f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
         return loss_values, val_loss_values
 
     def predict(self, x):

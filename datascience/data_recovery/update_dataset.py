@@ -3,6 +3,7 @@ import numpy as np
 import os
 from datascience.utils import utils, Connector
 
+
 def update_csvfile(path, dataset="./dataset"):
     requests = pd.read_csv(path).to_dict('index').values()
 

@@ -30,7 +30,7 @@ def update_dataset(city, language, queries, dataset):
             temp.to_csv(f"{dataset}/{city}/{city}_{language}.csv", index=False)
 
 
-def request(connector, params, dataset, path_generated_request, poss_request, avatar_path):
+def request(connector, params, dataset, path_generated_request, poss_request, avatar_path, retry=False):
     """ A function to perform and save the result of a request
 
     :param connector: A Connector object to communicate with the API
@@ -88,7 +88,12 @@ def request(connector, params, dataset, path_generated_request, poss_request, av
                 # print(f"modified {avatar_id}")
             print(f"Request({params['city']},{params['language']},{params['date']},{params['mobile']}) ==> Done")
         except:
-            print(params)
+            if retry:
+                print(params)
+            else:
+                avatar_id, name = create_avatar(connector)
+                params['avatar_id'] = avatar_id
+                request(connector, params, dataset, path_generated_request, poss_request, avatar_path, retry=True)
 
 
 def take_n_requests(path_requests, path_city, nb_requests, generated_r):
