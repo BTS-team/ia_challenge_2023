@@ -24,7 +24,6 @@ class Mse(Metric):
         try:
             return np.mean(np.power(y_true-y_pred, 2))
         except Exception as err:
-            print(y_true, y_pred)
             raise "error"
 
     def prime(self, y_true, y_pred):

@@ -46,7 +46,8 @@ class DeepLearningModel(MLModel):
 
             if epochs % 10 == 9:
                 learning_rate /= 10
-            print(f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
+            if show:
+                print(f"Epoch {epoch} - Training Loss : {train_loss_value} - Validation loss : {val_loss_value} - RMSE : {rmse.round(3)}")
         return loss_values, val_loss_values
 
     def predict(self, x):

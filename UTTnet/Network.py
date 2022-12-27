@@ -92,7 +92,6 @@ class Network:
                 output = self(x_train[j])
                 err += self.loss(y_train[j], output)
                 error = self.loss.prime(y_train[j], output)
-                print(error)
                 self.backward(error)
                 self.optimizer.step(self.layers)
 
