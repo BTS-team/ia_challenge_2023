@@ -14,8 +14,8 @@ def lasso(fold, dataset_path='../dataset', features_hotels="../meta_data/feature
     lasso_best = Lasso(alpha=model.alpha_)
     lasso_best.fit(dataset.x, dataset.y)
 
-    to_predict = pd.read_csv('meta_data/test_set.csv')
-    hotels = pd.read_csv('meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
+    to_predict = pd.read_csv('../meta_data/test_set.csv')
+    hotels = pd.read_csv('../meta_data/features_hotels.csv', index_col=['hotel_id', 'city'])
     to_predict = to_predict.join(hotels, on=['hotel_id', 'city'])
 
     submission_df = []

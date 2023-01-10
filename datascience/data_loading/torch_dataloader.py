@@ -52,6 +52,29 @@ def one_hot_encoding(x):
     return result
 
 
+def relative_column(x):
+    result = x[[
+        'stock',
+        'order_requests'
+    ]]
+
+    temp = x[[
+        'mobile',
+        'parking',
+        'pool',
+        'stock',
+        'city',
+        'language',
+        'group',
+        'children_policy',
+        'date'
+    ]]
+
+    temp = temp / temp.max()
+
+    return pd.concat([result, temp], axis=1)
+
+
 def to_matrix(x):
     x = x.to_numpy()
     dataset = []
@@ -62,32 +85,37 @@ def to_matrix(x):
     return dataset
 
 
-def torch_test_set(test_set='meta_data/test_set.csv', features_hotels='meta_data/features_hotels.csv', matrix=False):
+def torch_test_set(test_set='meta_data/test_set.csv', features_hotels='meta_data/features_hotels.csv', dtype='onehot'):
     index, test_set = load_test_set(test_set, features_hotels)
-    test_set = one_hot_encoding(test_set)
 
-    if not matrix:
+    if dtype == 'onehot':
+        test_set = one_hot_encoding(test_set)
         return index, test_set
-    else:
+    elif dtype == 'matrix':
+        test_set = one_hot_encoding(test_set)
         return index, to_matrix(test_set)
-
-
-def divide_by_max(x):
-    print(x.max())
+    elif dtype == 'relative':
+        return index, relative_column(test_set)
+    else:
+        raise f"{dtype} => Invalid type for loading test set"
 
 
 class Data(Dataset):
-    def __init__(self, dataset_path, features_hotels, matrix=False):
+    def __init__(self, dataset_path, features_hotels, dtype="onehot"):
         dataset = load_dataset(dataset_path, features_hotels, dtype="pandas")
 
-        x = one_hot_encoding(dataset.x)
-
-        if matrix:
+        if dtype == "matrix":
+            x = one_hot_encoding(dataset.x)
             x = to_matrix(x)
-            print(x.shape)
             self.X = torch.from_numpy(x.astype(np.float32))
-        else:
+        elif dtype == "onehot":
+            x = one_hot_encoding(dataset.x)
             self.X = torch.from_numpy(x.to_numpy().astype(np.float32))
+        elif dtype == "relative":
+            x = relative_column(dataset.x)
+            self.X = torch.from_numpy(x.to_numpy().astype(np.float32))
+        else:
+            raise f"{dtype} => Invalid type for loading test set"
 
         self.y = torch.from_numpy(dataset.y.to_numpy().astype(np.float32))
         self.len = self.X.shape[0]
@@ -99,8 +127,8 @@ class Data(Dataset):
         return self.len
 
 
-def prepare_dataloader(dataset_path, features_hotels, dist=[0.8, 0.2], batch_size=64, matrix=False):
-    dataset = Data(dataset_path, features_hotels, matrix)
+def prepare_dataloader(dataset_path, features_hotels, dist=[0.8, 0.2], batch_size=64, dtype="onehot"):
+    dataset = Data(dataset_path, features_hotels, dtype)
     rep = list(map(lambda x: int(x * dataset.__len__()), dist))
     rep[-1] += dataset.__len__() - sum(rep)
 

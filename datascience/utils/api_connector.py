@@ -28,7 +28,7 @@ class Connector:
         """
         try:
             r = requests.post(self.path(f'avatars/{self.user_id}/{name}'))
-            print(r)
+            #print(f"New Avatar : {name}")
         except urllib.error as e:
             print(e)
 
@@ -39,9 +39,9 @@ class Connector:
         """
         try:
             r = requests.get(self.path(f"avatars/{self.user_id}"))
-            result = []
+            result = {}
             for avatar in r.json():
-                result.append([avatar['id'], avatar['name']])
+                result[avatar['id']] = avatar['name']
             return result
 
         except urllib.error as e:
@@ -58,10 +58,17 @@ class Connector:
             if r.status_code == 200:
                 return r.json()
             elif r.status_code == 422:
-                return 422
+                return r.status_code, r.json()['detail']
             else:
                 print(r.status_code, r.json()['detail'])
                 sys.exit(1)
 
         except urllib.error as e:
             print(e)
+
+
+if __name__ == '__main__':
+    con = Connector('c760f776-e640-4d8c-a26e-dba910cc7218')
+    avatar = con.get_avatar()
+    avatar_id = list(avatar.keys())[list(avatar.values()).index(str(181))]
+    print(avatar_id)
